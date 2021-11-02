@@ -77,7 +77,7 @@ latex_table_font_size <- 8
 
 # List of Abbreviations
 
-```{r abbreviations, echo=FALSE, results="asis", warning=FALSE}
+```{r abbreviations, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
 abbreviations <- readr::read_delim(col_names = FALSE, delim = ";", trim_ws = TRUE, file = "
   AESI; adverse events of special interest 
   CCAE; IBM MarketScan(R) Commercial Claims and Encounters
@@ -113,7 +113,7 @@ if (knitr::is_latex_output()) {
 
 ## Investigators
 
-```{r parties, echo=FALSE, results="asis", warning=FALSE}
+```{r parties, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
 parties <- readr::read_delim(col_names = TRUE, delim = ";", trim_ws = TRUE, escape_backslash = TRUE, file = "
   Investigator; Institution/Affiliation
   Erica A Voss *; Observational Health Data Analytics, Janssen Research and Development, Titusville, NJ, USA
@@ -154,7 +154,7 @@ Data sources associated with the EHDEN network received funding from the Innovat
 
 Table \@ref(tab:amendments) lists any protocol amendments made over time.
 
-```{r amendments, echo=FALSE, results="asis", warning=FALSE}
+```{r amendments, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
 amendments <- readr::read_delim(col_names = TRUE, delim = ";", trim_ws = TRUE, file = "
   Number; Date; Section of study protocol; Amendment or update; Reason
   -;-;-;-;-
@@ -180,7 +180,7 @@ if (knitr::is_latex_output()) {
 
 Table \@ref(tab:dates) lists the study milestones.
 
-```{r dates, echo=FALSE, results="asis", warning=FALSE}
+```{r dates, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
 dates <- readr::read_delim(col_names = TRUE, delim = ";", trim_ws = TRUE, file = "
   Milestone; Planned / actual date
   Start of analysis;2021-11-29
@@ -199,7 +199,7 @@ if (knitr::is_latex_output()) {
 
 # Rationale and Background
 
-Background rates of adverse events are important in monitoring the safety of vaccines as this baseline information can serve as a comparator to the rates of the adverse events in those that are vaccinated [1, 2]. Previously, the Observational Health Data Sciences and Informatics (OHDSI) community conducted a population-based network retrospective cohort study to characterize the background rates of adverse events of special interest (AESI) for the COVID-19 vaccine, using observational data from 13 databases in 8 countries [3]. This work extends this prior OHDSI study by characterizing the background rates of these AESIs in subjects after their COVID-19 disease. In addition to pre-pandemic rates in the general population, it is relevant to know how often these AESIs occur amongst patients who suffer the condition vaccines aim to prevent to provide a counterfactual for risk evaluation.
+Background rates of adverse events are important in monitoring the safety of vaccines as this baseline information can serve as a comparator to the rates of the adverse events in those that are vaccinated [@Black2006] [@Wijnans2013]. Previously, the Observational Health Data Sciences and Informatics (OHDSI) community conducted a population-based network retrospective cohort study to characterize the background rates of adverse events of special interest (AESI) for the COVID-19 vaccine, using observational data from 13 databases in 8 countries [@Li2021]. This work extends this prior OHDSI study by characterizing the background rates of these AESIs in subjects after their COVID-19 disease. In addition to pre-pandemic rates in the general population, it is relevant to know how often these AESIs occur amongst patients who suffer the condition vaccines aim to prevent to provide a counterfactual for risk evaluation.
 
 # Study Objectives
 
@@ -210,7 +210,7 @@ Our aim is purely descriptive. The hope with this work is the evidence we provid
 # Research Methods
 
 ## Data Sources
-We intend to study data with different data source provenance (e.g., electronic medical records, insurance claims) as well data representing different populations (privately insured employees or patients with limited income) and data with different origins (US and non-US).  This study will be run on datasets that have been converted to the Observational Medical Outcomes Partnership (OMOP) Common Data Model (CDM) [4, 5]. 
+We intend to study data with different data source provenance (e.g., electronic medical records, insurance claims) as well data representing different populations (privately insured employees or patients with limited income) and data with different origins (US and non-US).  This study will be run on datasets that have been converted to the Observational Medical Outcomes Partnership (OMOP) Common Data Model (CDM) [@OMOPCDM-wp] [@Hripcsak2015-cl]. 
 
 These data sources include but are not limited to: 
 
@@ -241,7 +241,7 @@ The target population is subjects who had COVID-19 disease. We will identify thi
 ### Outcome Cohort Definitions
 For the purposes of this research, we use the outcomes outlined in the U.S. Food and Drug Administration (FDA) “Background Rates of Adverse Events of Special Interest for COVID-19 Vaccine Safety Monitoring” protocol [6]. This protocol includes Guillain-Barré syndrome, facial nerve (Bell’s) palsy, anaphylaxis, encephalomyelitis, narcolepsy, appendicitis, non-hemorrhagic stroke, hemorrhagic stroke, acute myocardial infarction, myocarditis and pericarditis, deep vein thrombosis, pulmonary embolism, disseminated intravascular coagulation, immune thrombocytopenia, febrile seizure, and transverse myelitis. We will also include additional safety outcomes/concerns that emerged such as thrombosis with thrombocytopenia syndrome (TTS), seizure, and narcolepsy. All phenotype definitions were based on the FDA protocol (when possible) with minor clinical context broadening (and minor code broadening as needed for example to accommodate SNOMED) to allow them to run on our wide range of data sources. 
 
-We consider the effect of clean windows to define the incidence of outcomes. A clean window is the prespecified time prior to the vaccination (reference master protocol [6]). We will use an outcome-specific clean window, within which an outcome is not considered incident. The clean window (as also defined in the FDA protocol), is 365 days for all outcomes except 30 days for anaphylaxis, 183 days for facial nerve palsy and encephalomyelitis.  
+We consider the effect of clean windows to define the incidence of outcomes. A clean window is the prespecified time prior to the vaccination (reference master protocol [@COVID19AESIs]). We will use an outcome-specific clean window, within which an outcome is not considered incident. The clean window (as also defined in the FDA protocol), is 365 days for all outcomes except 30 days for anaphylaxis, 183 days for facial nerve palsy and encephalomyelitis.  
 
 - Cohort 411 - FDA AESI Pulmonary Embolism events with conceptset subsuming FDA source concepts
 - Cohort 405 - FDA AESI Hemorrhagic stroke IP events with conceptset subsuming FDA source concepts
@@ -286,12 +286,12 @@ One aspect of the target population is the population subgroup. We will consider
     - Female 
 
 ## Time-at-risk (TAR)
-For AESI rates estimated for a general population, TAR is not possible to take into account, since there is no obvious index point from which TAR would be counted. Consequently AESI rates estimated over moderately long time intervals are for statistical stability is generally an appropriate approach to give background rates. When trying to understand AESI in COVID-19 patients, in contrast, the onset of COVID-19 provides a natural index point, which may be directly relevant if the AESI is associated with COVID-19. For some outcomes, there is a known pathophysiological relationship between them and COVID-19 that can justify a choice of time at risk￼￼. For other outcomes, less is known. In estimating baseline incidence rates, there is a tension between using long time-at-risk windows to maximize the sample size and provide rate stability,  and using windows that match the planned windows in the vaccinated patients. Using windows that match the planned windows in vaccinated individuals would be relevant mainly for conditions where it may be possible that both COVID-19 and vaccination affect the outcome with similar TAR, which may be assumed to be the case mainly if they act through related or similar mechanisms. In other situations, the more relevant comparison or context may be stable long-term rates. AESI rates on COVID-19 individuals, for different TARs, will be particularly important to understand especially when AESIs are assessed in vaccinated individuals, where information on prior COVID-19 and its timing are available. 
+For AESI rates estimated for a general population, TAR is not possible to take into account, since there is no obvious index point from which TAR would be counted. Consequently AESI rates estimated over moderately long time intervals are for statistical stability is generally an appropriate approach to give background rates. When trying to understand AESI in COVID-19 patients, in contrast, the onset of COVID-19 provides a natural index point, which may be directly relevant if the AESI is associated with COVID-19. For some outcomes, there is a known pathophysiological relationship between them and COVID-19 that can justify a choice of time at risk. For other outcomes, less is known. In estimating baseline incidence rates, there is a tension between using long time-at-risk windows to maximize the sample size and provide rate stability,  and using windows that match the planned windows in the vaccinated patients. Using windows that match the planned windows in vaccinated individuals would be relevant mainly for conditions where it may be possible that both COVID-19 and vaccination affect the outcome with similar TAR, which may be assumed to be the case mainly if they act through related or similar mechanisms. In other situations, the more relevant comparison or context may be stable long-term rates. AESI rates on COVID-19 individuals, for different TARs, will be particularly important to understand especially when AESIs are assessed in vaccinated individuals, where information on prior COVID-19 and its timing are available. 
 
 We will include six TARs, relative to the COVID-19 index date, for this work. 
 
 - Days 1 – 2 days (to capture acute events) 
-- Days 1 – 14 days (to align with COVID-19 symptoms appearing [8]) 
+- Days 1 – 14 days (to align with COVID-19 symptoms appearing [@COVID19Symptoms]) 
 - Days 1 – 21 days (this will likely be the target TAR post vaccines) 
 - Days 1 – 28 days 
 - Days 1 – 90 days 
@@ -365,21 +365,7 @@ We believe in sharing our findings that will guide clinical care with the genera
 
 # References {-}
 
-1.	Black S, Eskola J, Siegrist CA, Halsey N, MacDonald N, Law B, et al. Importance of background rates of disease in assessment of vaccine safety during mass immunisation with pandemic H1N1 influenza vaccines. Lancet (London, England). 2009 Dec 19;374(9707):2115-22. 
-
-2.	Wijnans L, Lecomte C, de Vries C, Weibel D, Sammon C, Hviid A, et al. The incidence of narcolepsy in Europe: before, during, and after the influenza A(H1N1)pdm09 pandemic and vaccination campaigns. Vaccine. 2013 Feb 6;31(8):1246-54. 
-
-3.	Li X, Ostropolets A, Makadia R, Shaoibi A, Rao G, Sena AG, et al. Characterizing the incidence of adverse events of special interest for COVID-19 vaccines across eight countries: a multinational network cohort study. medRxiv : the preprint server for health sciences. 2021 Apr 17. 
-
-4.	OMOP Common Data Model (CDM). [web page]  [cited; Available from: https://github.com/OHDSI/CommonDataModel 
-
-5.	Hripcsak G, Duke JD, Shah NH, Reich CG, Huser V, Schuemie MJ, et al. Observational Health Data Sciences and Informatics (OHDSI): Opportunities for Observational Researchers. Stud Health Technol Inform. 2015;216:574-8. 
-
-6.	Background Rates of Adverse Events of Special Interest for COVID-19 Vaccine Safety Monitoring Protocol. [PDF] 2021 2021.01.12 [cited 2021.10.14]; Available from: https://www.bestinitiative.org/wp-content/uploads/2021/02/C19-Vaccine-Safety-AESI-Background-Rate-Protocol-FINAL-2020.pdf 
-
-7.	Farrington P, Pugh S, Colville A, Flower A, Nash J, Morgan-Capner P, et al. A new method for active surveillance of adverse events from diphtheria/tetanus/pertussis and measles/mumps/rubella vaccines. Lancet (London, England). 1995 Mar 4;345(8949):567-9. 
-
-8.	Symptoms of COVID-19. [web site] 2021.02.22 [cited 2021.10.27]; Available from: https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html 
+<div id="refs"></div>
 
 # (APPENDIX) Appendix {-}
 

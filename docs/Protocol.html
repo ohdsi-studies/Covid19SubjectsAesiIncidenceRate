@@ -276,13 +276,6 @@ Adverse Events of Special Interest within COVID-19 Subjects</div></h1>
 
 <div id="list-of-abbreviations" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> List of Abbreviations</h1>
-<pre><code>## Rows: 19 Columns: 2</code></pre>
-<pre><code>## -- Column specification --------------------------------------------------------
-## Delimiter: &quot;;&quot;
-## chr (2): X1, X2</code></pre>
-<pre><code>## 
-## i Use `spec()` to retrieve the full column specification for this data.
-## i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <table class="table table-striped" style="margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -444,13 +437,6 @@ thrombosis with thrombocytopenia syndrome
 <h1><span class="header-section-number">2</span> Responsible Parties</h1>
 <div id="investigators" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Investigators</h2>
-<pre><code>## Rows: 9 Columns: 2</code></pre>
-<pre><code>## -- Column specification --------------------------------------------------------
-## Delimiter: &quot;;&quot;
-## chr (2): Investigator, Institution/Affiliation</code></pre>
-<pre><code>## 
-## i Use `spec()` to retrieve the full column specification for this data.
-## i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <table style="NAborder-bottom: 0; margin-left: auto; margin-right: auto;" class="table table-striped">
 <thead>
 <tr>
@@ -493,6 +479,14 @@ Fredrik Nyberg
 </td>
 <td style="text-align:left;width: 30em; ">
 School of Public Health and Community Medicine, Institute of Medicine, Sahlgrenska Academy, University of Gothenburg, Gothenburg, Sweden
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+Thamer Alshammary
+</td>
+<td style="text-align:left;width: 30em; ">
+Medication Safety Research Chair, King Saud University, Riyadh, Saudi Arabia
 </td>
 </tr>
 <tr>
@@ -556,13 +550,6 @@ Observational Health Data Analytics, Janssen Research and Development, Titusvill
 <div id="amendments-and-updates" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Amendments and Updates</h1>
 <p>Table <a href="#tab:amendments">3.1</a> lists any protocol amendments made over time.</p>
-<pre><code>## Rows: 1 Columns: 5</code></pre>
-<pre><code>## -- Column specification --------------------------------------------------------
-## Delimiter: &quot;;&quot;
-## chr (5): Number, Date, Section of study protocol, Amendment or update, Reason</code></pre>
-<pre><code>## 
-## i Use `spec()` to retrieve the full column specification for this data.
-## i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <table class="table table-striped" style="margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:amendments">Table 3.1: </span>Protocol amendments
@@ -615,14 +602,6 @@ Reason
 <div id="milestones" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Milestones</h1>
 <p>Table <a href="#tab:dates">4.1</a> lists the study milestones.</p>
-<pre><code>## Rows: 3 Columns: 2</code></pre>
-<pre><code>## -- Column specification --------------------------------------------------------
-## Delimiter: &quot;;&quot;
-## chr  (1): Milestone
-## date (1): Planned / actual date</code></pre>
-<pre><code>## 
-## i Use `spec()` to retrieve the full column specification for this data.
-## i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <table class="table table-striped" style="margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:dates">Table 4.1: </span>Study milestones
@@ -667,7 +646,7 @@ Results presentation
 </div>
 <div id="rationale-and-background" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Rationale and Background</h1>
-<p>Background rates of adverse events are important in monitoring the safety of vaccines as this baseline information can serve as a comparator to the rates of the adverse events in those that are vaccinated [1, 2]. Previously, the Observational Health Data Sciences and Informatics (OHDSI) community conducted a population-based network retrospective cohort study to characterize the background rates of adverse events of special interest (AESI) for the COVID-19 vaccine, using observational data from 13 databases in 8 countries [3]. This work extends this prior OHDSI study by characterizing the background rates of these AESIs in subjects after their COVID-19 disease. In addition to pre-pandemic rates in the general population, it is relevant to know how often these AESIs occur amongst patients who suffer the condition vaccines aim to prevent to provide a counterfactual for risk evaluation.</p>
+<p>Background rates of adverse events are important in monitoring the safety of vaccines as this baseline information can serve as a comparator to the rates of the adverse events in those that are vaccinated <span class="citation">[<a href="#ref-Black2006" role="doc-biblioref">1</a>]</span> <span class="citation">[<a href="#ref-Wijnans2013" role="doc-biblioref">2</a>]</span>. Previously, the Observational Health Data Sciences and Informatics (OHDSI) community conducted a population-based network retrospective cohort study to characterize the background rates of adverse events of special interest (AESI) for the COVID-19 vaccine, using observational data from 13 databases in 8 countries <span class="citation">[<a href="#ref-Li2021" role="doc-biblioref">3</a>]</span>. This work extends this prior OHDSI study by characterizing the background rates of these AESIs in subjects after their COVID-19 disease. In addition to pre-pandemic rates in the general population, it is relevant to know how often these AESIs occur amongst patients who suffer the condition vaccines aim to prevent to provide a counterfactual for risk evaluation.</p>
 </div>
 <div id="study-objectives" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> Study Objectives</h1>
@@ -678,7 +657,7 @@ Results presentation
 <h1><span class="header-section-number">7</span> Research Methods</h1>
 <div id="data-sources" class="section level2" number="7.1">
 <h2><span class="header-section-number">7.1</span> Data Sources</h2>
-<p>We intend to study data with different data source provenance (e.g., electronic medical records, insurance claims) as well data representing different populations (privately insured employees or patients with limited income) and data with different origins (US and non-US). This study will be run on datasets that have been converted to the Observational Medical Outcomes Partnership (OMOP) Common Data Model (CDM) [4, 5].</p>
+<p>We intend to study data with different data source provenance (e.g., electronic medical records, insurance claims) as well data representing different populations (privately insured employees or patients with limited income) and data with different origins (US and non-US). This study will be run on datasets that have been converted to the Observational Medical Outcomes Partnership (OMOP) Common Data Model (CDM) <span class="citation">[<a href="#ref-OMOPCDM-wp" role="doc-biblioref">4</a>]</span> <span class="citation">[<a href="#ref-Hripcsak2015-cl" role="doc-biblioref">5</a>]</span>.</p>
 <p>These data sources include but are not limited to:</p>
 <ul>
 <li>Columbia University Irving Medical Center (CUIMC) Electronic Health Record (EHR)</li>
@@ -712,7 +691,7 @@ Results presentation
 <div id="outcome-cohort-definitions" class="section level3" number="7.2.2">
 <h3><span class="header-section-number">7.2.2</span> Outcome Cohort Definitions</h3>
 <p>For the purposes of this research, we use the outcomes outlined in the U.S. Food and Drug Administration (FDA) “Background Rates of Adverse Events of Special Interest for COVID-19 Vaccine Safety Monitoring” protocol [6]. This protocol includes Guillain-Barré syndrome, facial nerve (Bell’s) palsy, anaphylaxis, encephalomyelitis, narcolepsy, appendicitis, non-hemorrhagic stroke, hemorrhagic stroke, acute myocardial infarction, myocarditis and pericarditis, deep vein thrombosis, pulmonary embolism, disseminated intravascular coagulation, immune thrombocytopenia, febrile seizure, and transverse myelitis. We will also include additional safety outcomes/concerns that emerged such as thrombosis with thrombocytopenia syndrome (TTS), seizure, and narcolepsy. All phenotype definitions were based on the FDA protocol (when possible) with minor clinical context broadening (and minor code broadening as needed for example to accommodate SNOMED) to allow them to run on our wide range of data sources.</p>
-<p>We consider the effect of clean windows to define the incidence of outcomes. A clean window is the prespecified time prior to the vaccination (reference master protocol [6]). We will use an outcome-specific clean window, within which an outcome is not considered incident. The clean window (as also defined in the FDA protocol), is 365 days for all outcomes except 30 days for anaphylaxis, 183 days for facial nerve palsy and encephalomyelitis.</p>
+<p>We consider the effect of clean windows to define the incidence of outcomes. A clean window is the prespecified time prior to the vaccination (reference master protocol <span class="citation">[<a href="#ref-COVID19AESIs" role="doc-biblioref">6</a>]</span>). We will use an outcome-specific clean window, within which an outcome is not considered incident. The clean window (as also defined in the FDA protocol), is 365 days for all outcomes except 30 days for anaphylaxis, 183 days for facial nerve palsy and encephalomyelitis.</p>
 <ul>
 <li>Cohort 411 - FDA AESI Pulmonary Embolism events with conceptset subsuming FDA source concepts</li>
 <li>Cohort 405 - FDA AESI Hemorrhagic stroke IP events with conceptset subsuming FDA source concepts</li>
@@ -772,11 +751,11 @@ Results presentation
 </div>
 <div id="time-at-risk-tar" class="section level2" number="7.4">
 <h2><span class="header-section-number">7.4</span> Time-at-risk (TAR)</h2>
-<p>For AESI rates estimated for a general population, TAR is not possible to take into account, since there is no obvious index point from which TAR would be counted. Consequently AESI rates estimated over moderately long time intervals are for statistical stability is generally an appropriate approach to give background rates. When trying to understand AESI in COVID-19 patients, in contrast, the onset of COVID-19 provides a natural index point, which may be directly relevant if the AESI is associated with COVID-19. For some outcomes, there is a known pathophysiological relationship between them and COVID-19 that can justify a choice of time at risk￼￼. For other outcomes, less is known. In estimating baseline incidence rates, there is a tension between using long time-at-risk windows to maximize the sample size and provide rate stability, and using windows that match the planned windows in the vaccinated patients. Using windows that match the planned windows in vaccinated individuals would be relevant mainly for conditions where it may be possible that both COVID-19 and vaccination affect the outcome with similar TAR, which may be assumed to be the case mainly if they act through related or similar mechanisms. In other situations, the more relevant comparison or context may be stable long-term rates. AESI rates on COVID-19 individuals, for different TARs, will be particularly important to understand especially when AESIs are assessed in vaccinated individuals, where information on prior COVID-19 and its timing are available.</p>
+<p>For AESI rates estimated for a general population, TAR is not possible to take into account, since there is no obvious index point from which TAR would be counted. Consequently AESI rates estimated over moderately long time intervals are for statistical stability is generally an appropriate approach to give background rates. When trying to understand AESI in COVID-19 patients, in contrast, the onset of COVID-19 provides a natural index point, which may be directly relevant if the AESI is associated with COVID-19. For some outcomes, there is a known pathophysiological relationship between them and COVID-19 that can justify a choice of time at risk. For other outcomes, less is known. In estimating baseline incidence rates, there is a tension between using long time-at-risk windows to maximize the sample size and provide rate stability, and using windows that match the planned windows in the vaccinated patients. Using windows that match the planned windows in vaccinated individuals would be relevant mainly for conditions where it may be possible that both COVID-19 and vaccination affect the outcome with similar TAR, which may be assumed to be the case mainly if they act through related or similar mechanisms. In other situations, the more relevant comparison or context may be stable long-term rates. AESI rates on COVID-19 individuals, for different TARs, will be particularly important to understand especially when AESIs are assessed in vaccinated individuals, where information on prior COVID-19 and its timing are available.</p>
 <p>We will include six TARs, relative to the COVID-19 index date, for this work.</p>
 <ul>
 <li>Days 1 – 2 days (to capture acute events)</li>
-<li>Days 1 – 14 days (to align with COVID-19 symptoms appearing [8])</li>
+<li>Days 1 – 14 days (to align with COVID-19 symptoms appearing <span class="citation">[<a href="#ref-COVID19Symptoms" role="doc-biblioref">7</a>]</span>)</li>
 <li>Days 1 – 21 days (this will likely be the target TAR post vaccines)</li>
 <li>Days 1 – 28 days</li>
 <li>Days 1 – 90 days</li>
@@ -833,10 +812,9 @@ Results presentation
 </div>
 <div id="plans-for-disseminating-and-communicating-study-results" class="section level1" number="11">
 <h1><span class="header-section-number">11</span> Plans for Disseminating and Communicating Study Results</h1>
-<p>Open science aims to make scientific research, including its data process and software, and its dissemination, through publication and presentation, accessible to all levels of an inquiring society, amateur or professional <span class="citation">[<a href="#ref-Woelfle2011-ss" role="doc-biblioref">1</a>]</span> and is a governing principle of EUMAEUS.
+<p>Open science aims to make scientific research, including its data process and software, and its dissemination, through publication and presentation, accessible to all levels of an inquiring society, amateur or professional <span class="citation">[<a href="#ref-Woelfle2011-ss" role="doc-biblioref">8</a>]</span>.
 Open science delivers reproducible, transparent and reliable evidence.
-All aspects of EUMAEUS (except private patient data) will be open and we will actively encourage other interested researchers, clinicians and patients to participate.
-This differs fundamentally from traditional studies that rarely open their analytic tools or share all result artifacts, and inform the community about hard-to-verify conclusions at completion.</p>
+All aspects of study (except private patient data) will be open and we will actively encourage other interested researchers, clinicians and patients to participate.</p>
 <div id="transparent-and-re-usable-research-tools" class="section level2" number="11.1">
 <h2><span class="header-section-number">11.1</span> Transparent and re-usable research tools</h2>
 <p>The protocol and all source code will be available here prior to execution across the federated and distributed network.
@@ -852,21 +830,37 @@ This differs fundamentally from traditional studies that rarely open their analy
 </div>
 <div id="general-public" class="section level2" number="11.4">
 <h2><span class="header-section-number">11.4</span> General public</h2>
-<p>We believe in sharing our findings that will guide clinical care with the general public. This study will use social-media (Twitter-<span class="citation">[<a href="#ref-OHDSI" role="doc-biblioref"><strong>OHDSI?</strong></a>]</span>(<a href="https://twitter.com/ohdsi" class="uri">https://twitter.com/ohdsi</a>)) to facilitate this.</p>
+<p>We believe in sharing our findings that will guide clinical care with the general public. This study will use social-media (Twitter-<a href="https://twitter.com/ohdsi">OHDSI</a>) to facilitate this.</p>
 </div>
 </div>
 <div id="references" class="section level1 unnumbered">
 <h1>References</h1>
-<ol style="list-style-type: decimal">
-<li><p>Black S, Eskola J, Siegrist CA, Halsey N, MacDonald N, Law B, et al. Importance of background rates of disease in assessment of vaccine safety during mass immunisation with pandemic H1N1 influenza vaccines. Lancet (London, England). 2009 Dec 19;374(9707):2115-22.</p></li>
-<li><p>Wijnans L, Lecomte C, de Vries C, Weibel D, Sammon C, Hviid A, et al. The incidence of narcolepsy in Europe: before, during, and after the influenza A(H1N1)pdm09 pandemic and vaccination campaigns. Vaccine. 2013 Feb 6;31(8):1246-54.</p></li>
-<li><p>Li X, Ostropolets A, Makadia R, Shaoibi A, Rao G, Sena AG, et al. Characterizing the incidence of adverse events of special interest for COVID-19 vaccines across eight countries: a multinational network cohort study. medRxiv : the preprint server for health sciences. 2021 Apr 17.</p></li>
-<li><p>OMOP Common Data Model (CDM). [web page] [cited; Available from: <a href="https://github.com/OHDSI/CommonDataModel" class="uri">https://github.com/OHDSI/CommonDataModel</a></p></li>
-<li><p>Hripcsak G, Duke JD, Shah NH, Reich CG, Huser V, Schuemie MJ, et al. Observational Health Data Sciences and Informatics (OHDSI): Opportunities for Observational Researchers. Stud Health Technol Inform. 2015;216:574-8.</p></li>
-<li><p>Background Rates of Adverse Events of Special Interest for COVID-19 Vaccine Safety Monitoring Protocol. [PDF] 2021 2021.01.12 [cited 2021.10.14]; Available from: <a href="https://www.bestinitiative.org/wp-content/uploads/2021/02/C19-Vaccine-Safety-AESI-Background-Rate-Protocol-FINAL-2020.pdf" class="uri">https://www.bestinitiative.org/wp-content/uploads/2021/02/C19-Vaccine-Safety-AESI-Background-Rate-Protocol-FINAL-2020.pdf</a></p></li>
-<li><p>Farrington P, Pugh S, Colville A, Flower A, Nash J, Morgan-Capner P, et al. A new method for active surveillance of adverse events from diphtheria/tetanus/pertussis and measles/mumps/rubella vaccines. Lancet (London, England). 1995 Mar 4;345(8949):567-9.</p></li>
-<li><p>Symptoms of COVID-19. [web site] 2021.02.22 [cited 2021.10.27]; Available from: <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html" class="uri">https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html</a></p></li>
-</ol>
+<div id="refs" class="references csl-bib-body">
+<div id="ref-Black2006" class="csl-entry">
+<div class="csl-left-margin">1 </div><div class="csl-right-inline">Black S, Eskola J, Siegrist CA, <em>et al.</em> Importance of background rates of disease in assessment of vaccine safety during mass immunisation with pandemic H1N1 influenza vaccines. <em>Lancet</em> 2009;<strong>374</strong>:2115–22. doi:<a href="https://doi.org/10.1016/s0140-6736(09)61877-8">10.1016/s0140-6736(09)61877-8</a></div>
+</div>
+<div id="ref-Wijnans2013" class="csl-entry">
+<div class="csl-left-margin">2 </div><div class="csl-right-inline">Wijnans L, Lecomte C, Vries C de, <em>et al.</em> The incidence of narcolepsy in europe: Before, during, and after the influenza a(H1N1)pdm09 pandemic and vaccination campaigns. <em>Vaccine</em> 2013;<strong>31</strong>:1246–54. doi:<a href="https://doi.org/10.1016/j.vaccine.2012.12.015">10.1016/j.vaccine.2012.12.015</a></div>
+</div>
+<div id="ref-Li2021" class="csl-entry">
+<div class="csl-left-margin">3 </div><div class="csl-right-inline">Li X, Ostropolets A, Makadia R, <em>et al.</em> Characterizing the incidence of adverse events of special interest for COVID-19 vaccines across eight countries: A multinational network cohort study. <em>medRxiv</em> Published Online First: 2021. doi:<a href="https://doi.org/10.1101/2021.03.25.21254315">10.1101/2021.03.25.21254315</a></div>
+</div>
+<div id="ref-OMOPCDM-wp" class="csl-entry">
+<div class="csl-left-margin">4 </div><div class="csl-right-inline">Observational medical outcomes partnership common data model (OMOP CDM). <a href="https://github.com/OHDSI/CommonDataModel">https://github.com/OHDSI/CommonDataModel</a></div>
+</div>
+<div id="ref-Hripcsak2015-cl" class="csl-entry">
+<div class="csl-left-margin">5 </div><div class="csl-right-inline">Hripcsak G, Duke JD, Shah NH, <em>et al.</em> Observational health data sciences and informatics (<span>OHDSI)</span>: Opportunities for observational researchers. <em>Studies in Health Technology and Informatics</em> 2015;<strong>216</strong>:574–8.</div>
+</div>
+<div id="ref-COVID19AESIs" class="csl-entry">
+<div class="csl-left-margin">6 </div><div class="csl-right-inline">Background rates of adverse events of special interest for COVID-19 vaccine safety monitoring protocol. 2021.<a href="https://www.bestinitiative.org/wp-content/uploads/2021/02/C19-Vaccine-Safety-AESI-Background-Rate-Protocol-FINAL-2020.pdf">https://www.bestinitiative.org/wp-content/uploads/2021/02/C19-Vaccine-Safety-AESI-Background-Rate-Protocol-FINAL-2020.pdf</a></div>
+</div>
+<div id="ref-COVID19Symptoms" class="csl-entry">
+<div class="csl-left-margin">7 </div><div class="csl-right-inline">Symptoms of COVID-19. <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html</a></div>
+</div>
+<div id="ref-Woelfle2011-ss" class="csl-entry">
+<div class="csl-left-margin">8 </div><div class="csl-right-inline">Woelfle M, Olliaro P, Todd MH. Open science is a research accelerator. <em>Nature Chemistry</em> 2011;<strong>3</strong>:745–8.</div>
+</div>
+</div>
 </div>
 <div id="appendix-appendix" class="section level1 unnumbered">
 <h1>Appendix</h1>
@@ -10688,11 +10682,6 @@ NO
 </table>
 <hr style="border:2px solid gray">
 </hr>
-<div id="refs" class="references csl-bib-body">
-<div id="ref-Woelfle2011-ss" class="csl-entry">
-<div class="csl-left-margin">1 </div><div class="csl-right-inline">Woelfle M, Olliaro P, Todd MH. Open science is a research accelerator. <em>Nature Chemistry</em> 2011;<strong>3</strong>:745–8.</div>
-</div>
-</div>
 </div>
 </div>
 </div>
