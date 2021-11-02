@@ -50,8 +50,8 @@ longtable: yes
 mainfont: Arial
 bibliography: Protocol.bib
 params:
-  date: '2021-10-29☻'
-  version: 0.0.1
+  date: '2021-11-02'
+  version: 1.0.0
 subtitle: 'Version: `r params$version`'
 link-citations: true
 csl: bmj.csl
@@ -221,7 +221,7 @@ These data sources include but are not limited to:
 - IBM MarketScan® Multi-state Medicaid (MDCD) 
 - IQVIA® Disease Analyzer (DA) Germany (IQVIA_GERMANY_DA) 
 - IQVIA® Disease Analyzer (DA) France (IQVIA_FRANCE_DA) 
-- IQVIA® Australia Australia Longitudinal Patient Data (IQVIA_AUSTRALIA_LPD) 
+- IQVIA® Australia Longitudinal Patient Data (IQVIA_AUSTRALIA_LPD) 
 - Japan Medical Data Center (JMDC) 
 - Optum® de-identified Electronic Health Record Dataset (OPTUM_EHR) 
 - Optum® de-identified Clinformatics® Data Mart Database – Date of Death (OPTUM_DOD) 
@@ -235,39 +235,37 @@ We will define all target and outcome cohorts in the Atlas environment ([https:/
 ### Target Cohort Definitions
 The target population is subjects who had COVID-19 disease. We will identify this in two ways:
 
- - COVID-19 Identified by the First of COVID-19 positive test or Diagnosis (without a negative test) 
- - COVID-19 Identified by COVID-19 positive test
+ - Cohort 562 - Earliest COVID-19 Event (positive test)
+ - Cohort 563 - Earliest COVID-19 Event (positive test OR diagnosis)
  
 ### Outcome Cohort Definitions
 For the purposes of this research, we use the outcomes outlined in the U.S. Food and Drug Administration (FDA) “Background Rates of Adverse Events of Special Interest for COVID-19 Vaccine Safety Monitoring” protocol [6]. This protocol includes Guillain-Barré syndrome, facial nerve (Bell’s) palsy, anaphylaxis, encephalomyelitis, narcolepsy, appendicitis, non-hemorrhagic stroke, hemorrhagic stroke, acute myocardial infarction, myocarditis and pericarditis, deep vein thrombosis, pulmonary embolism, disseminated intravascular coagulation, immune thrombocytopenia, febrile seizure, and transverse myelitis. We will also include additional safety outcomes/concerns that emerged such as thrombosis with thrombocytopenia syndrome (TTS), seizure, and narcolepsy. All phenotype definitions were based on the FDA protocol (when possible) with minor clinical context broadening (and minor code broadening as needed for example to accommodate SNOMED) to allow them to run on our wide range of data sources. 
 
 We consider the effect of clean windows to define the incidence of outcomes. A clean window is the prespecified time prior to the vaccination (reference master protocol [@COVID19AESIs]). We will use an outcome-specific clean window, within which an outcome is not considered incident. The clean window (as also defined in the FDA protocol), is 365 days for all outcomes except 30 days for anaphylaxis, 183 days for facial nerve palsy and encephalomyelitis.  
 
-- Cohort 411 - FDA AESI Pulmonary Embolism events with conceptset subsuming FDA source concepts
-- Cohort 405 - FDA AESI Hemorrhagic stroke IP events with conceptset subsuming FDA source concepts
-- Cohort 406 - FDA AESI non-hemorrhagic stroke IP events with conceptset subsuming FDA source concepts
-- Cohort 402 - FDA AESI Deep Vein Thrombosis (DVT) events with conceptset subsuming FDA source concepts
-- Cohort 386 - FDA AESI Appendicitis events
-- Cohort 385 - FDA AESI Disseminated intravascular coagulation events
-- Cohort 381 - FDA AESI Transverse myelitis events
-- Cohort 349 - FDA AESI Anaphylaxis events
-- Cohort 347 - FDA AESI Bells palsy events
-- Cohort 346 - FDA AESI Encephalomyelitis IP events
-- Cohort 345 - FDA AESI Narcolepsy events
-- Cohort 343 - FDA AESI Guillain Barre syndrome IP events
-- Cohort 340 - FDA AESI Acute myocardial infarction IP events
-- Cohort 339 - FDA AESI Myocarditis Pericarditis events
-- Cohort 335 - FDA AESI Immune thrombocytopenia (ITP) events
-- Cohort 547 - [TwT] Thrombosis (Narrow diagnosis) with Thrombocytopenia (narrow diagnosis or measurement) events
+- Cohort 411 - Pulmonary Embolism
+- Cohort 405 - Hemorrhagic Stroke
+- Cohort 406 - Non-Hemorrhagic Stroke
+- Cohort 402 - Deep Vein Thrombosis (DVT)
+- Cohort 386 - Appendicitis
+- Cohort 385 - Disseminated Intravascular Coagulation
+- Cohort 381 - Transverse Myelitis
+- Cohort 349 - Anaphylaxis
+- Cohort 347 - Bell's Palsy
+- Cohort 346 - Encephalomyelitis
+- Cohort 345 - Narcolepsy
+- Cohort 343 - Guillain Barre syndrome
+- Cohort 340 - Acute Myocardial Infarction
+- Cohort 339 - Myocarditis Pericarditis
+- Cohort 335 - Immune Thrombocytopenia (ITP)
+- Cohort 547 - Thrombosis with Thrombocytopenia (TWT)
 
 ## Population Subgroups
 In order to appropriately use incidence characterization among a target population (e.g., COVID-19 subjects) as context for interpreting an observed rate of adverse events in a given population (e.g., a population exposed to COVID-19 vaccines), it is important to consider the extent to which the target population is comparable to the exposed individuals.  
 
-One aspect of the target population is the population subgroup. We will consider the following age and sex subgroups independently and jointly. 
+One aspect of the target population is the population subgroup. We will consider the following age and sex subgroups independently and jointly. This work will not perform subgroup analysis on patients who have conditions that make them high risk for severe COVID-19 disease. 
 
 - Age groups 
-  - High Risk of Severe COVID-19: 
-    - 18-64  
   - Pediatric Age Groups: 
     - 0-4 
     - 5-11 
@@ -286,19 +284,22 @@ One aspect of the target population is the population subgroup. We will consider
     - Female 
 
 ## Time-at-risk (TAR)
-For AESI rates estimated for a general population, TAR is not possible to take into account, since there is no obvious index point from which TAR would be counted. Consequently AESI rates estimated over moderately long time intervals are for statistical stability is generally an appropriate approach to give background rates. When trying to understand AESI in COVID-19 patients, in contrast, the onset of COVID-19 provides a natural index point, which may be directly relevant if the AESI is associated with COVID-19. For some outcomes, there is a known pathophysiological relationship between them and COVID-19 that can justify a choice of time at risk. For other outcomes, less is known. In estimating baseline incidence rates, there is a tension between using long time-at-risk windows to maximize the sample size and provide rate stability,  and using windows that match the planned windows in the vaccinated patients. Using windows that match the planned windows in vaccinated individuals would be relevant mainly for conditions where it may be possible that both COVID-19 and vaccination affect the outcome with similar TAR, which may be assumed to be the case mainly if they act through related or similar mechanisms. In other situations, the more relevant comparison or context may be stable long-term rates. AESI rates on COVID-19 individuals, for different TARs, will be particularly important to understand especially when AESIs are assessed in vaccinated individuals, where information on prior COVID-19 and its timing are available. 
+For AESI rates estimated for a general population, TAR is not possible to consider, since there is no obvious index point from which TAR would be counted. Consequently, AESI rates estimated over moderately long-time intervals are for statistical stability is generally an appropriate approach to give background rates. When trying to understand AESI in COVID-19 patients, in contrast, the onset of COVID-19 provides a natural index point, which may be directly relevant if the AESI is associated with COVID-19. For some outcomes, there is a known pathophysiological relationship between them and COVID-19 that can justify a choice of time at risk. For other outcomes, less is known. In estimating baseline incidence rates, there is a tension between using long time-at-risk windows to maximize the sample size and provide rate stability and using windows that match the planned windows in the vaccinated patients. Using windows that match the planned windows in vaccinated individuals would be relevant mainly for conditions where it may be possible that both COVID-19 and vaccination affect the outcome with similar TAR, which may be assumed to be the case mainly if they act through related or similar mechanisms. In other situations, the more relevant comparison or context may be stable long-term rates. AESI rates on COVID-19 individuals, for different TARs, will be particularly important to understand especially when AESIs are assessed in vaccinated individuals, where information on prior COVID-19 and its timing are available. 
 
 We will include six TARs, relative to the COVID-19 index date, for this work. 
 
-- Days 1 – 2 days (to capture acute events) 
-- Days 1 – 14 days (to align with COVID-19 symptoms appearing [@COVID19Symptoms]) 
-- Days 1 – 21 days (this will likely be the target TAR post vaccines) 
-- Days 1 – 28 days 
+- Days 0 – 2 (to capture accute events)
+- Days 1 – 7 days (One Week) 
+- Days 1 – 14 days (Two Weeks - to align with COVID-19 symptoms appearing [@COVID19Symptoms]) 
+- Days 1 – 21 days (Three Weeks - this will likely be the target TAR post vaccines) 
+- Days 1 – 28 days (Four Weeks)
 - Days 1 – 90 days 
 - Days 1 – 365 days 
 
+For this work we are focused on the acute events of COVID-19, we are not estimating the post acute COVID-19 effects.
+
 ## Incidence rate estimation outputs
-The same cohort may address several questions, so they are grouped by cohort below. For each cohort, we compute the following: 
+The following will performed for every subgroup and TAR combination:
 
 - Absolute number of outcomes 
 - Absolute number of outcomes prior to TAR start date 
@@ -311,8 +312,6 @@ The same cohort may address several questions, so they are grouped by cohort bel
 In the above outcome counts, multiple data elements (e.g., multiple diagnosis codes) within a clean window count as one outcome. Patients will contribute time-at-risk from the index date (date of COVID-19 diagnosis or positive results) until the earliest of 365 days after the index, their observation period end date, or the start date of the outcome event. Persons with prior outcome events will not begin to contribute time-at-risk until the clean window requirement is satisfied.
 
 We will generate descriptive statistics for all these cohorts using the OHDSI R tool called Cohort Diagnostics.  Additionally, incidence rates will be calculated via an R package.  
-
-
 
 # Strengths and Limitations
 
@@ -332,26 +331,26 @@ We will generate descriptive statistics for all these cohorts using the OHDSI R 
 - Causality between drug exposure and any given event cannot be drawn for individual cases. 
 
 # Protection of Human Subjects
-This work does not involve human subjects research.The project does, however, use de-identified human data collected during routine healthcare provision. Confidentiality of subject records will be maintained always. All study reports will contain aggregate data only and will not identify individual subjects or physicians. At no time during the study will the sponsor receive subject identifying information except when it is required by regulations in case of reporting adverse events.
+This work does not involve human subjects research. The project does, however, use de-identified human data collected during routine healthcare provision. Confidentiality of subject records will be maintained always. All study reports will contain aggregate data only and will not identify individual subjects or physicians. At no time during the study will the sponsor receive subject identifying information except when it is required by regulations in case of reporting adverse events.
 
 All data partners executing this study within their data sources will have received institutional review board (IRB) approval or waiver for participation in accordance to their institutional governance prior to execution. This study will be executed across a federated and distributed data network, where analysis code is sent to participating data partners and only aggregate summary statistics are returned, with no sharing of patient-level data between organizations.
 
 # Management and Reporting of Adverse Events and Adverse Reactions
 
-This study uses coded data that already exist in electronic databases. In these types of databases, it is not possible to link (i.e., identify a potential causal association between) a particular product and medical event for any specific individual.Thus, the minimum criteria for reporting an adverse event (i.e., identifiable patient, identifiable reporter, a suspect product and event) are not available and adverse events are not reportable as individual adverse event reports. The study results will be assessed for medically important findings.
+This study uses coded data that already exist in electronic databases. In these types of databases, it is not possible to link (i.e., identify a potential causal association between) a particular product and medical event for any specific individual. Thus, the minimum criteria for reporting an adverse event (i.e., identifiable patient, identifiable reporter, a suspect product and event) are not available and adverse events are not reportable as individual adverse event reports. The study results will be assessed for medically important findings.
 
 # Plans for Disseminating and Communicating Study Results
 
 Open science aims to make scientific research, including its data process and software, and its dissemination, through publication and presentation, accessible to all levels of an inquiring society, amateur or professional [@Woelfle2011-ss].
 Open science delivers reproducible, transparent and reliable evidence.
-All aspects of study (except private patient data) will be open and we will actively encourage other interested researchers, clinicians and patients to participate.
+All aspects of study (except private patient data) will be open, and we will actively encourage other interested researchers, clinicians and patients to participate.
 
 ## Transparent and re-usable research tools
 
 The protocol and all source code will be available here prior to execution across the federated and distributed network.
 [https://github.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate](https://github.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate) 
 
-## Continous sharing of results
+## Continuous sharing of results
 
 We will store and openly communicate all of these results as they become available using a user-friendly web-based app.
 
@@ -370,7 +369,24 @@ We believe in sharing our findings that will guide clinical care with the genera
 # (APPENDIX) Appendix {-}
 
 # Target Cohort Definitions
-TBD
+
+```{r covid19Lab-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort562-COVID19_lab.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohort <- RJSONIO::fromJSON(baseCohortJson)
+
+baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
+
+printCohortDefinitionFromNameAndJson(name = "Cohort 562 - Earliest COVID-19 Event (postive test)",json = baseCohortJson)
+```
+
+```{r covid19LabDx-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort563-COVID19_labDx.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohort <- RJSONIO::fromJSON(baseCohortJson)
+
+baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
+
+printCohortDefinitionFromNameAndJson(name = "Cohort 563 - Earliest COVID-19 Event (postive test OR diagnosis)",json = baseCohortJson)
+```
 
 # Outcome Cohort Definitions
 
@@ -380,7 +396,7 @@ baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
 
-printCohortDefinitionFromNameAndJson(name = "Cohort 411 - FDA AESI Pulmonary Embolism events with conceptset subsuming FDA source concepts",json = baseCohortJson)
+printCohortDefinitionFromNameAndJson(name = "Cohort 411 - Pulmonary Embolism",json = baseCohortJson)
 ```
 
 ```{r hemorrhagicStroke-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
@@ -389,7 +405,7 @@ baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
 
-printCohortDefinitionFromNameAndJson(name = "Cohort 405 - -FDA AESI Hemorrhagic stroke IP events with conceptset subsuming FDA source concepts",json = baseCohortJson)
+printCohortDefinitionFromNameAndJson(name = "Cohort 405 - Hemorrhagic stroke",json = baseCohortJson)
 ```
 
 
@@ -399,7 +415,7 @@ baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
 
-printCohortDefinitionFromNameAndJson(name = "Cohort 406 - FDA AESI non-hemorrhagic stroke IP events with conceptset subsuming FDA source concepts",json = baseCohortJson)
+printCohortDefinitionFromNameAndJson(name = "Cohort 406 - Non-Hemorrhagic Stroke",json = baseCohortJson)
 ```
 
 ```{r deepVein-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
@@ -408,7 +424,7 @@ baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
 
-printCohortDefinitionFromNameAndJson(name = "Cohort 402 - FDA AESI Deep Vein Thrombosis (DVT) events with conceptset subsuming FDA source concepts",json = baseCohortJson)
+printCohortDefinitionFromNameAndJson(name = "Cohort 402 - Deep Vein Thrombosis (DVT)",json = baseCohortJson)
 ```
 
 ```{r appendicitis-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
@@ -417,7 +433,7 @@ baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
 
-printCohortDefinitionFromNameAndJson(name = "Cohort 386 - FDA AESI Appendicitis events",json = baseCohortJson)
+printCohortDefinitionFromNameAndJson(name = "Cohort 386 - Appendicitis",json = baseCohortJson)
 ```
 
 ```{r disseminatedIntravascularCoagulation-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
@@ -426,7 +442,7 @@ baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
 
-printCohortDefinitionFromNameAndJson(name = "Cohort 385 - FDA AESI Disseminated intravascular coagulation events",json = baseCohortJson)
+printCohortDefinitionFromNameAndJson(name = "Cohort 385 - Disseminated Intravascular Coagulation",json = baseCohortJson)
 ```
 
 ```{r transverseMyelitis-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
@@ -435,7 +451,7 @@ baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
 
-printCohortDefinitionFromNameAndJson(name = "Cohort 381 - FDA AESI Transverse myelitis events",json = baseCohortJson)
+printCohortDefinitionFromNameAndJson(name = "Cohort 381 - Transverse Myelitis",json = baseCohortJson)
 ```
 
 ```{r anaphylaxis-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
@@ -444,7 +460,7 @@ baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
 
-printCohortDefinitionFromNameAndJson(name = "Cohort 349 - FDA AESI Anaphylaxis events",json = baseCohortJson)
+printCohortDefinitionFromNameAndJson(name = "Cohort 349 - Anaphylaxis",json = baseCohortJson)
 ```
 
 ```{r bellsPalsy-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
@@ -453,7 +469,7 @@ baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
 
-printCohortDefinitionFromNameAndJson(name = "Cohort 347 - FDA AESI Bells palsy events",json = baseCohortJson)
+printCohortDefinitionFromNameAndJson(name = "Cohort 347 - Bell's Palsy Events",json = baseCohortJson)
 ```
 
 ```{r encephalomyelitis-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
@@ -462,7 +478,7 @@ baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
 
-printCohortDefinitionFromNameAndJson(name = "Cohort 346 - FDA AESI Encephalomyelitis IP events",json = baseCohortJson)
+printCohortDefinitionFromNameAndJson(name = "Cohort 346 - Encephalomyelitis",json = baseCohortJson)
 ```
 
 ```{r narcolepsy-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
@@ -471,7 +487,7 @@ baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
 
-printCohortDefinitionFromNameAndJson(name = "Cohort 345 - FDA AESI Narcolepsy events",json = baseCohortJson)
+printCohortDefinitionFromNameAndJson(name = "Cohort 345 - Narcolepsy",json = baseCohortJson)
 ```
 
 ```{r guillainBarre-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
@@ -480,7 +496,7 @@ baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
 
-printCohortDefinitionFromNameAndJson(name = "Cohort 343 - FDA AESI Guillain Barre syndrome IP events",json = baseCohortJson)
+printCohortDefinitionFromNameAndJson(name = "Cohort 343 - Guillain Barre Syndrome",json = baseCohortJson)
 ```
 
 ```{r acuteMyocardialInfarction-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
@@ -489,7 +505,7 @@ baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
 
-printCohortDefinitionFromNameAndJson(name = "Cohort 340 - FDA AESI Acute myocardial infarction IP events",json = baseCohortJson)
+printCohortDefinitionFromNameAndJson(name = "Cohort 340 - Acute Myocardial Infarction",json = baseCohortJson)
 ```
 
 
@@ -499,7 +515,7 @@ baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
 
-printCohortDefinitionFromNameAndJson(name = "Cohort 339 - FDA AESI Myocarditis Pericarditis events",json = baseCohortJson)
+printCohortDefinitionFromNameAndJson(name = "Cohort 339 - Myocarditis Pericarditis",json = baseCohortJson)
 ```
 
 ```{r immuneThrombocytopenia-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
@@ -508,7 +524,7 @@ baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
 
-printCohortDefinitionFromNameAndJson(name = "Cohort 335 - FDA AESI Immune thrombocytopenia (ITP) events",json = baseCohortJson)
+printCohortDefinitionFromNameAndJson(name = "Cohort 335 - Immune thrombocytopenia (ITP)",json = baseCohortJson)
 ```
 
 
@@ -518,5 +534,5 @@ baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
 
-printCohortDefinitionFromNameAndJson(name = "Cohort 547 - TwT Thrombosis (Narrow diagnosis) with Thrombocytopenia (narrow diagnosis or measurement) events",json = baseCohortJson)
+printCohortDefinitionFromNameAndJson(name = "Cohort 547 - Thrombosis with Thrombocytopenia (TWT)",json = baseCohortJson)
 ```
