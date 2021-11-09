@@ -1,0 +1,5096 @@
+{
+  "ExpressionLimit": {"Type": "All"},
+  "CollapseSettings": {
+    "CollapseType": "ERA",
+    "EraPad": 0
+  },
+  "CensorWindow": {},
+  "ConceptSets": [
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 37397537,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "718196002",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Beta thalassemia X-linked thrombocytopenia syndrome",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 432870,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "302215000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombocytopenic disorder",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        }
+      ]},
+      "name": "Thrombocytopenia (broad)",
+      "id": 1
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 3007461,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "26515-7",
+            "VOCABULARY_ID": "LOINC",
+            "CONCEPT_NAME": "Platelets [#/volume] in Blood",
+            "DOMAIN_ID": "Measurement",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Lab Test",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 3031586,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "49497-1",
+            "VOCABULARY_ID": "LOINC",
+            "CONCEPT_NAME": "Platelets [#/volume] in Blood by Estimate",
+            "DOMAIN_ID": "Measurement",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Lab Test",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 3024929,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "777-3",
+            "VOCABULARY_ID": "LOINC",
+            "CONCEPT_NAME": "Platelets [#/volume] in Blood by Automated count",
+            "DOMAIN_ID": "Measurement",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Lab Test",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 3039827,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "40574-6",
+            "VOCABULARY_ID": "LOINC",
+            "CONCEPT_NAME": "Platelets [#/volume] in Body fluid by Automated count",
+            "DOMAIN_ID": "Measurement",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Lab Test",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 3024386,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "776-5",
+            "VOCABULARY_ID": "LOINC",
+            "CONCEPT_NAME": "Platelet mean volume [Entitic volume] in Blood by Rees-Ecker",
+            "DOMAIN_ID": "Measurement",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Lab Test",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4267147,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "61928009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Platelet count",
+            "DOMAIN_ID": "Measurement",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Procedure",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 37393863,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "1022651000000100",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Platelet count",
+            "DOMAIN_ID": "Measurement",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Observable Entity",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        }
+      ]},
+      "name": "Platelet measurement",
+      "id": 2
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 44782752,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "135001000119100",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute deep venous thrombosis of internal jugular vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 435565,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "195437003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Embolism and thrombosis of the vena cava",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 40481089,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "444816006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Embolism from thrombosis of vein of lower extremity",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 193512,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "195438008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Embolism and thrombosis of the renal vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4133004,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "128053003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Deep venous thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4149782,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "309735004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of vein of lower limb",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 36712971,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "15760351000119105",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Chronic deep venous thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 435887,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "49956009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Antepartum deep vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4179911,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "297156001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Axillary vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 435031,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "200237000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Postnatal deep vein thrombosis - delivered with postnatal complication",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4062264,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "200238005",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Postnatal deep vein thrombosis with postnatal complication",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 438820,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "56272000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Postpartum deep phlebothrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 44782762,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "132611000119104",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute thrombosis of subclavian vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 762049,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "286431000119103",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute thrombosis of right subclavian vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 762048,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "286421000119101",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute thrombosis of left subclavian vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 46271900,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "710167004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Recurrent deep vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4317289,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "95446005",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of mesenteric vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4124856,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "234041004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Inferior mesenteric vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4318407,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "95447001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombophlebitis of mesenteric vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4055089,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "197001004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Superior mesenteric vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 45757410,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "133421000119101",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute thrombosis of mesenteric vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 45757409,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "133411000119108",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Chronic thrombosis of mesenteric vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4203836,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "438647008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of subclavian vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 44782759,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "132551000119104",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Chronic thrombosis of subclavian vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4205652,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "438483005",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombophlebitis of subclavian vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 762046,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "286381000119105",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Chronic thrombosis of right subclavian vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 762051,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "286451000119109",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Chronic thrombosis of left subclavian vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 44811347,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "864191000000104",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of internal jugular vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4033521,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "14534009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Splenic vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4089917,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "280966008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Phlegmasia alba dolens - obstetric",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 45773536,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "703277001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Deep venous thrombosis of femoropopliteal vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4203618,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "52496006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombophlebitis of femoropopliteal vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 762047,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "286411000119108",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute bilateral thrombosis of subclavian veins",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 36712892,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "143561000119108",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute thrombosis of splenic vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4269051,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "62583006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Puerperal phlegmasia alba dolens",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4096099,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "25114006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Phlebitis of deep veins of lower extremity",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        }
+      ]},
+      "name": "Deep Vein Thrombosis (narrow)",
+      "id": 31
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 320741,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "64156001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombophlebitis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4096099,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "25114006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Phlebitis of deep veins of lower extremity",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 44782752,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "135001000119100",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute deep venous thrombosis of internal jugular vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 44811347,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "864191000000104",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of internal jugular vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 45757409,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "133411000119108",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Chronic thrombosis of mesenteric vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4203836,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "438647008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of subclavian vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4205652,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "438483005",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombophlebitis of subclavian vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4124856,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "234041004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Inferior mesenteric vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4203618,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "52496006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombophlebitis of femoropopliteal vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4318407,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "95447001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombophlebitis of mesenteric vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 762047,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "286411000119108",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute bilateral thrombosis of subclavian veins",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 44782762,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "132611000119104",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute thrombosis of subclavian vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 435565,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "195437003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Embolism and thrombosis of the vena cava",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 45757410,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "133421000119101",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute thrombosis of mesenteric vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4033521,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "14534009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Splenic vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 762049,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "286431000119103",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute thrombosis of right subclavian vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4055089,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "197001004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Superior mesenteric vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 440738,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "195404000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Phlebitis of the femoral vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 444247,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "111293003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Venous thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 40481089,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "444816006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Embolism from thrombosis of vein of lower extremity",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 193512,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "195438008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Embolism and thrombosis of the renal vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 45773536,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "703277001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Deep venous thrombosis of femoropopliteal vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 36712892,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "143561000119108",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute thrombosis of splenic vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4234997,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "90507008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Disorder of vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 439838,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "31268005",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombophlebitis migrans",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4133004,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "128053003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Deep venous thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 44782759,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "132551000119104",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Chronic thrombosis of subclavian vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 444097,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "46253008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombophlebitis of lower extremities",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4327889,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "429098002",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thromboembolism of vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4149782,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "309735004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of vein of lower limb",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 762048,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "286421000119101",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute thrombosis of left subclavian vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4317289,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "95446005",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of mesenteric vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 36712971,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "15760351000119105",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Chronic deep venous thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 435887,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "49956009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Antepartum deep vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 438820,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "56272000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Postpartum deep phlebothrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4179911,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "297156001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Axillary vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4089917,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "280966008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Phlegmasia alba dolens - obstetric",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        }
+      ]},
+      "name": "Deep Vein Thrombosis (broad)",
+      "id": 34
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 254662,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "64662007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Pulmonary infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 36713113,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "328511000119109",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Saddle embolus of pulmonary artery",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 440417,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "59282003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Pulmonary embolism",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 435616,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "17263003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Amniotic fluid embolism",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 435887,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "49956009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Antepartum deep vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 196715,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "82385007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Budd-Chiari syndrome",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4062269,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "200259003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Cerebral venous thrombosis in pregnancy",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 442055,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "200286003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Obstetric air pulmonary embolism",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 433832,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "200299000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Obstetric blood-clot pulmonary embolism",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 435026,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "200284000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Obstetric pulmonary embolism",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 440477,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "267284008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Obstetric pyemic and septic pulmonary embolism",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 318137,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "192753009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Phlebitis and thrombophlebitis of intracranial sinuses",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 199837,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "17920008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Portal vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 438820,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "56272000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Postpartum deep phlebothrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4235812,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "439731006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Septic thrombophlebitis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 195294,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "75955007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosed hemorrhoids",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4187790,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "46085004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of retinal vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 444247,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "111293003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Venous thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 44782732,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "133971000119108",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Chronic pulmonary embolism",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 40479606,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "441557008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Septic pulmonary embolism",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4240832,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "58123006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Failed attempted termination of pregnancy with pulmonary embolism",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4236271,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "438773007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Recurrent pulmonary embolism",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        }
+      ]},
+      "name": "Pulmonary Embolism",
+      "id": 35
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 443454,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "432504007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Cerebral infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 40479572,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "441526008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Infarct of cerebrum due to iatrogenic cerebrovascular accident",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4046360,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "230698000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Lacunar infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 372435,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "230769007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Periventricular leukomalacia",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 377254,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "70936005",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Multi-infarct dementia, uncomplicated",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 379778,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "56267009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Multi-infarct dementia",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 443790,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "25772007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Multi-infarct dementia with delusions",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 443864,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "14070001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Multi-infarct dementia with depression",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 444091,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "10349009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Multi-infarct dementia with delirium",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4046089,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "230285003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Vascular dementia of acute onset",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4046090,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "230287006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Mixed cortical and subcortical vascular dementia",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4129534,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "237701005",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Pituitary apoplexy",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        }
+      ]},
+      "name": "Cerebral infarction",
+      "id": 40
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 439847,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "1386000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Intracranial hemorrhage",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 432923,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "21454007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Subarachnoid hemorrhage",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 376713,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "274100004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Cerebral hemorrhage",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4148906,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "270907008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Spontaneous subarachnoid hemorrhage",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4144154,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "425957003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Non-traumatic intracerebral ventricular hemorrhage",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4111709,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "195176009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Non-traumatic subdural hemorrhage",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 42535426,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "291581000119109",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute nontraumatic subdural hemorrhage",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 43530728,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "291591000119107",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Subacute non-traumatic intracranial subdural hemorrhage",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4174299,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "276647007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Perinatal intracranial hemorrhage",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 36716544,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "722581000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Fetal or neonatal non-traumatic intraventricular hemorrhage",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4345688,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "240313004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Intracerebral hemorrhage in fetus or newborn",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 43530727,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "291571000119106",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Spontaneous cerebral hemorrhage",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4108952,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "195155004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Subarachnoid hemorrhage from carotid siphon and bifurcation",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4111708,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "195160000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Subarachnoid hemorrhage from vertebral artery",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 35609033,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "1078001000000105",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Haemorrhagic stroke",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        }
+      ]},
+      "name": "Hemorrhagic stroke",
+      "id": 41
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4329847,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "22298006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Myocardial infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4108680,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "194868001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of atrium, auricular appendage, and ventricle due to and following acute myocardial infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4108678,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "194862000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Hemopericardium due to and following acute myocardial infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 438172,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "194863005",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Atrial septal defect due to and following acute myocardial infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4124687,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "233847009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Cardiac rupture due to and following acute myocardial infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 45766212,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "703326006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Mitral valve regurgitation due to and following acute myocardial infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 37109910,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "723858002",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Ventricular aneurysm due to and following acute myocardial infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 37109911,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "723859005",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Pulmonary embolism due to and following acute myocardial infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 37109912,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "723860000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Arrhythmia due to and following acute myocardial infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 314666,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "1755008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Old myocardial infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        }
+      ]},
+      "name": "Myocardial Infarction and complication",
+      "id": 43
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4195665,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "312607004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Gastrointestinal tract vascular insufficiency",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4148299,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "30588004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Ischemic colitis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4173167,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "276500007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Mesenteric embolus",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4317289,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "95446005",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of mesenteric vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4319280,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "22323009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute bowel infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4144032,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "307420006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Mesenteric thrombus and/or embolus",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 45757410,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "133421000119101",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute thrombosis of mesenteric vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 45757409,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "133411000119108",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Chronic thrombosis of mesenteric vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 44811741,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "906201000000100",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute ischaemia of large intestine",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 44811740,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "906191000000102",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute ischaemia of small intestine",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 37117790,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "734041006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Insufficiency of mesenteric artery",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 37016198,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "14720231000119109",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Epiploic appendagitis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 35622081,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "763398006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Nongangrenous ischemic colitis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 35622080,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "763397001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Gangrenous ischemic colitis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4345926,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "241154007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Abdominal angina",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4342767,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "235845003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Transient ischemic colitis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4341648,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "235851008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Hemorrhagic infarction of intestine",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4341646,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "235842000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Occlusive mesenteric ischemia",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4340939,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "235843005",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Non-occlusive mesenteric ischemia",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4340378,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "235852001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Transmural infarction of intestine",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4340375,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "235844004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Focal segmental ischemia of small intestine",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4318537,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "95538007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Large bowel gangrene",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4318407,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "95447001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombophlebitis of mesenteric vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4240850,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "5820008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute ischemic enterocolitis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4239942,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "57658009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Embolic mesenteric infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4237654,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "90891007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Ischemic enterocolitis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4215949,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "72150009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Nonocclusive intestinal infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4214720,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "80475003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombotic mesenteric infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4192856,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "75700000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute ischemic colitis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4188336,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "46882000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Chronic ischemic enterocolitis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4174014,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "297140006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Inferior mesenteric artery embolus",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4149013,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "3558002",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Mesenteric infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4148257,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "266520007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Chronic gastrointestinal tract vascular insufficiency",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4148256,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "266519001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute GIT vascular insufficiency",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4124856,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "234041004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Inferior mesenteric vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4055089,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "197001004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Superior mesenteric vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4055025,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "196999001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Superior mesenteric artery embolus",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4045408,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "13026000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Ischemic stricture of intestine",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 201894,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "91489000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute vascular insufficiency of intestine",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 192673,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "82196007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Vascular insufficiency of intestine",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        }
+      ]},
+      "name": "Intestinal infarction",
+      "id": 44
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 432870,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "302215000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombocytopenic disorder",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 37397537,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "718196002",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Beta thalassemia X-linked thrombocytopenia syndrome",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 36713112,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "328301000119102",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Pancytopenia due to antineoplastic chemotherapy",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 40321716,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "154826009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Secondary thrombocytopenia",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 435076,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "23205009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Transient neonatal thrombocytopenia",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4239484,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "5876000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acquired pancytopenia",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 137829,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "306058006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Aplastic anemia",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4133981,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "128090002",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Benign gestational thrombocytopenia",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 436956,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "75331009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Evans syndrome",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4316372,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "95605009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "HELLP syndrome",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 42536958,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "736024007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Pancytopenia caused by medication",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4247776,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "73162004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Posttransfusion purpura",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 440982,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "36070007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Wiskott-Aldrich syndrome",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 42537688,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "737221003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Congenital thrombocytopenia",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 437242,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "267535004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Congenital thrombocytopenic purpura",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4221109,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "82835005",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Neonatal thrombocytopenia",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 432881,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "127034005",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Pancytopenia",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4119134,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "302873008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombocytopenic purpura",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        }
+      ]},
+      "name": "Thrombocytopenia (narrow)",
+      "id": 47
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4223098,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "83940008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Hepatic artery thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4301208,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "38739001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Hepatic vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4111853,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "195343000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Embolism and thrombosis of hepatic artery",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 196715,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "82385007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Budd-Chiari syndrome",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4277276,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "65617004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Veno-occlusive disease of the liver",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        }
+      ]},
+      "name": "Intraabdominal thrombosis - hepatic thrombosis ",
+      "id": 49
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 199837,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "17920008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Portal vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 37111372,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "726099002",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Visceral venous thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4223670,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "84272007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of abdominal aorta",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 196715,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "82385007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Budd-Chiari syndrome",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 36717492,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "721663007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute occlusion of mesenteric vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 45757410,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "133421000119101",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute thrombosis of mesenteric vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 45757409,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "133411000119108",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Chronic thrombosis of mesenteric vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4124856,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "234041004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Inferior mesenteric vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4173167,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "276500007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Mesenteric embolus",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4144032,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "307420006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Mesenteric thrombus and/or embolus",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4055089,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "197001004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Superior mesenteric vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4318407,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "95447001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombophlebitis of mesenteric vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4317289,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "95446005",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of mesenteric vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        }
+      ]},
+      "name": "Portal Vein thrombosis (include visceral, mesenteric)",
+      "id": 50
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 36712891,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "143551000119106",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Chronic thrombosis of splenic vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4033521,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "14534009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Splenic vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 35615064,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "15972701000119106",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of splenic artery",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 36712892,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "143561000119108",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Acute thrombosis of splenic vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4044745,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "22996003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Splenic infarction",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4048527,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "123617004",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Fleckmilz",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        }
+      ]},
+      "name": "Intraabdominal- splenic infacrtion and thrombosis ",
+      "id": 52
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4111714,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "195230003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Cerebral infarction due to cerebral venous thrombosis, non-pyogenic",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4179912,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "297157005",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Intracranial venous thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4061473,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "200258006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Obstetric cerebral venous thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4273550,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "63795001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of intracranial venous sinus of pregnancy AND/OR puerperium",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 45765438,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "702374000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Neonatal noninfectious cerebral venous sinus thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 36717594,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "722930000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Neonatal thrombosis of cerebral venous sinus",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4223544,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "84216001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Cerebral venous thrombosis of pregnancy AND/OR puerperium",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        }
+      ]},
+      "name": "cerebral venous sinus thrombosis (CVST narrow)",
+      "id": 55
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 318137,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "192753009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Phlebitis and thrombophlebitis of intracranial sinuses",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4111714,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "195230003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Cerebral infarction due to cerebral venous thrombosis, non-pyogenic",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4045733,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "230689003",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Cerebrovascular and spinal vascular disorders",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4179912,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "297157005",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Intracranial venous thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4061473,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "200258006",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Obstetric cerebral venous thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4273550,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "63795001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of intracranial venous sinus of pregnancy AND/OR puerperium",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 45765438,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "702374000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Neonatal noninfectious cerebral venous sinus thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 36717594,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "722930000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Neonatal thrombosis of cerebral venous sinus",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4223544,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "84216001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Cerebral venous thrombosis of pregnancy AND/OR puerperium",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        }
+      ]},
+      "name": "cerebral venous sinus thrombosis (CVST broad)",
+      "id": 56
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4049318,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "15842009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of renal vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4223670,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "84272007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of abdominal aorta",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 444264,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "82453008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of iliac artery",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4207615,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "312584000",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of vein of trunk",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4273526,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "64775002",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Vertebral artery thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 196715,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "82385007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Budd-Chiari syndrome",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 199837,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "17920008",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Portal vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4317289,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "95446005",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosis of mesenteric vein",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 195294,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "75955007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Thrombosed hemorrhoids",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4033521,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "14534009",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Splenic vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4301208,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "38739001",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Hepatic vein thrombosis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": true,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 4092406,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "24805007",
+            "VOCABULARY_ID": "SNOMED",
+            "CONCEPT_NAME": "Portal thrombophlebitis",
+            "DOMAIN_ID": "Condition",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Clinical Finding",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        }
+      ]},
+      "name": "other Intraabdominal thrombosis",
+      "id": 57
+    }
+  ],
+  "EndStrategy": {"DateOffset": {
+    "DateField": "StartDate",
+    "Offset": 1
+  }},
+  "cdmVersionRange": ">=5.0.0",
+  "CensoringCriteria": [],
+  "QualifiedLimit": {"Type": "All"},
+  "InclusionRules": [
+    {
+      "expression": {
+        "CriteriaList": [],
+        "Type": "ALL",
+        "DemographicCriteriaList": [],
+        "Groups": [
+          {
+            "CriteriaList": [
+              {
+                "RestrictVisit": false,
+                "StartWindow": {
+                  "UseEventEnd": false,
+                  "Start": {
+                    "Days": 7,
+                    "Coeff": -1
+                  },
+                  "End": {
+                    "Days": 7,
+                    "Coeff": 1
+                  },
+                  "UseIndexEnd": false
+                },
+                "IgnoreObservationPeriod": false,
+                "Criteria": {"Measurement": {
+                  "MeasurementTypeExclude": false,
+                  "CodesetId": 2,
+                  "ValueAsNumber": {
+                    "Op": "bt",
+                    "Extent": 150,
+                    "Value": 10
+                  },
+                  "Unit": [
+                    {
+                      "INVALID_REASON_CAPTION": "Unknown",
+                      "CONCEPT_ID": 8686,
+                      "STANDARD_CONCEPT": null,
+                      "CONCEPT_CODE": "mm3",
+                      "VOCABULARY_ID": "UCUM",
+                      "CONCEPT_NAME": "cubic millimeter",
+                      "DOMAIN_ID": "Unit",
+                      "STANDARD_CONCEPT_CAPTION": "Unknown",
+                      "CONCEPT_CLASS_ID": null,
+                      "INVALID_REASON": null
+                    },
+                    {
+                      "INVALID_REASON_CAPTION": "Unknown",
+                      "CONCEPT_ID": 8785,
+                      "STANDARD_CONCEPT": null,
+                      "CONCEPT_CODE": "/mm3",
+                      "VOCABULARY_ID": "UCUM",
+                      "CONCEPT_NAME": "per cubic millimeter",
+                      "DOMAIN_ID": "Unit",
+                      "STANDARD_CONCEPT_CAPTION": "Unknown",
+                      "CONCEPT_CLASS_ID": null,
+                      "INVALID_REASON": null
+                    },
+                    {
+                      "INVALID_REASON_CAPTION": "Unknown",
+                      "CONCEPT_ID": 8848,
+                      "STANDARD_CONCEPT": null,
+                      "CONCEPT_CODE": "10*3/uL",
+                      "VOCABULARY_ID": "UCUM",
+                      "CONCEPT_NAME": "thousand per microliter",
+                      "DOMAIN_ID": "Unit",
+                      "STANDARD_CONCEPT_CAPTION": "Unknown",
+                      "CONCEPT_CLASS_ID": null,
+                      "INVALID_REASON": null
+                    },
+                    {
+                      "INVALID_REASON_CAPTION": "Unknown",
+                      "CONCEPT_ID": 8961,
+                      "STANDARD_CONCEPT": null,
+                      "CONCEPT_CODE": "10*3/mm3",
+                      "VOCABULARY_ID": "UCUM",
+                      "CONCEPT_NAME": "thousand per cubic millimeter",
+                      "DOMAIN_ID": "Unit",
+                      "STANDARD_CONCEPT_CAPTION": "Unknown",
+                      "CONCEPT_CLASS_ID": null,
+                      "INVALID_REASON": null
+                    },
+                    {
+                      "INVALID_REASON_CAPTION": "Unknown",
+                      "CONCEPT_ID": 9444,
+                      "STANDARD_CONCEPT": null,
+                      "CONCEPT_CODE": "10*9/L",
+                      "VOCABULARY_ID": "UCUM",
+                      "CONCEPT_NAME": "billion per liter",
+                      "DOMAIN_ID": "Unit",
+                      "STANDARD_CONCEPT_CAPTION": "Unknown",
+                      "CONCEPT_CLASS_ID": null,
+                      "INVALID_REASON": null
+                    },
+                    {
+                      "INVALID_REASON_CAPTION": "Unknown",
+                      "CONCEPT_ID": 9254,
+                      "STANDARD_CONCEPT": null,
+                      "CONCEPT_CODE": "/L",
+                      "VOCABULARY_ID": "UCUM",
+                      "CONCEPT_NAME": "per liter",
+                      "DOMAIN_ID": "Unit",
+                      "STANDARD_CONCEPT_CAPTION": "Unknown",
+                      "CONCEPT_CLASS_ID": null,
+                      "INVALID_REASON": null
+                    },
+                    {
+                      "INVALID_REASON_CAPTION": "Unknown",
+                      "CONCEPT_ID": 8816,
+                      "STANDARD_CONCEPT": null,
+                      "CONCEPT_CODE": "10*6/mL",
+                      "VOCABULARY_ID": "UCUM",
+                      "CONCEPT_NAME": "million per milliliter",
+                      "DOMAIN_ID": "Unit",
+                      "STANDARD_CONCEPT_CAPTION": "Unknown",
+                      "CONCEPT_CLASS_ID": null,
+                      "INVALID_REASON": null
+                    }
+                  ]
+                }},
+                "Occurrence": {
+                  "Type": 2,
+                  "IsDistinct": false,
+                  "Count": 1
+                }
+              },
+              {
+                "RestrictVisit": false,
+                "StartWindow": {
+                  "UseEventEnd": false,
+                  "Start": {
+                    "Days": 7,
+                    "Coeff": -1
+                  },
+                  "End": {
+                    "Days": 7,
+                    "Coeff": 1
+                  },
+                  "UseIndexEnd": false
+                },
+                "IgnoreObservationPeriod": false,
+                "Criteria": {"Measurement": {
+                  "MeasurementTypeExclude": false,
+                  "CodesetId": 2,
+                  "ValueAsNumber": {
+                    "Op": "bt",
+                    "Extent": 150,
+                    "Value": 10
+                  },
+                  "RangeLow": {
+                    "Op": "bt",
+                    "Extent": 170,
+                    "Value": 130
+                  }
+                }},
+                "Occurrence": {
+                  "Type": 2,
+                  "IsDistinct": false,
+                  "Count": 1
+                }
+              },
+              {
+                "RestrictVisit": false,
+                "StartWindow": {
+                  "UseEventEnd": false,
+                  "Start": {
+                    "Days": 7,
+                    "Coeff": -1
+                  },
+                  "End": {
+                    "Days": 7,
+                    "Coeff": 1
+                  },
+                  "UseIndexEnd": false
+                },
+                "IgnoreObservationPeriod": false,
+                "Criteria": {"ConditionOccurrence": {
+                  "ConditionTypeExclude": false,
+                  "CodesetId": 47
+                }},
+                "Occurrence": {
+                  "Type": 2,
+                  "IsDistinct": false,
+                  "Count": 1
+                }
+              }
+            ],
+            "Type": "ANY",
+            "DemographicCriteriaList": [],
+            "Groups": []
+          },
+          {
+            "CriteriaList": [
+              {
+                "RestrictVisit": false,
+                "StartWindow": {
+                  "UseEventEnd": false,
+                  "Start": {
+                    "Days": 90,
+                    "Coeff": -1
+                  },
+                  "End": {
+                    "Days": 7,
+                    "Coeff": -1
+                  },
+                  "UseIndexEnd": false
+                },
+                "IgnoreObservationPeriod": false,
+                "Criteria": {"Measurement": {
+                  "MeasurementTypeExclude": false,
+                  "CodesetId": 2,
+                  "ValueAsNumber": {
+                    "Op": "bt",
+                    "Extent": 150,
+                    "Value": 10
+                  },
+                  "Unit": [
+                    {
+                      "INVALID_REASON_CAPTION": "Unknown",
+                      "CONCEPT_ID": 8686,
+                      "STANDARD_CONCEPT": null,
+                      "CONCEPT_CODE": "mm3",
+                      "VOCABULARY_ID": "UCUM",
+                      "CONCEPT_NAME": "cubic millimeter",
+                      "DOMAIN_ID": "Unit",
+                      "STANDARD_CONCEPT_CAPTION": "Unknown",
+                      "CONCEPT_CLASS_ID": null,
+                      "INVALID_REASON": null
+                    },
+                    {
+                      "INVALID_REASON_CAPTION": "Unknown",
+                      "CONCEPT_ID": 8785,
+                      "STANDARD_CONCEPT": null,
+                      "CONCEPT_CODE": "/mm3",
+                      "VOCABULARY_ID": "UCUM",
+                      "CONCEPT_NAME": "per cubic millimeter",
+                      "DOMAIN_ID": "Unit",
+                      "STANDARD_CONCEPT_CAPTION": "Unknown",
+                      "CONCEPT_CLASS_ID": null,
+                      "INVALID_REASON": null
+                    },
+                    {
+                      "INVALID_REASON_CAPTION": "Unknown",
+                      "CONCEPT_ID": 8848,
+                      "STANDARD_CONCEPT": null,
+                      "CONCEPT_CODE": "10*3/uL",
+                      "VOCABULARY_ID": "UCUM",
+                      "CONCEPT_NAME": "thousand per microliter",
+                      "DOMAIN_ID": "Unit",
+                      "STANDARD_CONCEPT_CAPTION": "Unknown",
+                      "CONCEPT_CLASS_ID": null,
+                      "INVALID_REASON": null
+                    },
+                    {
+                      "INVALID_REASON_CAPTION": "Unknown",
+                      "CONCEPT_ID": 8961,
+                      "STANDARD_CONCEPT": null,
+                      "CONCEPT_CODE": "10*3/mm3",
+                      "VOCABULARY_ID": "UCUM",
+                      "CONCEPT_NAME": "thousand per cubic millimeter",
+                      "DOMAIN_ID": "Unit",
+                      "STANDARD_CONCEPT_CAPTION": "Unknown",
+                      "CONCEPT_CLASS_ID": null,
+                      "INVALID_REASON": null
+                    },
+                    {
+                      "INVALID_REASON_CAPTION": "Unknown",
+                      "CONCEPT_ID": 9444,
+                      "STANDARD_CONCEPT": null,
+                      "CONCEPT_CODE": "10*9/L",
+                      "VOCABULARY_ID": "UCUM",
+                      "CONCEPT_NAME": "billion per liter",
+                      "DOMAIN_ID": "Unit",
+                      "STANDARD_CONCEPT_CAPTION": "Unknown",
+                      "CONCEPT_CLASS_ID": null,
+                      "INVALID_REASON": null
+                    },
+                    {
+                      "INVALID_REASON_CAPTION": "Unknown",
+                      "CONCEPT_ID": 9254,
+                      "STANDARD_CONCEPT": null,
+                      "CONCEPT_CODE": "/L",
+                      "VOCABULARY_ID": "UCUM",
+                      "CONCEPT_NAME": "per liter",
+                      "DOMAIN_ID": "Unit",
+                      "STANDARD_CONCEPT_CAPTION": "Unknown",
+                      "CONCEPT_CLASS_ID": null,
+                      "INVALID_REASON": null
+                    },
+                    {
+                      "INVALID_REASON_CAPTION": "Unknown",
+                      "CONCEPT_ID": 45890995,
+                      "STANDARD_CONCEPT": null,
+                      "CONCEPT_CODE": "10*6.[U]/mL",
+                      "VOCABULARY_ID": "UCUM",
+                      "CONCEPT_NAME": "Million unit per milliliter",
+                      "DOMAIN_ID": "Unit",
+                      "STANDARD_CONCEPT_CAPTION": "Unknown",
+                      "CONCEPT_CLASS_ID": null,
+                      "INVALID_REASON": null
+                    }
+                  ]
+                }},
+                "Occurrence": {
+                  "Type": 0,
+                  "IsDistinct": false,
+                  "Count": 0
+                }
+              },
+              {
+                "RestrictVisit": false,
+                "StartWindow": {
+                  "UseEventEnd": false,
+                  "Start": {
+                    "Days": 90,
+                    "Coeff": -1
+                  },
+                  "End": {
+                    "Days": 7,
+                    "Coeff": -1
+                  },
+                  "UseIndexEnd": false
+                },
+                "IgnoreObservationPeriod": false,
+                "Criteria": {"Measurement": {
+                  "MeasurementTypeExclude": false,
+                  "CodesetId": 2,
+                  "ValueAsNumber": {
+                    "Op": "bt",
+                    "Extent": 150,
+                    "Value": 10
+                  },
+                  "RangeLow": {
+                    "Op": "bt",
+                    "Extent": 170,
+                    "Value": 130
+                  }
+                }},
+                "Occurrence": {
+                  "Type": 0,
+                  "IsDistinct": false,
+                  "Count": 0
+                }
+              },
+              {
+                "RestrictVisit": false,
+                "StartWindow": {
+                  "UseEventEnd": false,
+                  "Start": {
+                    "Days": 90,
+                    "Coeff": -1
+                  },
+                  "End": {
+                    "Days": 7,
+                    "Coeff": -1
+                  },
+                  "UseIndexEnd": false
+                },
+                "IgnoreObservationPeriod": false,
+                "Criteria": {"ConditionOccurrence": {
+                  "ConditionTypeExclude": false,
+                  "CodesetId": 1
+                }},
+                "Occurrence": {
+                  "Type": 0,
+                  "IsDistinct": false,
+                  "Count": 0
+                }
+              }
+            ],
+            "Type": "ALL",
+            "DemographicCriteriaList": [],
+            "Groups": []
+          }
+        ]
+      },
+      "name": "Thrombocytopenia within 7 days of thrombosis with no such event in the past 90 days (clean window) "
+    },
+    {
+      "expression": {
+        "CriteriaList": [
+          {
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": {
+                "Days": 365,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 1,
+                "Coeff": -1
+              },
+              "UseIndexEnd": false
+            },
+            "IgnoreObservationPeriod": false,
+            "Criteria": {"ConditionOccurrence": {
+              "ConditionTypeExclude": false,
+              "CodesetId": 56
+            }},
+            "Occurrence": {
+              "Type": 0,
+              "IsDistinct": false,
+              "Count": 0
+            }
+          },
+          {
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": {
+                "Days": 365,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 1,
+                "Coeff": -1
+              },
+              "UseIndexEnd": false
+            },
+            "IgnoreObservationPeriod": false,
+            "Criteria": {"ConditionOccurrence": {
+              "ConditionTypeExclude": false,
+              "CodesetId": 34
+            }},
+            "Occurrence": {
+              "Type": 0,
+              "IsDistinct": false,
+              "Count": 0
+            }
+          },
+          {
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": {
+                "Days": 365,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 1,
+                "Coeff": -1
+              },
+              "UseIndexEnd": false
+            },
+            "IgnoreObservationPeriod": false,
+            "Criteria": {"ConditionOccurrence": {
+              "ConditionTypeExclude": false,
+              "CodesetId": 35
+            }},
+            "Occurrence": {
+              "Type": 0,
+              "IsDistinct": false,
+              "Count": 0
+            }
+          },
+          {
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": {
+                "Days": 365,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 1,
+                "Coeff": -1
+              },
+              "UseIndexEnd": false
+            },
+            "IgnoreObservationPeriod": false,
+            "Criteria": {"ConditionOccurrence": {
+              "ConditionTypeExclude": false,
+              "CodesetId": 49
+            }},
+            "Occurrence": {
+              "Type": 0,
+              "IsDistinct": false,
+              "Count": 0
+            }
+          },
+          {
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": {
+                "Days": 365,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 1,
+                "Coeff": -1
+              },
+              "UseIndexEnd": false
+            },
+            "IgnoreObservationPeriod": false,
+            "Criteria": {"ConditionOccurrence": {
+              "ConditionTypeExclude": false,
+              "CodesetId": 52
+            }},
+            "Occurrence": {
+              "Type": 0,
+              "IsDistinct": false,
+              "Count": 0
+            }
+          },
+          {
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": {
+                "Days": 365,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 1,
+                "Coeff": -1
+              },
+              "UseIndexEnd": false
+            },
+            "IgnoreObservationPeriod": false,
+            "Criteria": {"ConditionOccurrence": {
+              "ConditionTypeExclude": false,
+              "CodesetId": 50
+            }},
+            "Occurrence": {
+              "Type": 0,
+              "IsDistinct": false,
+              "Count": 0
+            }
+          },
+          {
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": {
+                "Days": 365,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 1,
+                "Coeff": -1
+              },
+              "UseIndexEnd": false
+            },
+            "IgnoreObservationPeriod": false,
+            "Criteria": {"ConditionOccurrence": {
+              "ConditionTypeExclude": false,
+              "CodesetId": 57
+            }},
+            "Occurrence": {
+              "Type": 0,
+              "IsDistinct": false,
+              "Count": 0
+            }
+          },
+          {
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": {
+                "Days": 365,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 1,
+                "Coeff": -1
+              },
+              "UseIndexEnd": false
+            },
+            "IgnoreObservationPeriod": false,
+            "Criteria": {"ConditionOccurrence": {
+              "ConditionTypeExclude": false,
+              "CodesetId": 44
+            }},
+            "Occurrence": {
+              "Type": 0,
+              "IsDistinct": false,
+              "Count": 0
+            }
+          },
+          {
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": {
+                "Days": 365,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 1,
+                "Coeff": -1
+              },
+              "UseIndexEnd": false
+            },
+            "IgnoreObservationPeriod": false,
+            "Criteria": {"ConditionOccurrence": {
+              "ConditionTypeExclude": false,
+              "CodesetId": 40
+            }},
+            "Occurrence": {
+              "Type": 0,
+              "IsDistinct": false,
+              "Count": 0
+            }
+          },
+          {
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": {
+                "Days": 365,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 1,
+                "Coeff": -1
+              },
+              "UseIndexEnd": false
+            },
+            "IgnoreObservationPeriod": false,
+            "Criteria": {"ConditionOccurrence": {
+              "ConditionTypeExclude": false,
+              "CodesetId": 41
+            }},
+            "Occurrence": {
+              "Type": 0,
+              "IsDistinct": false,
+              "Count": 0
+            }
+          },
+          {
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": {
+                "Days": 365,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 1,
+                "Coeff": -1
+              },
+              "UseIndexEnd": false
+            },
+            "IgnoreObservationPeriod": false,
+            "Criteria": {"ConditionOccurrence": {
+              "ConditionTypeExclude": false,
+              "CodesetId": 43
+            }},
+            "Occurrence": {
+              "Type": 0,
+              "IsDistinct": false,
+              "Count": 0
+            }
+          }
+        ],
+        "Type": "ALL",
+        "DemographicCriteriaList": [],
+        "Groups": []
+      },
+      "name": "Thrombosis clean window period (-365 days)"
+    }
+  ],
+  "PrimaryCriteria": {
+    "CriteriaList": [
+      {"ConditionOccurrence": {
+        "ConditionTypeExclude": false,
+        "CodesetId": 55
+      }},
+      {"ConditionOccurrence": {
+        "ConditionTypeExclude": false,
+        "CodesetId": 31
+      }},
+      {"ConditionOccurrence": {
+        "ConditionTypeExclude": false,
+        "CodesetId": 35
+      }},
+      {"ConditionOccurrence": {
+        "ConditionTypeExclude": false,
+        "CodesetId": 49
+      }},
+      {"ConditionOccurrence": {
+        "ConditionTypeExclude": false,
+        "CodesetId": 52
+      }},
+      {"ConditionOccurrence": {
+        "ConditionTypeExclude": false,
+        "CodesetId": 50
+      }},
+      {"ConditionOccurrence": {
+        "ConditionTypeExclude": false,
+        "CodesetId": 57
+      }},
+      {"ConditionOccurrence": {
+        "ConditionTypeExclude": false,
+        "CodesetId": 44
+      }},
+      {"ConditionOccurrence": {
+        "ConditionTypeExclude": false,
+        "CodesetId": 40
+      }},
+      {"ConditionOccurrence": {
+        "ConditionTypeExclude": false,
+        "CodesetId": 41
+      }},
+      {"ConditionOccurrence": {
+        "ConditionTypeExclude": false,
+        "CodesetId": 43
+      }}
+    ],
+    "PrimaryCriteriaLimit": {"Type": "All"},
+    "ObservationWindow": {
+      "PostDays": 0,
+      "PriorDays": 0
+    }
+  }
+}
