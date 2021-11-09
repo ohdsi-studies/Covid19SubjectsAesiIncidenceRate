@@ -1,4 +1,4 @@
-[Adverse Events of Special Interest within COVID-19 Subjects]
+Adverse Events of Special Interest within COVID-19 Subjects
 =============
 
 <img src="https://img.shields.io/badge/Study%20Status-Started-blue.svg" alt="Study Status: Started">
@@ -7,7 +7,7 @@
 - Study type: **Clinical Application**
 - Tags: **COVID-19**
 - Study lead: **Erica A Voss**
-- Study lead forums tag: **[[ericaVoss]](https://forums.ohdsi.org/u/ericaVoss)**
+- Study lead forums tag: **[ericaVoss](https://forums.ohdsi.org/u/ericaVoss)**
 - Study start date: **November 2, 2021**
 - Study end date: **-**
 - Protocol: [AESIs in COVID-19 Subjects Protocol](https://ohdsi-studies.github.io/Covid19SubjectsAesiIncidenceRate/Protocol.html)
