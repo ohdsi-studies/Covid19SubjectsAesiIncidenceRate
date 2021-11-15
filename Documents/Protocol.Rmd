@@ -199,7 +199,7 @@ if (knitr::is_latex_output()) {
 
 # Rationale and Background
 
-Background rates of adverse events are important in monitoring the safety of vaccines as this baseline information can serve as a comparator to the rates of the adverse events in those that are vaccinated [@Black2006] [@Wijnans2013]. Previously, the Observational Health Data Sciences and Informatics (OHDSI) community conducted a population-based network retrospective cohort study to characterize the background rates of adverse events of special interest (AESI) for the COVID-19 vaccine, using observational data from 13 databases in 8 countries [@Li2021]. This work extends this prior OHDSI study by characterizing the background rates of these AESIs in subjects after their COVID-19 disease. In addition to pre-pandemic rates in the general population, it is relevant to know how often these AESIs occur amongst patients who suffer the condition vaccines aim to prevent to provide a counterfactual for risk evaluation.
+Background rates of adverse events are important in monitoring the safety of vaccines as this baseline information can serve as a comparator to the rates of the adverse events in those that are vaccinated  ( [@Black2006] , [@Wijnans2013] ). Previously, the Observational Health Data Sciences and Informatics (OHDSI) community conducted a population-based network retrospective cohort study to characterize the background rates of adverse events of special interest (AESI) for the COVID-19 vaccine, using observational data from 13 databases in 8 countries [@Li2021]. This work extends this prior OHDSI study by characterizing the background rates of these AESIs in subjects after their COVID-19 disease. In addition to pre-pandemic rates in the general population, it is relevant to know how often these AESIs occur amongst patients who suffer the condition vaccines aim to prevent to provide a counterfactual for risk evaluation.
 
 # Study Objectives
 
@@ -273,12 +273,12 @@ One aspect of the target population is the population subgroup. We will consider
   - General: 
     - 0–5 
     - 6–17 
-    - 18–35 
-    - 36–55 
-    - 56–64 
+    - 18–34 
+    - 35–54 
+    - 55–64 
     - 65–74 
-    - 74–85 
-    - Greater Than 85 
+    - 75–84 
+    - Greater Than 85 (>=)
   - Sex 
     - Male 
     - Female 
@@ -371,7 +371,7 @@ We believe in sharing our findings that will guide clinical care with the genera
 # Target Cohort Definitions
 
 ```{r covid19Lab-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
-baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort562-COVID19_lab.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "562.json", package = "Covid19SubjectsAesiIncidenceRate"))
 baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
@@ -380,7 +380,7 @@ printCohortDefinitionFromNameAndJson(name = "Cohort 562 - Earliest COVID-19 Even
 ```
 
 ```{r covid19LabDx-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
-baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort563-COVID19_labDx.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "563.json", package = "Covid19SubjectsAesiIncidenceRate"))
 baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
@@ -391,7 +391,7 @@ printCohortDefinitionFromNameAndJson(name = "Cohort 563 - Earliest COVID-19 Even
 # Outcome Cohort Definitions
 
 ```{r pulmonaryEmbolism-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
-baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort411-pulmonaryEmbolism.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "411.json", package = "Covid19SubjectsAesiIncidenceRate"))
 baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
@@ -400,7 +400,7 @@ printCohortDefinitionFromNameAndJson(name = "Cohort 411 - Pulmonary Embolism",js
 ```
 
 ```{r hemorrhagicStroke-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
-baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort405-hemorrhagicStroke.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "405.json", package = "Covid19SubjectsAesiIncidenceRate"))
 baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
@@ -410,7 +410,7 @@ printCohortDefinitionFromNameAndJson(name = "Cohort 405 - Hemorrhagic stroke",js
 
 
 ```{r nonHemorrhagicStroke-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
-baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort406-nonHemorrhagicStroke.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "406.json", package = "Covid19SubjectsAesiIncidenceRate"))
 baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
@@ -419,7 +419,7 @@ printCohortDefinitionFromNameAndJson(name = "Cohort 406 - Non-Hemorrhagic Stroke
 ```
 
 ```{r deepVein-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
-baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort402-deepVein.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "402.json", package = "Covid19SubjectsAesiIncidenceRate"))
 baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
@@ -428,7 +428,7 @@ printCohortDefinitionFromNameAndJson(name = "Cohort 402 - Deep Vein Thrombosis (
 ```
 
 ```{r appendicitis-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
-baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort386-appendicitis.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "386.json", package = "Covid19SubjectsAesiIncidenceRate"))
 baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
@@ -437,7 +437,7 @@ printCohortDefinitionFromNameAndJson(name = "Cohort 386 - Appendicitis",json = b
 ```
 
 ```{r disseminatedIntravascularCoagulation-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
-baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort385-disseminatedIntravascularCoagulation.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "385.json", package = "Covid19SubjectsAesiIncidenceRate"))
 baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
@@ -446,7 +446,7 @@ printCohortDefinitionFromNameAndJson(name = "Cohort 385 - Disseminated Intravasc
 ```
 
 ```{r transverseMyelitis-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
-baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort381-transverseMyelitis.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "381.json", package = "Covid19SubjectsAesiIncidenceRate"))
 baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
@@ -455,7 +455,7 @@ printCohortDefinitionFromNameAndJson(name = "Cohort 381 - Transverse Myelitis",j
 ```
 
 ```{r anaphylaxis-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
-baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort349-anaphylaxis.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "349.json", package = "Covid19SubjectsAesiIncidenceRate"))
 baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
@@ -464,7 +464,7 @@ printCohortDefinitionFromNameAndJson(name = "Cohort 349 - Anaphylaxis",json = ba
 ```
 
 ```{r bellsPalsy-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
-baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort347-bellsPalsy.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "347.json", package = "Covid19SubjectsAesiIncidenceRate"))
 baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
@@ -473,7 +473,7 @@ printCohortDefinitionFromNameAndJson(name = "Cohort 347 - Bell's Palsy Events",j
 ```
 
 ```{r encephalomyelitis-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
-baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort346-encephalomyelitis.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "346.json", package = "Covid19SubjectsAesiIncidenceRate"))
 baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
@@ -482,7 +482,7 @@ printCohortDefinitionFromNameAndJson(name = "Cohort 346 - Encephalomyelitis",jso
 ```
 
 ```{r narcolepsy-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
-baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort345-narcolepsy.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "345.json", package = "Covid19SubjectsAesiIncidenceRate"))
 baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
@@ -491,7 +491,7 @@ printCohortDefinitionFromNameAndJson(name = "Cohort 345 - Narcolepsy",json = bas
 ```
 
 ```{r guillainBarre-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
-baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort343-guillainBarre.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "343.json", package = "Covid19SubjectsAesiIncidenceRate"))
 baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
@@ -500,7 +500,7 @@ printCohortDefinitionFromNameAndJson(name = "Cohort 343 - Guillain Barre Syndrom
 ```
 
 ```{r acuteMyocardialInfarction-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
-baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort340-acuteMyocardialInfarction.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "340.json", package = "Covid19SubjectsAesiIncidenceRate"))
 baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
@@ -510,7 +510,7 @@ printCohortDefinitionFromNameAndJson(name = "Cohort 340 - Acute Myocardial Infar
 
 
 ```{r myocarditisPericarditis-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
-baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort339-myocarditisPericarditis.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "339.json", package = "Covid19SubjectsAesiIncidenceRate"))
 baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
@@ -519,7 +519,7 @@ printCohortDefinitionFromNameAndJson(name = "Cohort 339 - Myocarditis Pericardit
 ```
 
 ```{r immuneThrombocytopenia-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
-baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort335-immuneThrombocytopenia.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "335.json", package = "Covid19SubjectsAesiIncidenceRate"))
 baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
@@ -529,7 +529,7 @@ printCohortDefinitionFromNameAndJson(name = "Cohort 335 - Immune thrombocytopeni
 
 
 ```{r twt-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
-baseCohortJson <- SqlRender::readSql(system.file("cohorts", "Cohort547-twt.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "547.json", package = "Covid19SubjectsAesiIncidenceRate"))
 baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)

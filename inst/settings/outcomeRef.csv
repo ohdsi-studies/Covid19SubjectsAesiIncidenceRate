@@ -1,0 +1,17 @@
+outcomeId,outcomeCohortDefinitionId,outcomeName,cleanWindow,primaryTimeAtRiskStartOffset,primaryTimeAtRiskStartIndex,primaryTimeAtRiskEndOffset,primaryTimeAtRiskEndIndex,excludedCohortDefinitionId,fileName
+345,345,Narcolepsy,365,1,0,28,0,0,345.sql
+349,349,Anaphylaxis,365,1,0,28,0,0,349.sql
+347,347,Bells Palsy,365,1,0,28,0,0,347.sql
+346,346,Encephalomyelitis,365,1,0,28,0,0,346.sql
+343,343,Guillain Barre Syndrome,365,1,0,28,0,0,343.sql
+340,340,Acute Myocardial Infarction,365,1,0,28,0,0,340.sql
+339,339,Myocarditis Pericarditis,365,1,0,28,0,0,339.sql
+335,335,Immune Thrombocytopenia (ITP),365,1,0,28,0,0,335.sql
+385,385,Disseminated Intravascular Coagulation,365,1,0,28,0,0,385.sql
+386,386,Appendicitis,365,1,0,28,0,0,386.sql
+381,381,Transverse Myelitis,365,1,0,28,0,0,381.sql
+405,405,Hemorrhagic Stroke,365,1,0,28,0,0,405.sql
+402,402,Deep Vein Thrombosis (DVT),365,1,0,28,0,0,402.sql
+406,406,Non-hemorrhagic Stroke,365,1,0,28,0,0,406.sql
+411,411,Pulmonary Embolism,365,1,0,28,0,0,411.sql
+547,547,Thrombosis with Thrombocytopenia (TWT),365,1,0,28,0,0,547.sql

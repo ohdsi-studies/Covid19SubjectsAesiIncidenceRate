@@ -1,0 +1,3 @@
+cohortId,cohortName,fileName
+562,Earliest COVID-19 Event (positive test),562.sql
+563,Earliest COVID-19 Event (positive test OR diagnosis),563.sql

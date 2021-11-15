@@ -1,6 +1,6 @@
 # Copyright 2021 Observational Health Data Sciences and Informatics
 #
-# This file is part of Covid19SubjectsAesiIncidenceRate
+# This file is part of Covid19SubjectsAesiIncidenceRate19SubjectsAesiIncidenceRate
 #
 # Author: Marc A. Suchard
 #

@@ -1,19 +1,19 @@
 atlasId,cohortId,id,cohortName
-345,345,345,FDA AESI Narcolepsy events
-349,349,349,FDA AESI Anaphylaxis events
-347,347,347,FDA AESI Bells palsy events
-346,346,346,FDA AESI Encephalomyelitis IP events
-343,343,343,FDA AESI Guillain Barre syndrome IP events
-340,340,340,FDA AESI Acute myocardial infarction IP events
-339,339,339,FDA AESI Myocarditis Pericarditis events
-335,335,335,FDA AESI Immune thrombocytopenia (ITP) events
-385,385,385,FDA AESI Disseminated intravascular coagulation events
-386,386,386,FDA AESI Appendicitis events
-381,381,381,FDA AESI Transverse myelitis events
-405,405,405,FDA AESI Hemorrhagic stroke IP events with conceptset subsuming FDA source concepts
-402,402,402,FDA AESI Deep Vein Thrombosis (DVT) events with conceptset subsuming FDA source concepts
-406,406,406,FDA AESI non-hemorrhagic stroke IP events with conceptset subsuming FDA source concepts
-411,411,411,FDA AESI Pulmonary Embolism events with conceptset subsuming FDA source concepts
-547,547,547,[TwT] Thrombosis (Narrow diagnosis) with Thrombocytopenia (narrow diagnosis or measurement) events
-562,562,562,[COVID AESI] Persons with earliest COVID event with positive SARS-COV-2 test
-563,563,563,[COVID AESI] Persons with earliest COVID event based on positive test or diagnosis without neg test
+345,345,345,Narcolepsy
+349,349,349,Anaphylaxis
+347,347,347,Bells Palsy
+346,346,346,Encephalomyelitis
+343,343,343,Guillain Barre Syndrome
+340,340,340,Acute Myocardial Infarction
+339,339,339,Myocarditis Pericarditis
+335,335,335,Immune Thrombocytopenia (ITP)
+385,385,385,Disseminated Intravascular Coagulation
+386,386,386,Appendicitis
+381,381,381,Transverse Myelitis
+405,405,405,Hemorrhagic Stroke
+402,402,402,Deep Vein Thrombosis (DVT)
+406,406,406,Non-hemorrhagic Stroke
+411,411,411,Pulmonary Embolism
+547,547,547,Thrombosis with Thrombocytopenia (TWT)
+562,562,562,Earliest COVID-19 Event (positive test)
+563,563,563,Earliest COVID-19 Event (positive test OR diagnosis)

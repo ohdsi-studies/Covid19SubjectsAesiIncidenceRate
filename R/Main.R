@@ -19,22 +19,33 @@ execute <- function(connectionDetails,
                     outputFolder,
                     cdmDatabaseSchema,
                     cohortDatabaseSchema,
-                    cohortTable,
+                    cohortTable = paste0(databaseId, "_cohort"),
                     databaseId,
-                    createCohorts = TRUE,
-                    runCohortDiagnostics = TRUE){
+                    createCohortsAndRef = TRUE,
+                    runCohortDiagnostics = TRUE,
+                    runIR = TRUE){
 
   ################################
   # Setup
   ################################
+  start <- Sys.time()
+
   if (!file.exists(outputFolder)) {
     dir.create(outputFolder, recursive = TRUE)
   }
 
-  ParallelLogger::addDefaultFileLogger(file.path(outputFolder, "log.txt"))
-  ParallelLogger::addDefaultErrorReportLogger(file.path(outputFolder, "errorReportR.txt"))
+  ParallelLogger::clearLoggers()  # Ensure that any/all previous logging activities are cleared
+  ParallelLogger::addDefaultFileLogger(file.path(outputFolder,
+                                                 paste0(getThisPackageName(), "_log.txt")))
+  ParallelLogger::addDefaultErrorReportLogger(file.path(outputFolder, paste0(getThisPackageName(),
+                                                                             "_ErrorReportR.txt")))
+  ParallelLogger::addDefaultConsoleLogger()
   on.exit(ParallelLogger::unregisterLogger("DEFAULT_FILE_LOGGER", silent = TRUE))
   on.exit(ParallelLogger::unregisterLogger("DEFAULT_ERRORREPORT_LOGGER", silent = TRUE), add = TRUE)
+  on.exit(ParallelLogger::unregisterLogger("DEFAULT_CONSOLE_LOGGER", silent = TRUE), add = TRUE)
+
+  # Write out the system information
+  ParallelLogger::logInfo(.systemInfo())
 
   #Variables---------------------
   tempEmulationSchema <- getOption("sqlRenderTempEmulationSchema")
@@ -44,20 +55,26 @@ execute <- function(connectionDetails,
   ################################
   # STEP 1 - Create Cohorts
   ################################
-  if(createCohorts){
-    ParallelLogger::logInfo("Creating exposure and outcome cohorts")
-    createCohorts(connectionDetails = connectionDetails,
-                  cdmDatabaseSchema = cdmDatabaseSchema,
-                  cohortDatabaseSchema = cohortDatabaseSchema,
-                  cohortTable = cohortTable,
-                  outputFolder = outputFolder)
+  if(createCohortsAndRef){
+    ParallelLogger::logInfo("**********************************************************")
+    ParallelLogger::logInfo("  ---- Creating exposure and outcome cohorts ---- ")
+    ParallelLogger::logInfo("**********************************************************")
+    createCohortsAndRef(connectionDetails = connectionDetails,
+                        cdmDatabaseSchema = cdmDatabaseSchema,
+                        cohortDatabaseSchema = cohortDatabaseSchema,
+                        cohortTable = cohortTable,
+                        outputFolder = outputFolder,
+                        incremental = TRUE,
+                        cohortTablePrefix = databaseId)
   }
 
   ################################
   # STEP 2 - Run Cohort Diagnostics
   ################################
   if(runCohortDiagnostics){
-    ParallelLogger::logInfo("Running cohort diagnostics")
+    ParallelLogger::logInfo("**********************************************************")
+    ParallelLogger::logInfo("  ---- Running cohort diagnostics ---- ")
+    ParallelLogger::logInfo("**********************************************************")
     exportFolder <- file.path(outputFolder, "cohortDiagnostics")
     CohortDiagnostics::runCohortDiagnostics(packageName = "Covid19SubjectsAesiIncidenceRate",
                                             cohortToCreateFile = "settings/CohortsToCreate.csv",
@@ -85,6 +102,26 @@ execute <- function(connectionDetails,
                                             incremental = TRUE,
                                             incrementalFolder = incrementalFolder)
     CohortDiagnostics::preMergeDiagnosticsFiles(exportFolder)
+  }
+
+  ################################
+  # STEP 3 - Run Incidence Rate Analysis
+  ################################
+  if(runIR){
+    ParallelLogger::logInfo("**********************************************************")
+    ParallelLogger::logInfo("  ---- Running incidence rates ---- ")
+    ParallelLogger::logInfo("**********************************************************")
+    exportFolder <- file.path(outputFolder, "incidenceRate")
+    runIR(connectionDetails = connectionDetails,
+          cdmDatabaseSchema = cdmDatabaseSchema,
+          cohortDatabaseSchema = cohortDatabaseSchema,
+          cohortTablePrefix = databaseId,
+          exportFolder = exportFolder,
+          databaseId = databaseId,
+          databaseName = databaseName,
+          databaseDescription = databaseDescription,
+          incremental = TRUE)
+
   }
 
 }

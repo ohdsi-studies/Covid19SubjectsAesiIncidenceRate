@@ -1,42 +1,44 @@
+# ##############################################################################
 # Adverse Events of Special Interest within COVID-19 Subjects
 # ##############################################################################
 
-################################
-# SETUP
-################################
+# --- SETUP --------------------------------------------------------------------
 library(Covid19SubjectsAesiIncidenceRate)
 
 options(andromedaTempFolder = "D:/andromedaTemp")
 options(sqlRenderTempEmulationSchema = NULL)
 
 # Details for connecting to the server:
-connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = 'redshift',
-                                                                server = paste0(Sys.getenv("DB_SERVER"),"/truven_ccae"),
-                                                                user = keyring::key_get("redShiftUserName"),
-                                                                password = keyring::key_get("redShiftPassword"),
-                                                                port = 5439,
-                                                                extraSettings = "ssl=true&sslfactory=com.amazon.redshift.ssl.NonValidatingFactory")
+# See ?DatabaseConnector::createConnectionDetails for help
+connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = "postgresql",
+                                                                server = "some.server.com/ohdsi",
+                                                                user = "joe",
+                                                                password = "secret")
 
-outputFolder <- "D:/Git/GitHub/Covid19SubjectsAesiIncidenceRate/results"
-cdmDatabaseSchema <- "cdm"
-cohortDatabaseSchema <- "scratch"
-cohortTable <- "aesi_cohort"
-databaseId <- "DBID"
-databaseName <- "Database Name"
-databaseDescription <- "Database Description"
+outputFolder <- "D:/Covid19SubjectsAesiIncidenceRate/results"
+cdmDatabaseSchema <- "cdm_synpuf"
+cohortDatabaseSchema <- "scratch.dbo"
+databaseId <- "synpuf"
+databaseName <- "Medicare Claims Synthetic Public Use Files (SynPUFs)"
+databaseDescription <- "Medicare Claims Synthetic Public Use Files (SynPUFs) were created to allow interested parties to gain familiarity using Medicare claims data while protecting beneficiary privacy. These files are intended to promote development of software and applications that utilize files in this format, train researchers on the use and complexities of Centers for Medicare and Medicaid Services (CMS) claims, and support safe data mining innovations. The SynPUFs were created by combining randomized information from multiple unique beneficiaries and changing variable values. This randomization and combining of beneficiary information ensures privacy of health information."
 
-################################
-# EXECUTE
-################################
-execute(connectionDetails = connectionDetails,
-        outputFolder = outputFolder,
-        cdmDatabaseSchema = cdmDatabaseSchema,
-        cohortDatabaseSchema = cohortDatabaseSchema,
-        cohortTable = cohortTable,
-        databaseId = databaseId,
-        createCohorts = FALSE,
-        runCohortDiagnostics = TRUE)
+# --- EXECUTE ------------------------------------------------------------------
+Covid19SubjectsAesiIncidenceRate::execute(connectionDetails = connectionDetails,
+                                          outputFolder = outputFolder,
+                                          cdmDatabaseSchema = cdmDatabaseSchema,
+                                          cohortDatabaseSchema = cohortDatabaseSchema,
+                                          databaseId = databaseId,
+                                          createCohortsAndRef = TRUE,
+                                          runCohortDiagnostics = TRUE,
+                                          runIR = TRUE)
 
-#If CohortDiagnostics has been run, you can call the RShiney viewer like this:
-CohortDiagnostics::launchDiagnosticsExplorer(dataFolder = file.path(outputFolder, "cohortDiagnostics"))
+# --- SHARE RESULTS ------------------------------------------------------------
+# Upload the results to the OHDSI SFTP server:
+privateKeyFileName <- "<file>"
+userName <- "<name>"
+Covid19SubjectsAesiIncidenceRate::uploadStudyResults(file.path(outputFolder,"cohortDiagnostics"), privateKeyFileName, userName)
+Covid19SubjectsAesiIncidenceRate::uploadStudyResults(file.path(outputFolder, "incidenceRate"), privateKeyFileName, userName)
 
+# --- VIEW COHORT DIAGNOSTICS --------------------------------------------------
+# If CohortDiagnostics has been run, you can call the RShiney viewer like this:
+CohortDiagnostics::launchDiagnosticsExplorer(dataFolder = file.path(outputFolder,"cohortDiagnostics"))

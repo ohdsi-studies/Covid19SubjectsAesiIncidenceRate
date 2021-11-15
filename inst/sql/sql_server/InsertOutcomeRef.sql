@@ -1,0 +1,22 @@
+insert into @cohort_database_schema.@ref_table (
+  outcome_id, 
+  outcome_cohort_definition_id, 
+  outcome_name, 
+  clean_window, 
+  primary_time_at_risk_start_offset, 
+  primary_time_at_risk_start_index, 
+  primary_time_at_risk_end_offset, 
+  primary_time_at_risk_end_index, 
+  excluded_cohort_definition_id
+)
+SELECT 
+  @outcome_id, 
+  @outcome_cohort_definition_id, 
+  '@outcome_name', 
+  @clean_window, 
+  @primary_time_at_risk_start_offset, 
+  @primary_time_at_risk_start_index, 
+  @primary_time_at_risk_end_offset, 
+  @primary_time_at_risk_end_index, 
+  @excluded_cohort_definition_id
+;

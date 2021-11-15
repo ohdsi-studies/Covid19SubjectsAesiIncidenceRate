@@ -17,10 +17,39 @@ Adverse Events of Special Interest within COVID-19 Subjects
 Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies/Covid19VaccineAesiIncidenceRate) [2](https://pubmed.ncbi.nlm.nih.gov/33791732/) in understanding the incidence rates of adverse events of special interest (AESI) for COVID-19, this work will look at the rates of these AESIs in patients who had COVDI-19 disease.
 
 # Requirements
-TBD
+- A database in [Common Data Model version 5](https://github.com/OHDSI/CommonDataModel) in one of these platforms: SQL Server, Oracle, PostgreSQL, IBM Netezza, Apache Impala, Amazon RedShift, Google BigQuery, or Microsoft APS.
+- R version 4.0.0 or newer
+- On Windows: [RTools](http://cran.r-project.org/bin/windows/Rtools/)
+- [Java](http://java.com)
+- 25 GB of free disk space
 
 # How to Run
-TBD
+1. Follow [these instructions](https://ohdsi.github.io/Hades/rSetup.html) for setting up your R environment, including RTools and Java. 
+
+2. Open your study package in RStudio. Use the following code to install all the dependencies:
+
+	```r
+	renv::restore()
+	```
+
+3. In RStudio, select 'Build' then 'Install and Restart' to build the package.
+
+3. Once installed, you can execute the study by modifying and using the code below. For your convenience, this code is also provided under `extras/CodeToRun.R`:
+	
+	```r
+	```
+	
+4. Upload the file ```export/Results_<DatabaseId>.zip``` in the output folder to the study coordinator:
+
+	```r
+	privateKeyFileName <- "<file>"
+	userName <- "<name>"
+	Covid19SubjectsAesiIncidenceRate::uploadStudyResults(file.path(outputFolder,"cohortDiagnostics"), privateKeyFileName, userName)
+	Covid19SubjectsAesiIncidenceRate::uploadStudyResults(file.path(outputFolder, "incidenceRate"), privateKeyFileName, userName)
+	```
+	
+	Where ```<file>``` and ```<name>``` are the credentials provided to you personally by the study coordinator.
+
 
 # License 
 The Covid19SubjectsAesiIncidenceRate package is licensed under Apache License 2.0.
