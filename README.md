@@ -37,9 +37,38 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
 3. Once installed, you can execute the study by modifying and using the code below. For your convenience, this code is also provided under `extras/CodeToRun.R`:
 	
 	```r
+	# --- SETUP --------------------------------------------------------------------
+	library(Covid19SubjectsAesiIncidenceRate)
+
+	options(andromedaTempFolder = "D:/andromedaTemp")
+	options(sqlRenderTempEmulationSchema = NULL)
+
+	# Details for connecting to the server:
+	# See ?DatabaseConnector::createConnectionDetails for help
+	connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = "postgresql",
+																	server = "some.server.com/ohdsi",
+																	user = "joe",
+																	password = "secret")
+
+	outputFolder <- "D:/Covid19SubjectsAesiIncidenceRate/results"
+	cdmDatabaseSchema <- "cdm_synpuf"
+	cohortDatabaseSchema <- "scratch.dbo"
+	databaseId <- "synpuf"
+	databaseName <- "Medicare Claims Synthetic Public Use Files (SynPUFs)"
+	databaseDescription <- "Medicare Claims Synthetic Public Use Files (SynPUFs) were created to allow interested parties to gain familiarity using Medicare claims data while protecting beneficiary privacy. These files are intended to promote development of software and applications that utilize files in this format, train researchers on the use and complexities of Centers for Medicare and Medicaid Services (CMS) claims, and support safe data mining innovations. The SynPUFs were created by combining randomized information from multiple unique beneficiaries and changing variable values. This randomization and combining of beneficiary information ensures privacy of health information."
+
+	# --- EXECUTE ------------------------------------------------------------------
+	Covid19SubjectsAesiIncidenceRate::execute(connectionDetails = connectionDetails,
+											  outputFolder = outputFolder,
+											  cdmDatabaseSchema = cdmDatabaseSchema,
+											  cohortDatabaseSchema = cohortDatabaseSchema,
+											  databaseId = databaseId,
+											  createCohortsAndRef = TRUE,
+											  runCohortDiagnostics = TRUE,
+											  runIR = TRUE)
 	```
 	
-4. Upload the file ```export/Results_<DatabaseId>.zip``` in the output folder to the study coordinator:
+4. Upload the files ```results/cohortDiagnostics/Results_<DatabaseId>.zip``` and ```results/incidenceRate/Results_IR_<DatabaseId>.zip``` in the output folder to the study coordinator:
 
 	```r
 	privateKeyFileName <- "<file>"
