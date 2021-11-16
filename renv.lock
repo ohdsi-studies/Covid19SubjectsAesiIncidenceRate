@@ -385,6 +385,13 @@
 			"Repository" : "CRAN",
 			"Hash" : "77bd60a6157420d4ffa93b27cf6a58b8"
 		},
+		"filelock" : {
+			"Package" : "filelock",
+			"Version" : "1.0.2",
+			"Source" : "Repository",
+			"Repository" : "CRAN",
+			"Hash" : "38ec653c2613bed60052ba3787bd8a2c"
+		},
 		"formatR" : {
 			"Package" : "formatR",
 			"Version" : "1.11",
@@ -489,6 +496,13 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN",
 			"Hash" : "49b625e6aabe4c5f091f5850aba8ff78"
+		},
+		"keyring" : {
+			"Package" : "keyring",
+			"Version" : "1.2.0",
+			"Source" : "Repository",
+			"Repository" : "CRAN",
+			"Hash" : "dec373d855af8247fd5e24c0ebe14472"
 		},
 		"knitr" : {
 			"Package" : "knitr",
@@ -783,6 +797,13 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN",
 			"Hash" : "40b74690debd20c57d93d8c246b305d4"
+		},
+		"sodium" : {
+			"Package" : "sodium",
+			"Version" : "1.2.0",
+			"Source" : "Repository",
+			"Repository" : "CRAN",
+			"Hash" : "07060494360a48fc8a2e282f0dc8f2cf"
 		},
 		"stringi" : {
 			"Package" : "stringi",

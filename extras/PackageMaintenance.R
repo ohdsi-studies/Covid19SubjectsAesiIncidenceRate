@@ -15,6 +15,7 @@
 # limitations under the License.
 
 # CREATE LOCK FILE --------------------------------------------------------
+library(keyring)
 OhdsiRTools::createRenvLockFile(rootPackage = "Covid19SubjectsAesiIncidenceRate",
                                 additionalRequiredPackages = "keyring",
                                 includeRootPackage = TRUE)
