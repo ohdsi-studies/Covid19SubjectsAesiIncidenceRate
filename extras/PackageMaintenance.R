@@ -14,6 +14,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# CREATE LOCK FILE --------------------------------------------------------
+OhdsiRTools::createRenvLockFile(rootPackage = "Covid19SubjectsAesiIncidenceRate",
+                                additionalRequiredPackages = "keyring",
+                                includeRootPackage = TRUE)
+
+
 # Format and check code ---------------------------------------------------
 OhdsiRTools::formatRFolder()
 OhdsiRTools::updatePackageNameFolder(packageName = "Covid19SubjectsAesiIncidenceRate",

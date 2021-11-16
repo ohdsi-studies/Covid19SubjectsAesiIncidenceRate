@@ -26,15 +26,44 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
 # How to Run
 1. Follow [these instructions](https://ohdsi.github.io/Hades/rSetup.html) for setting up your R environment, including RTools and Java. 
 
-2. Open your study package in RStudio. Use the following code to install all the dependencies:
+2. Create an empty folder or new RStudio project, and in R, use the following code to install the study package and its dependencies:
 
 	```r
-	renv::restore()
+  install.packages("renv")
+  download.file("https://raw.githubusercontent.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/master/renv.lock", "renv.lock")
+  renv::init()
 	```
 
-3. In RStudio, select 'Build' then 'Install and Restart' to build the package.
+3. When asked if the project already has a lockfile select "1: Restore the project from the lockfile.".
 
-3. Once installed, you can execute the study by modifying and using the code below. For your convenience, this code is also provided under `extras/CodeToRun.R`:
+4. Verify all dependencies have been loaded:
+
+  ```r
+  verifyDependencies <- function() {
+    expected <- RJSONIO::fromJSON("renv.lock")
+    expected <- dplyr::bind_rows(expected[[2]])
+    basePackages <- rownames(installed.packages(priority = "base"))
+    expected <- expected[!expected$Package %in% basePackages, ]
+    observedVersions <- sapply(sapply(expected$Package, packageVersion), paste, collapse = ".")
+    expectedVersions <- sapply(sapply(expected$Version, numeric_version), paste, collapse = ".")
+    mismatchIdx <- which(observedVersions != expectedVersions)
+    if (length(mismatchIdx) > 0) {
+      
+      lines <- sapply(mismatchIdx, function(idx) sprintf("- Package %s version %s should be %s",
+                                                         expected$Package[idx],
+                                                         observedVersions[idx],
+                                                         expectedVersions[idx]))
+      message <- paste(c("Mismatch between required and installed package versions. Did you forget to run renv::restore()?",
+                         lines),
+                       collapse = "\n")
+      stop(message)
+    }
+    return("Dependencies Verified")
+  }
+  verifyDependencies()
+  ```
+  
+5. You can execute the study by modifying and using the code below. For your convenience, this code is also provided under `extras/CodeToRun.R`:
 	
 	```r
 	# --- SETUP --------------------------------------------------------------------
