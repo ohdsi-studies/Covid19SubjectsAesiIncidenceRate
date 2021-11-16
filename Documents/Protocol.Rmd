@@ -185,7 +185,7 @@ dates <- readr::read_delim(col_names = TRUE, delim = ";", trim_ws = TRUE, file =
   Milestone; Planned / actual date
   Start of analysis;2021-11-29
   End of analysis;2021-12-31
-  Results presentation;2021-02-01
+  Results presentation;2022-02-01
 ")
 
 tab <- kable(dates, booktabs = TRUE, linesep = "", caption = "Study milestones") 
