@@ -28,11 +28,11 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
 
 2. Create an empty folder or new RStudio project, and in R, use the following code to install the study package and its dependencies:
 
-	```r
+  ```r
   install.packages("renv")
   download.file("https://raw.githubusercontent.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/master/renv.lock", "renv.lock")
   renv::init()
-	```
+  ```
 
 3. When asked if the project already has a lockfile select "1: Restore the project from the lockfile.".
 
