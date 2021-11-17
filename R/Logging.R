@@ -15,7 +15,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+#'
+#' @export
 .systemInfo <- function() {
   si <- sessionInfo()
   lines <- c()
@@ -35,4 +36,28 @@
   for (pkg in si$otherPkgs) lines <- c(lines,
                                        paste("- ", pkg$Package, " (", pkg$Version, ")", sep = ""))
   return(paste(lines, collapse = "\n"))
+}
+
+#'
+#' @export
+verifyDependencies <- function() {
+  expected <- RJSONIO::fromJSON("renv.lock")
+  expected <- dplyr::bind_rows(expected[[2]])
+  basePackages <- rownames(installed.packages(priority = "base"))
+  expected <- expected[!expected$Package %in% basePackages, ]
+  observedVersions <- sapply(sapply(expected$Package, packageVersion), paste, collapse = ".")
+  expectedVersions <- sapply(sapply(expected$Version, numeric_version), paste, collapse = ".")
+  mismatchIdx <- which(observedVersions != expectedVersions)
+  if (length(mismatchIdx) > 0) {
+
+    lines <- sapply(mismatchIdx, function(idx) sprintf("- Package %s version %s should be %s",
+                                                       expected$Package[idx],
+                                                       observedVersions[idx],
+                                                       expectedVersions[idx]))
+    message <- paste(c("Mismatch between required and installed package versions. Did you forget to run renv::restore()?",
+                       lines),
+                     collapse = "\n")
+    stop(message)
+  }
+  return("Dependencies Verified")
 }

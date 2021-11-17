@@ -21,3 +21,4 @@ loadCohortsToCreate <- function() {
   cohortsToCreate <- readr::read_csv(pathToCsv, col_types = readr::cols())
   return(cohortsToCreate)
 }
+

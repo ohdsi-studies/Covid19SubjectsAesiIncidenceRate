@@ -21,6 +21,7 @@ execute <- function(connectionDetails,
                     cohortDatabaseSchema,
                     cohortTable = paste0(databaseId, "_cohort"),
                     databaseId,
+                    verifyDependencies = TRUE,
                     createCohortsAndRef = TRUE,
                     runCohortDiagnostics = TRUE,
                     runIR = TRUE){
@@ -46,6 +47,11 @@ execute <- function(connectionDetails,
 
   # Write out the system information
   ParallelLogger::logInfo(.systemInfo())
+
+  if (verifyDependencies) {
+    ParallelLogger::logInfo("Checking whether correct package versions are installed")
+    verifyDependencies()
+  }
 
   #Variables---------------------
   tempEmulationSchema <- getOption("sqlRenderTempEmulationSchema")

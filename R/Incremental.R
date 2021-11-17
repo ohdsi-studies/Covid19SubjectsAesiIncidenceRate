@@ -13,7 +13,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+#'
+#' @export
 computeChecksum <- function(column) {
   return(sapply(as.character(column), digest::digest, algo = "md5", serialize = FALSE))
 }
