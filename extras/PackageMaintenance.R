@@ -17,6 +17,7 @@
 # CREATE LOCK FILE --------------------------------------------------------
 library(keyring)
 library(Covid19SubjectsAesiIncidenceRate)
+renv::purge("Covid19SubjectsAesiIncidenceRate")
 OhdsiRTools::createRenvLockFile(rootPackage = "Covid19SubjectsAesiIncidenceRate",
                                 additionalRequiredPackages = c("keyring", "Covid19SubjectsAesiIncidenceRate"),
                                 includeRootPackage = TRUE)
