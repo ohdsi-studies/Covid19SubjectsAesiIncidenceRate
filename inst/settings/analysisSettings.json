@@ -4,11 +4,11 @@
 			"name" : "AESIs in COVID-19 subjects",
 			"targetIds" : [
 				562,
-				563
+				563,
+				565,
+				566
 			],
 			"subgroupIds" : [
-				11,
-				12,
 				21,
 				22,
 				31,
@@ -28,7 +28,9 @@
 				101,
 				102,
 				111,
-				112
+				112,
+				121,
+				122
 			],
 			"timeAtRiskIds" : [
 				1,

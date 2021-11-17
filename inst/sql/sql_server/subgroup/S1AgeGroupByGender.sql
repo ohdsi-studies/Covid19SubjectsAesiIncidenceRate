@@ -1,29 +1,32 @@
 DELETE FROM @target_database_schema.@target_cohort_table where cohort_definition_id between 10 and 150;
 
 with ages as (
-  --PEDIATRIC AGE GROUPS
-   SELECT 1 as age_id, 0 as age_low, 4 as age_high
-   UNION ALL
-   SELECT 2 as age_id, 5 as age_low, 11 as age_high
-   UNION ALL
-   SELECT 3 as age_id, 12 as age_low, 17 as age_high
-   UNION ALL
   --GENERAL AGE GROUPS
-  SELECT 4 as age_id, 0 as age_low, 5 as age_high
+  SELECT 2 as age_id, 0 as age_low, 5 as age_high
   UNION ALL
-  SELECT 5 as age_id, 6 as age_low, 17 as age_high
+  SELECT 3 as age_id, 6 as age_low, 17 as age_high
   UNION ALL
-  SELECT 6 as age_id, 18 as age_low, 34 as age_high
+  SELECT 4 as age_id, 18 as age_low, 34 as age_high
   UNION ALL
-  SELECT 7 as age_id, 35 as age_low, 54 as age_high
+  SELECT 5 as age_id, 35 as age_low, 54 as age_high
   UNION ALL
-  SELECT 8 as age_id, 55 as age_low, 64 as age_high
+  SELECT 6 as age_id, 55 as age_low, 64 as age_high
   UNION ALL
-  SELECT 9 as age_id, 65 as age_low, 74 as age_high
+  SELECT 7 as age_id, 65 as age_low, 74 as age_high
   UNION ALL
-  SELECT 10 as age_id, 75 as age_low, 84 as age_high
+  SELECT 8 as age_id, 75 as age_low, 84 as age_high
   UNION ALL
-  SELECT 11 as age_id, 85 as age_low, 114 as age_high
+  SELECT 9 as age_id, 85 as age_low, 114 as age_high
+
+  UNION ALL
+
+    --PEDIATRIC AGE GROUPS
+   SELECT 10 as age_id, 0 as age_low, 4 as age_high
+   UNION ALL
+   SELECT 11 as age_id, 5 as age_low, 11 as age_high
+   UNION ALL
+   SELECT 12 as age_id, 12 as age_low, 17 as age_high
+
 ),
 genders as (
   SELECT 1 as gender_id, 8532 as gender_concept_id, 'Female' as gender_name

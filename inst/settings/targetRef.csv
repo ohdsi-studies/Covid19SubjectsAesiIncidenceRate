@@ -1,3 +1,5 @@
 cohortId,cohortName,fileName
 562,Earliest COVID-19 Event (positive test),562.sql
 563,Earliest COVID-19 Event (positive test OR diagnosis),563.sql
+565,Earliest COVID-19 Event (positive test OR diagnosis) (pre 2021),565.sql
+566,Persons at Risk at Start of Year 2017-2019,566.sql

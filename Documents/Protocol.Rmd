@@ -233,11 +233,16 @@ These data sources include but are not limited to:
 We will define all target and outcome cohorts in the Atlas environment ([https://atlas.ohdsi.org/](https://atlas.ohdsi.org/)). Detailed definitions can be found in the Appendix.
 
 ### Target Cohort Definitions
-The target population is subjects who had COVID-19 disease. We will identify this in two ways:
+The target population is subjects who had COVID-19 disease. We will identify this in three ways:
 
  - Cohort 562 - Earliest COVID-19 Event (positive test)
  - Cohort 563 - Earliest COVID-19 Event (positive test OR diagnosis)
+ - Cohort 565 - Earliest COVID-19 Event (positive test OR diagnosis) (pre 2021)
  
+An additional cohort will be added to run background incidence rates for the AESIs within a general population. This will allow us to more easily compare this work to the previously generated background rates [@Li2021].
+
+ - Cohort 566 - Persons at Risk at Start of Year 2017-2019
+
 ### Outcome Cohort Definitions
 For the purposes of this research, we use the outcomes outlined in the U.S. Food and Drug Administration (FDA) “Background Rates of Adverse Events of Special Interest for COVID-19 Vaccine Safety Monitoring” protocol [6]. This protocol includes Guillain-Barré syndrome, facial nerve (Bell’s) palsy, anaphylaxis, encephalomyelitis, narcolepsy, appendicitis, non-hemorrhagic stroke, hemorrhagic stroke, acute myocardial infarction, myocarditis and pericarditis, deep vein thrombosis, pulmonary embolism, disseminated intravascular coagulation, immune thrombocytopenia, febrile seizure, and transverse myelitis. We will also include additional safety outcomes/concerns that emerged such as thrombosis with thrombocytopenia syndrome (TTS), seizure, and narcolepsy. All phenotype definitions were based on the FDA protocol (when possible) with minor clinical context broadening (and minor code broadening as needed for example to accommodate SNOMED) to allow them to run on our wide range of data sources. 
 
@@ -386,6 +391,24 @@ baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
 
 printCohortDefinitionFromNameAndJson(name = "Cohort 563 - Earliest COVID-19 Event (postive test OR diagnosis)",json = baseCohortJson)
+```
+
+```{r covid19LabDxpre2021-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "565.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohort <- RJSONIO::fromJSON(baseCohortJson)
+
+baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
+
+printCohortDefinitionFromNameAndJson(name = "Cohort 565 - Earliest COVID-19 Event (postive test OR diagnosis) (pre 2021)",json = baseCohortJson)
+```
+
+```{r general-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "566.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohort <- RJSONIO::fromJSON(baseCohortJson)
+
+baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
+
+printCohortDefinitionFromNameAndJson(name = "Cohort 566 - Persons at Risk at Start of Year 2017-2019",json = baseCohortJson)
 ```
 
 # Outcome Cohort Definitions

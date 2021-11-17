@@ -638,7 +638,7 @@ End of analysis
 Results presentation
 </td>
 <td style="text-align:left;">
-2021-02-01
+2022-02-01
 </td>
 </tr>
 </tbody>
@@ -682,10 +682,15 @@ Results presentation
 <p>We will define all target and outcome cohorts in the Atlas environment (<a href="https://atlas.ohdsi.org/">https://atlas.ohdsi.org/</a>). Detailed definitions can be found in the Appendix.</p>
 <div id="target-cohort-definitions" class="section level3" number="7.2.1">
 <h3><span class="header-section-number">7.2.1</span> Target Cohort Definitions</h3>
-<p>The target population is subjects who had COVID-19 disease. We will identify this in two ways:</p>
+<p>The target population is subjects who had COVID-19 disease. We will identify this in three ways:</p>
 <ul>
 <li>Cohort 562 - Earliest COVID-19 Event (positive test)</li>
 <li>Cohort 563 - Earliest COVID-19 Event (positive test OR diagnosis)</li>
+<li>Cohort 565 - Earliest COVID-19 Event (positive test OR diagnosis) (pre 2021)</li>
+</ul>
+<p>An additional cohort will be added to run background incidence rates for the AESIs within a general population. This will allow us to more easily compare this work to the previously generated background rates <span class="citation">[<a href="#ref-Li2021" role="doc-biblioref">3</a>]</span>.</p>
+<ul>
+<li>Cohort 566 - Persons at Risk at Start of Year 2017-2019</li>
 </ul>
 </div>
 <div id="outcome-cohort-definitions" class="section level3" number="7.2.2">
@@ -1302,30 +1307,268 @@ NO
 </hr>
 </div>
 </div>
+<div id="cohort-565---earliest-covid-19-event-postive-test-or-diagnosis-pre-2021" class="section level2" number="12.3">
+<h2><span class="header-section-number">A.3</span> Cohort 565 - Earliest COVID-19 Event (postive test OR diagnosis) (pre 2021)</h2>
+<div id="cohort-entry-events-2" class="section level3" number="12.3.1">
+<h3><span class="header-section-number">A.3.1</span> Cohort Entry Events</h3>
+<p>People may enter the cohort when observing any of the following:</p>
+<ol style="list-style-type: decimal">
+<li><p>measurements of ‘SARS-CoV-2 test’, starting between December 1, 2019 and December 1, 2020; with value as concept: “detected”, “detected”, “positive”, “positive”, “present” or “present”.</p></li>
+<li><p>condition occurrences of ‘COVID-19’, starting between December 1, 2019 and December 1, 2020; having no measurements of ‘SARS-CoV-2 test’, starting between 0 days before and 3 days after ‘COVID-19’ start date; with value as concept: “negative”, “not detected”, “not detected in pooled specimen”, “absent”, “negative”, “not detected” or “absent”.</p></li>
+</ol>
+<p>Limit cohort entry events to the earliest event per person.</p>
+</div>
+<div id="additional-inclusion-criteria-2" class="section level3" number="12.3.2">
+<h3><span class="header-section-number">A.3.2</span> Additional Inclusion Criteria</h3>
+<ul>
+<li>Continuous Observation of at least 365d</li>
+</ul>
+<p>Entry events having at least 1 observation period, starting anytime up to 365 days before cohort entry start date and ending between 0 days after and all days after cohort entry start date.</p>
+<ul>
+<li>No COVID-19/SARS-CoV-2 Tests Prior to Index</li>
+</ul>
+<p>Entry events with all of the following criteria:</p>
+<ol style="list-style-type: decimal">
+<li>having no measurements of ‘SARS-CoV-2 test’, starting anytime prior to cohort entry start date; allow events outside observation period; with value as concept: “detected”, “detected”, “positive”, “positive”, “present” or “present”.</li>
+<li>having no condition occurrences of ‘COVID-19’, starting anytime prior to cohort entry start date; having no measurements of ‘SARS-CoV-2 test’, starting anytime up to 3 days after ‘COVID-19’ start date; allow events outside observation period; with value as concept: “negative”, “not detected”, “not detected in pooled specimen”, “absent”, “negative”, “not detected” or “absent”.</li>
+</ol>
+</div>
+<div id="cohort-exit-2" class="section level3" number="12.3.3">
+<h3><span class="header-section-number">A.3.3</span> Cohort Exit</h3>
+<p>The cohort end date will be offset from index event’s start date plus 3 days.</p>
+</div>
+<div id="cohort-eras-2" class="section level3" number="12.3.4">
+<h3><span class="header-section-number">A.3.4</span> Cohort Eras</h3>
+<p>Entry events will be combined into cohort eras if they are within 0 days of each other.</p>
+</div>
+<div id="concept-covid-19-2" class="section level3" number="12.3.5">
+<h3><span class="header-section-number">A.3.5</span> Concept: COVID-19</h3>
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Concept ID
+</th>
+<th style="text-align:left;">
+Concept Name
+</th>
+<th style="text-align:left;">
+Code
+</th>
+<th style="text-align:left;">
+Vocabulary
+</th>
+<th style="text-align:left;">
+Excluded
+</th>
+<th style="text-align:left;">
+Descendants
+</th>
+<th style="text-align:left;">
+Mapped
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+37311061
+</td>
+<td style="text-align:left;">
+COVID-19
+</td>
+<td style="text-align:left;">
+840539006
+</td>
+<td style="text-align:left;">
+SNOMED
+</td>
+<td style="text-align:left;">
+NO
+</td>
+<td style="text-align:left;">
+YES
+</td>
+<td style="text-align:left;">
+NO
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="concept-sars-cov-2-test-2" class="section level3" number="12.3.6">
+<h3><span class="header-section-number">A.3.6</span> Concept: SARS-CoV-2 test</h3>
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Concept ID
+</th>
+<th style="text-align:left;">
+Concept Name
+</th>
+<th style="text-align:left;">
+Code
+</th>
+<th style="text-align:left;">
+Vocabulary
+</th>
+<th style="text-align:left;">
+Excluded
+</th>
+<th style="text-align:left;">
+Descendants
+</th>
+<th style="text-align:left;">
+Mapped
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+756055
+</td>
+<td style="text-align:left;">
+Measurement of Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
+</td>
+<td style="text-align:left;">
+OMOP4873969
+</td>
+<td style="text-align:left;">
+OMOP Extension
+</td>
+<td style="text-align:left;">
+NO
+</td>
+<td style="text-align:left;">
+YES
+</td>
+<td style="text-align:left;">
+NO
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+37310258
+</td>
+<td style="text-align:left;">
+Measurement of Severe acute respiratory syndrome coronavirus 2 antibody
+</td>
+<td style="text-align:left;">
+1240461000000109
+</td>
+<td style="text-align:left;">
+SNOMED
+</td>
+<td style="text-align:left;">
+YES
+</td>
+<td style="text-align:left;">
+YES
+</td>
+<td style="text-align:left;">
+NO
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+704059
+</td>
+<td style="text-align:left;">
+Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (Coronavirus disease [COVID-19]), amplified probe technique, making use of high throughput technologies as described by CMS-2020-01-R
+</td>
+<td style="text-align:left;">
+U0003
+</td>
+<td style="text-align:left;">
+HCPCS
+</td>
+<td style="text-align:left;">
+NO
+</td>
+<td style="text-align:left;">
+YES
+</td>
+<td style="text-align:left;">
+NO
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+704058
+</td>
+<td style="text-align:left;">
+2019-nCoV Coronavirus, SARS-CoV-2/2019-nCoV (COVID-19), any technique, multiple types or subtypes (includes all targets), non-CDC, making use of high throughput technologies as described by CMS-2020-01-R
+</td>
+<td style="text-align:left;">
+U0004
+</td>
+<td style="text-align:left;">
+HCPCS
+</td>
+<td style="text-align:left;">
+NO
+</td>
+<td style="text-align:left;">
+YES
+</td>
+<td style="text-align:left;">
+NO
+</td>
+</tr>
+</tbody>
+</table>
+<hr style="border:2px solid gray">
+</hr>
+</div>
+</div>
+<div id="cohort-566---persons-at-risk-at-start-of-year-2017-2019" class="section level2" number="12.4">
+<h2><span class="header-section-number">A.4</span> Cohort 566 - Persons at Risk at Start of Year 2017-2019</h2>
+<div id="cohort-entry-events-3" class="section level3" number="12.4.1">
+<h3><span class="header-section-number">A.4.1</span> Cohort Entry Events</h3>
+<p>People with continuous observation of 365 days before event enter the cohort when observing any of the following:</p>
+<ol style="list-style-type: decimal">
+<li><p>observation periods, a user defiend start date of January 1, 2017 and end date of January 1, 2017.</p></li>
+<li><p>observation periods, a user defiend start date of January 1, 2018 and end date of January 1, 2018.</p></li>
+<li><p>observation periods, a user defiend start date of January 1, 2019 and end date of January 1, 2019.</p></li>
+</ol>
+</div>
+<div id="cohort-exit-3" class="section level3" number="12.4.2">
+<h3><span class="header-section-number">A.4.2</span> Cohort Exit</h3>
+<p>The cohort end date will be offset from index event’s start date plus 0 days.</p>
+</div>
+<div id="cohort-eras-3" class="section level3" number="12.4.3">
+<h3><span class="header-section-number">A.4.3</span> Cohort Eras</h3>
+<p>Entry events will be combined into cohort eras if they are within 0 days of each other.</p>
+<hr style="border:2px solid gray">
+</hr>
+</div>
+</div>
 </div>
 <div id="outcome-cohort-definitions-1" class="section level1" number="13">
 <h1><span class="header-section-number">B</span> Outcome Cohort Definitions</h1>
 <div id="cohort-411---pulmonary-embolism" class="section level2" number="13.1">
 <h2><span class="header-section-number">B.1</span> Cohort 411 - Pulmonary Embolism</h2>
-<div id="cohort-entry-events-2" class="section level3" number="13.1.1">
+<div id="cohort-entry-events-4" class="section level3" number="13.1.1">
 <h3><span class="header-section-number">B.1.1</span> Cohort Entry Events</h3>
 <p>People may enter the cohort when observing any of the following:</p>
 <ol style="list-style-type: decimal">
 <li>condition occurrences of ‘Pulmonary Embolism FDA concept proxy’.</li>
 </ol>
 </div>
-<div id="additional-inclusion-criteria-2" class="section level3" number="13.1.2">
+<div id="additional-inclusion-criteria-3" class="section level3" number="13.1.2">
 <h3><span class="header-section-number">B.1.2</span> Additional Inclusion Criteria</h3>
 <ul>
 <li>has no events in prior ‘clean window’ - 365 days</li>
 </ul>
 <p>Entry events having no condition occurrences of ‘Pulmonary Embolism FDA concept proxy’, starting in the 365 days prior to cohort entry start date; allow events outside observation period.</p>
 </div>
-<div id="cohort-exit-2" class="section level3" number="13.1.3">
+<div id="cohort-exit-4" class="section level3" number="13.1.3">
 <h3><span class="header-section-number">B.1.3</span> Cohort Exit</h3>
 <p>The cohort end date will be offset from index event’s start date plus 1 day.</p>
 </div>
-<div id="cohort-eras-2" class="section level3" number="13.1.4">
+<div id="cohort-eras-4" class="section level3" number="13.1.4">
 <h3><span class="header-section-number">B.1.4</span> Cohort Eras</h3>
 <p>Entry events will be combined into cohort eras if they are within 0 days of each other.</p>
 </div>
@@ -1826,7 +2069,7 @@ NO
 </div>
 <div id="cohort-405---hemorrhagic-stroke" class="section level2" number="13.2">
 <h2><span class="header-section-number">B.2</span> Cohort 405 - Hemorrhagic stroke</h2>
-<div id="cohort-entry-events-3" class="section level3" number="13.2.1">
+<div id="cohort-entry-events-5" class="section level3" number="13.2.1">
 <h3><span class="header-section-number">B.2.1</span> Cohort Entry Events</h3>
 <p>People may enter the cohort when observing any of the following:</p>
 <ol style="list-style-type: decimal">
@@ -1834,18 +2077,18 @@ NO
 </ol>
 <p>Restrict entry events to having at least 1 visit occurrence of ‘Inpatient or Inpatient/ER visit’, starting anytime on or before cohort entry start date and ending between 0 days before and all days after cohort entry start date.</p>
 </div>
-<div id="additional-inclusion-criteria-3" class="section level3" number="13.2.2">
+<div id="additional-inclusion-criteria-4" class="section level3" number="13.2.2">
 <h3><span class="header-section-number">B.2.2</span> Additional Inclusion Criteria</h3>
 <ul>
 <li>has no events in prior ‘clean window’ - 365 days</li>
 </ul>
 <p>Entry events having no condition occurrences of ‘Hemorrhagic stroke subarachnoid intracerebral subdural’, starting in the 365 days prior to cohort entry start date; allow events outside observation period; having at least 1 visit occurrence of ‘Inpatient or Inpatient/ER visit’, starting anytime on or before ‘Hemorrhagic stroke subarachnoid intracerebral subdural’ start date and ending between 0 days before and all days after ‘Hemorrhagic stroke subarachnoid intracerebral subdural’ start date.</p>
 </div>
-<div id="cohort-exit-3" class="section level3" number="13.2.3">
+<div id="cohort-exit-5" class="section level3" number="13.2.3">
 <h3><span class="header-section-number">B.2.3</span> Cohort Exit</h3>
 <p>The cohort end date will be offset from index event’s start date plus 1 day.</p>
 </div>
-<div id="cohort-eras-3" class="section level3" number="13.2.4">
+<div id="cohort-eras-5" class="section level3" number="13.2.4">
 <h3><span class="header-section-number">B.2.4</span> Cohort Eras</h3>
 <p>Entry events will be combined into cohort eras if they are within 0 days of each other.</p>
 </div>
@@ -2240,7 +2483,7 @@ NO
 </div>
 <div id="cohort-406---non-hemorrhagic-stroke" class="section level2" number="13.3">
 <h2><span class="header-section-number">B.3</span> Cohort 406 - Non-Hemorrhagic Stroke</h2>
-<div id="cohort-entry-events-4" class="section level3" number="13.3.1">
+<div id="cohort-entry-events-6" class="section level3" number="13.3.1">
 <h3><span class="header-section-number">B.3.1</span> Cohort Entry Events</h3>
 <p>People may enter the cohort when observing any of the following:</p>
 <ol style="list-style-type: decimal">
@@ -2248,18 +2491,18 @@ NO
 </ol>
 <p>Restrict entry events to having at least 1 visit occurrence of ‘Inpatient or Inpatient/ER visit’, starting anytime on or before cohort entry start date and ending between 0 days before and all days after cohort entry start date.</p>
 </div>
-<div id="additional-inclusion-criteria-4" class="section level3" number="13.3.2">
+<div id="additional-inclusion-criteria-5" class="section level3" number="13.3.2">
 <h3><span class="header-section-number">B.3.2</span> Additional Inclusion Criteria</h3>
 <ul>
 <li>has no events in prior ‘clean window’ - 365 days</li>
 </ul>
 <p>Entry events having no condition occurrences of ‘cerebral infarction FDA conceptset proxy’, starting in the 365 days prior to cohort entry start date; allow events outside observation period; having at least 1 visit occurrence of ‘Inpatient or Inpatient/ER visit’, starting anytime on or before ‘cerebral infarction FDA conceptset proxy’ start date and ending between 0 days before and all days after ‘cerebral infarction FDA conceptset proxy’ start date.</p>
 </div>
-<div id="cohort-exit-4" class="section level3" number="13.3.3">
+<div id="cohort-exit-6" class="section level3" number="13.3.3">
 <h3><span class="header-section-number">B.3.3</span> Cohort Exit</h3>
 <p>The cohort end date will be offset from index event’s start date plus 1 day.</p>
 </div>
-<div id="cohort-eras-4" class="section level3" number="13.3.4">
+<div id="cohort-eras-6" class="section level3" number="13.3.4">
 <h3><span class="header-section-number">B.3.4</span> Cohort Eras</h3>
 <p>Entry events will be combined into cohort eras if they are within 0 days of each other.</p>
 </div>
@@ -2447,25 +2690,25 @@ NO
 </div>
 <div id="cohort-402---deep-vein-thrombosis-dvt" class="section level2" number="13.4">
 <h2><span class="header-section-number">B.4</span> Cohort 402 - Deep Vein Thrombosis (DVT)</h2>
-<div id="cohort-entry-events-5" class="section level3" number="13.4.1">
+<div id="cohort-entry-events-7" class="section level3" number="13.4.1">
 <h3><span class="header-section-number">B.4.1</span> Cohort Entry Events</h3>
 <p>People may enter the cohort when observing any of the following:</p>
 <ol style="list-style-type: decimal">
 <li>condition occurrences of ‘Deep Vein Thrombosis broad’.</li>
 </ol>
 </div>
-<div id="additional-inclusion-criteria-5" class="section level3" number="13.4.2">
+<div id="additional-inclusion-criteria-6" class="section level3" number="13.4.2">
 <h3><span class="header-section-number">B.4.2</span> Additional Inclusion Criteria</h3>
 <ul>
 <li>has no events in prior ‘clean window’ - 365 days</li>
 </ul>
 <p>Entry events having no condition occurrences of ‘Deep Vein Thrombosis broad’, starting in the 365 days prior to cohort entry start date; allow events outside observation period.</p>
 </div>
-<div id="cohort-exit-5" class="section level3" number="13.4.3">
+<div id="cohort-exit-7" class="section level3" number="13.4.3">
 <h3><span class="header-section-number">B.4.3</span> Cohort Exit</h3>
 <p>The cohort end date will be offset from index event’s start date plus 1 day.</p>
 </div>
-<div id="cohort-eras-5" class="section level3" number="13.4.4">
+<div id="cohort-eras-7" class="section level3" number="13.4.4">
 <h3><span class="header-section-number">B.4.4</span> Cohort Eras</h3>
 <p>Entry events will be combined into cohort eras if they are within 0 days of each other.</p>
 </div>
@@ -2805,25 +3048,25 @@ NO
 </div>
 <div id="cohort-386---appendicitis" class="section level2" number="13.5">
 <h2><span class="header-section-number">B.5</span> Cohort 386 - Appendicitis</h2>
-<div id="cohort-entry-events-6" class="section level3" number="13.5.1">
+<div id="cohort-entry-events-8" class="section level3" number="13.5.1">
 <h3><span class="header-section-number">B.5.1</span> Cohort Entry Events</h3>
 <p>People may enter the cohort when observing any of the following:</p>
 <ol style="list-style-type: decimal">
 <li>condition occurrences of ‘Appendicitis’.</li>
 </ol>
 </div>
-<div id="additional-inclusion-criteria-6" class="section level3" number="13.5.2">
+<div id="additional-inclusion-criteria-7" class="section level3" number="13.5.2">
 <h3><span class="header-section-number">B.5.2</span> Additional Inclusion Criteria</h3>
 <ul>
 <li>has no events in prior ‘clean window’ - 365 days</li>
 </ul>
 <p>Entry events having no condition occurrences of ‘Appendicitis’, starting in the 365 days prior to cohort entry start date; allow events outside observation period.</p>
 </div>
-<div id="cohort-exit-6" class="section level3" number="13.5.3">
+<div id="cohort-exit-8" class="section level3" number="13.5.3">
 <h3><span class="header-section-number">B.5.3</span> Cohort Exit</h3>
 <p>The cohort end date will be offset from index event’s start date plus 1 day.</p>
 </div>
-<div id="cohort-eras-6" class="section level3" number="13.5.4">
+<div id="cohort-eras-8" class="section level3" number="13.5.4">
 <h3><span class="header-section-number">B.5.4</span> Cohort Eras</h3>
 <p>Entry events will be combined into cohort eras if they are within 0 days of each other.</p>
 </div>
@@ -2965,25 +3208,25 @@ NO
 </div>
 <div id="cohort-385---disseminated-intravascular-coagulation" class="section level2" number="13.6">
 <h2><span class="header-section-number">B.6</span> Cohort 385 - Disseminated Intravascular Coagulation</h2>
-<div id="cohort-entry-events-7" class="section level3" number="13.6.1">
+<div id="cohort-entry-events-9" class="section level3" number="13.6.1">
 <h3><span class="header-section-number">B.6.1</span> Cohort Entry Events</h3>
 <p>People may enter the cohort when observing any of the following:</p>
 <ol style="list-style-type: decimal">
 <li>condition occurrences of ‘Disseminated intravascular coagulation’.</li>
 </ol>
 </div>
-<div id="additional-inclusion-criteria-7" class="section level3" number="13.6.2">
+<div id="additional-inclusion-criteria-8" class="section level3" number="13.6.2">
 <h3><span class="header-section-number">B.6.2</span> Additional Inclusion Criteria</h3>
 <ul>
 <li>has no events in prior ‘clean window’ - 365 days</li>
 </ul>
 <p>Entry events having no condition occurrences of ‘Disseminated intravascular coagulation’, starting in the 365 days prior to cohort entry start date; allow events outside observation period.</p>
 </div>
-<div id="cohort-exit-7" class="section level3" number="13.6.3">
+<div id="cohort-exit-9" class="section level3" number="13.6.3">
 <h3><span class="header-section-number">B.6.3</span> Cohort Exit</h3>
 <p>The cohort end date will be offset from index event’s start date plus 1 day.</p>
 </div>
-<div id="cohort-eras-7" class="section level3" number="13.6.4">
+<div id="cohort-eras-9" class="section level3" number="13.6.4">
 <h3><span class="header-section-number">B.6.4</span> Cohort Eras</h3>
 <p>Entry events will be combined into cohort eras if they are within 0 days of each other.</p>
 </div>
@@ -3125,25 +3368,25 @@ NO
 </div>
 <div id="cohort-381---transverse-myelitis" class="section level2" number="13.7">
 <h2><span class="header-section-number">B.7</span> Cohort 381 - Transverse Myelitis</h2>
-<div id="cohort-entry-events-8" class="section level3" number="13.7.1">
+<div id="cohort-entry-events-10" class="section level3" number="13.7.1">
 <h3><span class="header-section-number">B.7.1</span> Cohort Entry Events</h3>
 <p>People may enter the cohort when observing any of the following:</p>
 <ol style="list-style-type: decimal">
 <li>condition occurrences of ‘Transverse Myelitis’.</li>
 </ol>
 </div>
-<div id="additional-inclusion-criteria-8" class="section level3" number="13.7.2">
+<div id="additional-inclusion-criteria-9" class="section level3" number="13.7.2">
 <h3><span class="header-section-number">B.7.2</span> Additional Inclusion Criteria</h3>
 <ul>
 <li>has no events in prior ‘clean window’ - 365 days</li>
 </ul>
 <p>Entry events having no condition occurrences of ‘Transverse Myelitis’, starting in the 365 days prior to cohort entry start date; allow events outside observation period.</p>
 </div>
-<div id="cohort-exit-8" class="section level3" number="13.7.3">
+<div id="cohort-exit-10" class="section level3" number="13.7.3">
 <h3><span class="header-section-number">B.7.3</span> Cohort Exit</h3>
 <p>The cohort end date will be offset from index event’s start date plus 1 day.</p>
 </div>
-<div id="cohort-eras-8" class="section level3" number="13.7.4">
+<div id="cohort-eras-10" class="section level3" number="13.7.4">
 <h3><span class="header-section-number">B.7.4</span> Cohort Eras</h3>
 <p>Entry events will be combined into cohort eras if they are within 0 days of each other.</p>
 </div>
@@ -3207,25 +3450,25 @@ NO
 </div>
 <div id="cohort-349---anaphylaxis" class="section level2" number="13.8">
 <h2><span class="header-section-number">B.8</span> Cohort 349 - Anaphylaxis</h2>
-<div id="cohort-entry-events-9" class="section level3" number="13.8.1">
+<div id="cohort-entry-events-11" class="section level3" number="13.8.1">
 <h3><span class="header-section-number">B.8.1</span> Cohort Entry Events</h3>
 <p>People may enter the cohort when observing any of the following:</p>
 <ol style="list-style-type: decimal">
 <li>condition occurrences of ‘Anaphylaxis or Anaphylactic shock due to serum’.</li>
 </ol>
 </div>
-<div id="additional-inclusion-criteria-9" class="section level3" number="13.8.2">
+<div id="additional-inclusion-criteria-10" class="section level3" number="13.8.2">
 <h3><span class="header-section-number">B.8.2</span> Additional Inclusion Criteria</h3>
 <ul>
 <li>has no events in prior ‘clean window’ - 30 days</li>
 </ul>
 <p>Entry events having no condition occurrences of ‘Anaphylaxis or Anaphylactic shock due to serum’, starting in the 30 days prior to cohort entry start date; allow events outside observation period.</p>
 </div>
-<div id="cohort-exit-9" class="section level3" number="13.8.3">
+<div id="cohort-exit-11" class="section level3" number="13.8.3">
 <h3><span class="header-section-number">B.8.3</span> Cohort Exit</h3>
 <p>The cohort end date will be offset from index event’s start date plus 1 day.</p>
 </div>
-<div id="cohort-eras-9" class="section level3" number="13.8.4">
+<div id="cohort-eras-11" class="section level3" number="13.8.4">
 <h3><span class="header-section-number">B.8.4</span> Cohort Eras</h3>
 <p>Entry events will be combined into cohort eras if they are within 0 days of each other.</p>
 </div>
@@ -3312,25 +3555,25 @@ NO
 </div>
 <div id="cohort-347---bells-palsy-events" class="section level2" number="13.9">
 <h2><span class="header-section-number">B.9</span> Cohort 347 - Bell’s Palsy Events</h2>
-<div id="cohort-entry-events-10" class="section level3" number="13.9.1">
+<div id="cohort-entry-events-12" class="section level3" number="13.9.1">
 <h3><span class="header-section-number">B.9.1</span> Cohort Entry Events</h3>
 <p>People may enter the cohort when observing any of the following:</p>
 <ol style="list-style-type: decimal">
 <li>condition occurrences of ‘Bell’s palsy’.</li>
 </ol>
 </div>
-<div id="additional-inclusion-criteria-10" class="section level3" number="13.9.2">
+<div id="additional-inclusion-criteria-11" class="section level3" number="13.9.2">
 <h3><span class="header-section-number">B.9.2</span> Additional Inclusion Criteria</h3>
 <ul>
 <li>has no events in prior ‘clean window’ 183 days</li>
 </ul>
 <p>Entry events having no condition occurrences of ‘Bell’s palsy’, starting in the 183 days prior to cohort entry start date; allow events outside observation period.</p>
 </div>
-<div id="cohort-exit-10" class="section level3" number="13.9.3">
+<div id="cohort-exit-12" class="section level3" number="13.9.3">
 <h3><span class="header-section-number">B.9.3</span> Cohort Exit</h3>
 <p>The cohort end date will be offset from index event’s start date plus 1 day.</p>
 </div>
-<div id="cohort-eras-10" class="section level3" number="13.9.4">
+<div id="cohort-eras-12" class="section level3" number="13.9.4">
 <h3><span class="header-section-number">B.9.4</span> Cohort Eras</h3>
 <p>Entry events will be combined into cohort eras if they are within 0 days of each other.</p>
 </div>
@@ -3440,7 +3683,7 @@ NO
 </div>
 <div id="cohort-346---encephalomyelitis" class="section level2" number="13.10">
 <h2><span class="header-section-number">B.10</span> Cohort 346 - Encephalomyelitis</h2>
-<div id="cohort-entry-events-11" class="section level3" number="13.10.1">
+<div id="cohort-entry-events-13" class="section level3" number="13.10.1">
 <h3><span class="header-section-number">B.10.1</span> Cohort Entry Events</h3>
 <p>People may enter the cohort when observing any of the following:</p>
 <ol style="list-style-type: decimal">
@@ -3448,18 +3691,18 @@ NO
 </ol>
 <p>Restrict entry events to having at least 1 visit occurrence of ‘Inpatient or Inpatient/ER visit’, starting anytime on or before cohort entry start date and ending between 0 days before and all days after cohort entry start date.</p>
 </div>
-<div id="additional-inclusion-criteria-11" class="section level3" number="13.10.2">
+<div id="additional-inclusion-criteria-12" class="section level3" number="13.10.2">
 <h3><span class="header-section-number">B.10.2</span> Additional Inclusion Criteria</h3>
 <ul>
 <li>has no events in prior ‘clean window’ 183 days</li>
 </ul>
 <p>Entry events having no condition occurrences of ‘Encephalomyelitis’, starting in the 183 days prior to cohort entry start date; allow events outside observation period; having at least 1 visit occurrence of ‘Inpatient or Inpatient/ER visit’, starting anytime on or before ‘Encephalomyelitis’ start date and ending between 0 days before and all days after ‘Encephalomyelitis’ start date.</p>
 </div>
-<div id="cohort-exit-11" class="section level3" number="13.10.3">
+<div id="cohort-exit-13" class="section level3" number="13.10.3">
 <h3><span class="header-section-number">B.10.3</span> Cohort Exit</h3>
 <p>The cohort end date will be offset from index event’s start date plus 1 day.</p>
 </div>
-<div id="cohort-eras-11" class="section level3" number="13.10.4">
+<div id="cohort-eras-13" class="section level3" number="13.10.4">
 <h3><span class="header-section-number">B.10.4</span> Cohort Eras</h3>
 <p>Entry events will be combined into cohort eras if they are within 0 days of each other.</p>
 </div>
@@ -3762,25 +4005,25 @@ NO
 </div>
 <div id="cohort-345---narcolepsy" class="section level2" number="13.11">
 <h2><span class="header-section-number">B.11</span> Cohort 345 - Narcolepsy</h2>
-<div id="cohort-entry-events-12" class="section level3" number="13.11.1">
+<div id="cohort-entry-events-14" class="section level3" number="13.11.1">
 <h3><span class="header-section-number">B.11.1</span> Cohort Entry Events</h3>
 <p>People may enter the cohort when observing any of the following:</p>
 <ol style="list-style-type: decimal">
 <li>condition occurrences of ‘Narcolepsy’.</li>
 </ol>
 </div>
-<div id="additional-inclusion-criteria-12" class="section level3" number="13.11.2">
+<div id="additional-inclusion-criteria-13" class="section level3" number="13.11.2">
 <h3><span class="header-section-number">B.11.2</span> Additional Inclusion Criteria</h3>
 <ul>
 <li>has no events in prior ‘clean window’ - 365 days</li>
 </ul>
 <p>Entry events having no condition occurrences of ‘Narcolepsy’, starting in the 365 days prior to cohort entry start date; allow events outside observation period.</p>
 </div>
-<div id="cohort-exit-12" class="section level3" number="13.11.3">
+<div id="cohort-exit-14" class="section level3" number="13.11.3">
 <h3><span class="header-section-number">B.11.3</span> Cohort Exit</h3>
 <p>The cohort end date will be offset from index event’s start date plus 1 day.</p>
 </div>
-<div id="cohort-eras-12" class="section level3" number="13.11.4">
+<div id="cohort-eras-14" class="section level3" number="13.11.4">
 <h3><span class="header-section-number">B.11.4</span> Cohort Eras</h3>
 <p>Entry events will be combined into cohort eras if they are within 0 days of each other.</p>
 </div>
@@ -3867,7 +4110,7 @@ NO
 </div>
 <div id="cohort-343---guillain-barre-syndrome" class="section level2" number="13.12">
 <h2><span class="header-section-number">B.12</span> Cohort 343 - Guillain Barre Syndrome</h2>
-<div id="cohort-entry-events-13" class="section level3" number="13.12.1">
+<div id="cohort-entry-events-15" class="section level3" number="13.12.1">
 <h3><span class="header-section-number">B.12.1</span> Cohort Entry Events</h3>
 <p>People may enter the cohort when observing any of the following:</p>
 <ol style="list-style-type: decimal">
@@ -3875,18 +4118,18 @@ NO
 </ol>
 <p>Restrict entry events to having at least 1 visit occurrence of ‘Inpatient or Inpatient/ER visit’, starting anytime on or before cohort entry start date and ending between 0 days before and all days after cohort entry start date.</p>
 </div>
-<div id="additional-inclusion-criteria-13" class="section level3" number="13.12.2">
+<div id="additional-inclusion-criteria-14" class="section level3" number="13.12.2">
 <h3><span class="header-section-number">B.12.2</span> Additional Inclusion Criteria</h3>
 <ul>
 <li>has no events in prior ‘clean window’</li>
 </ul>
 <p>Entry events having no condition occurrences of ‘Guillian-Barre syndrome’, starting in the 365 days prior to cohort entry start date; allow events outside observation period; having at least 1 visit occurrence of ‘Inpatient or Inpatient/ER visit’, starting anytime on or before ‘Guillian-Barre syndrome’ start date and ending between 0 days before and all days after ‘Guillian-Barre syndrome’ start date.</p>
 </div>
-<div id="cohort-exit-13" class="section level3" number="13.12.3">
+<div id="cohort-exit-15" class="section level3" number="13.12.3">
 <h3><span class="header-section-number">B.12.3</span> Cohort Exit</h3>
 <p>The cohort end date will be offset from index event’s start date plus 1 day.</p>
 </div>
-<div id="cohort-eras-13" class="section level3" number="13.12.4">
+<div id="cohort-eras-15" class="section level3" number="13.12.4">
 <h3><span class="header-section-number">B.12.4</span> Cohort Eras</h3>
 <p>Entry events will be combined into cohort eras if they are within 0 days of each other.</p>
 </div>
@@ -4074,7 +4317,7 @@ NO
 </div>
 <div id="cohort-340---acute-myocardial-infarction" class="section level2" number="13.13">
 <h2><span class="header-section-number">B.13</span> Cohort 340 - Acute Myocardial Infarction</h2>
-<div id="cohort-entry-events-14" class="section level3" number="13.13.1">
+<div id="cohort-entry-events-16" class="section level3" number="13.13.1">
 <h3><span class="header-section-number">B.13.1</span> Cohort Entry Events</h3>
 <p>People may enter the cohort when observing any of the following:</p>
 <ol style="list-style-type: decimal">
@@ -4082,18 +4325,18 @@ NO
 </ol>
 <p>Restrict entry events to having at least 1 visit occurrence of ‘Inpatient or Inpatient/ER visit’, starting anytime on or before cohort entry start date and ending between 0 days before and all days after cohort entry start date.</p>
 </div>
-<div id="additional-inclusion-criteria-14" class="section level3" number="13.13.2">
+<div id="additional-inclusion-criteria-15" class="section level3" number="13.13.2">
 <h3><span class="header-section-number">B.13.2</span> Additional Inclusion Criteria</h3>
 <ul>
 <li>has no events in prior ‘clean window’ - 365 days</li>
 </ul>
 <p>Entry events having no condition occurrences of ‘Myocardial Infarction and complication’, starting in the 365 days prior to cohort entry start date; allow events outside observation period; having at least 1 visit occurrence of ‘Inpatient or Inpatient/ER visit’, starting anytime on or before ‘Myocardial Infarction and complication’ start date and ending between 0 days before and all days after ‘Myocardial Infarction and complication’ start date.</p>
 </div>
-<div id="cohort-exit-14" class="section level3" number="13.13.3">
+<div id="cohort-exit-16" class="section level3" number="13.13.3">
 <h3><span class="header-section-number">B.13.3</span> Cohort Exit</h3>
 <p>The cohort end date will be offset from index event’s start date plus 1 day.</p>
 </div>
-<div id="cohort-eras-14" class="section level3" number="13.13.4">
+<div id="cohort-eras-16" class="section level3" number="13.13.4">
 <h3><span class="header-section-number">B.13.4</span> Cohort Eras</h3>
 <p>Entry events will be combined into cohort eras if they are within 0 days of each other.</p>
 </div>
@@ -4442,25 +4685,25 @@ NO
 </div>
 <div id="cohort-339---myocarditis-pericarditis" class="section level2" number="13.14">
 <h2><span class="header-section-number">B.14</span> Cohort 339 - Myocarditis Pericarditis</h2>
-<div id="cohort-entry-events-15" class="section level3" number="13.14.1">
+<div id="cohort-entry-events-17" class="section level3" number="13.14.1">
 <h3><span class="header-section-number">B.14.1</span> Cohort Entry Events</h3>
 <p>People may enter the cohort when observing any of the following:</p>
 <ol style="list-style-type: decimal">
 <li>condition occurrences of ‘Myocarditis Pericarditis’.</li>
 </ol>
 </div>
-<div id="additional-inclusion-criteria-15" class="section level3" number="13.14.2">
+<div id="additional-inclusion-criteria-16" class="section level3" number="13.14.2">
 <h3><span class="header-section-number">B.14.2</span> Additional Inclusion Criteria</h3>
 <ul>
 <li>has no events in prior ‘clean window’ - 365 days</li>
 </ul>
 <p>Entry events having no condition occurrences of ‘Myocarditis Pericarditis’, starting in the 365 days prior to cohort entry start date; allow events outside observation period.</p>
 </div>
-<div id="cohort-exit-15" class="section level3" number="13.14.3">
+<div id="cohort-exit-17" class="section level3" number="13.14.3">
 <h3><span class="header-section-number">B.14.3</span> Cohort Exit</h3>
 <p>The cohort end date will be offset from index event’s start date plus 1 day.</p>
 </div>
-<div id="cohort-eras-15" class="section level3" number="13.14.4">
+<div id="cohort-eras-17" class="section level3" number="13.14.4">
 <h3><span class="header-section-number">B.14.4</span> Cohort Eras</h3>
 <p>Entry events will be combined into cohort eras if they are within 0 days of each other.</p>
 </div>
@@ -4639,25 +4882,25 @@ NO
 </div>
 <div id="cohort-335---immune-thrombocytopenia-itp" class="section level2" number="13.15">
 <h2><span class="header-section-number">B.15</span> Cohort 335 - Immune thrombocytopenia (ITP)</h2>
-<div id="cohort-entry-events-16" class="section level3" number="13.15.1">
+<div id="cohort-entry-events-18" class="section level3" number="13.15.1">
 <h3><span class="header-section-number">B.15.1</span> Cohort Entry Events</h3>
 <p>People may enter the cohort when observing any of the following:</p>
 <ol style="list-style-type: decimal">
 <li>condition occurrences of ‘Idiopathic and Immune Thrombocytopenia’.</li>
 </ol>
 </div>
-<div id="additional-inclusion-criteria-16" class="section level3" number="13.15.2">
+<div id="additional-inclusion-criteria-17" class="section level3" number="13.15.2">
 <h3><span class="header-section-number">B.15.2</span> Additional Inclusion Criteria</h3>
 <ul>
 <li>has no events in prior ‘clean window’ - 365 days</li>
 </ul>
 <p>Entry events having no condition occurrences of ‘Idiopathic and Immune Thrombocytopenia’, starting in the 365 days prior to cohort entry start date; allow events outside observation period.</p>
 </div>
-<div id="cohort-exit-16" class="section level3" number="13.15.3">
+<div id="cohort-exit-18" class="section level3" number="13.15.3">
 <h3><span class="header-section-number">B.15.3</span> Cohort Exit</h3>
 <p>The cohort end date will be offset from index event’s start date plus 1 day.</p>
 </div>
-<div id="cohort-eras-16" class="section level3" number="13.15.4">
+<div id="cohort-eras-18" class="section level3" number="13.15.4">
 <h3><span class="header-section-number">B.15.4</span> Cohort Eras</h3>
 <p>Entry events will be combined into cohort eras if they are within 0 days of each other.</p>
 </div>
@@ -4767,7 +5010,7 @@ NO
 </div>
 <div id="cohort-547---thrombosis-with-thrombocytopenia-twt" class="section level2" number="13.16">
 <h2><span class="header-section-number">B.16</span> Cohort 547 - Thrombosis with Thrombocytopenia (TWT)</h2>
-<div id="cohort-entry-events-17" class="section level3" number="13.16.1">
+<div id="cohort-entry-events-19" class="section level3" number="13.16.1">
 <h3><span class="header-section-number">B.16.1</span> Cohort Entry Events</h3>
 <p>People may enter the cohort when observing any of the following:</p>
 <ol style="list-style-type: decimal">
@@ -4784,7 +5027,7 @@ NO
 <li><p>condition occurrences of ‘Myocardial Infarction and complication’.</p></li>
 </ol>
 </div>
-<div id="additional-inclusion-criteria-17" class="section level3" number="13.16.2">
+<div id="additional-inclusion-criteria-18" class="section level3" number="13.16.2">
 <h3><span class="header-section-number">B.16.2</span> Additional Inclusion Criteria</h3>
 <ul>
 <li>Thrombocytopenia within 7 days of thrombosis with no such event in the past 90 days (clean window)</li>
@@ -4822,11 +5065,11 @@ NO
 <li>having no condition occurrences of ‘Myocardial Infarction and complication’, starting in the 365 days prior to cohort entry start date.</li>
 </ol>
 </div>
-<div id="cohort-exit-17" class="section level3" number="13.16.3">
+<div id="cohort-exit-19" class="section level3" number="13.16.3">
 <h3><span class="header-section-number">B.16.3</span> Cohort Exit</h3>
 <p>The cohort end date will be offset from index event’s start date plus 1 day.</p>
 </div>
-<div id="cohort-eras-17" class="section level3" number="13.16.4">
+<div id="cohort-eras-19" class="section level3" number="13.16.4">
 <h3><span class="header-section-number">B.16.4</span> Cohort Eras</h3>
 <p>Entry events will be combined into cohort eras if they are within 0 days of each other.</p>
 </div>

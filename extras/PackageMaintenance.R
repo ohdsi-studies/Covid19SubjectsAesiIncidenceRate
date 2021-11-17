@@ -22,24 +22,25 @@ OhdsiRTools::createRenvLockFile(rootPackage = "Covid19SubjectsAesiIncidenceRate"
 
 
 # Format and check code ---------------------------------------------------
-OhdsiRTools::formatRFolder()
-OhdsiRTools::updatePackageNameFolder(packageName = "Covid19SubjectsAesiIncidenceRate",
-                                     recursive = T)
-OhdsiRTools::checkUsagePackage("Covid19SubjectsAesiIncidenceRate")
-OhdsiRTools::updateCopyrightYearFolder()
-devtools::document()
-Sys.setenv(JAVA_HOME = "")
-devtools::check()
+# OhdsiRTools::formatRFolder()
+# OhdsiRTools::updatePackageNameFolder(packageName = "Covid19SubjectsAesiIncidenceRate",
+#                                      recursive = T)
+# OhdsiRTools::checkUsagePackage("Covid19SubjectsAesiIncidenceRate")
+# OhdsiRTools::updateCopyrightYearFolder()
+# devtools::document()
+# Sys.setenv(JAVA_HOME = "")
+# devtools::check()
 
 # Create manual -----------------------------------------------------------
-unlink("extras/Covid19SubjectsAesiIncidenceRate.pdf")
-shell("R CMD Rd2pdf ./ --output=extras/Covid19SubjectsAesiIncidenceRate.pdf")
+# unlink("extras/Covid19SubjectsAesiIncidenceRate.pdf")
+# shell("R CMD Rd2pdf ./ --output=extras/Covid19SubjectsAesiIncidenceRate.pdf")
+#
+# pkgdown::build_site()
 
-pkgdown::build_site()
-
+# CREATE ANALYSIS.json
 analysis1 <- list(name = "AESIs in COVID-19 subjects",
-                  targetIds = list(562, 563),
-                  subgroupIds = list(11, 12, 21, 22, 31, 32, 41, 42, 51, 52, 61, 62, 71, 72, 81, 82, 91, 92, 101, 102, 111, 112),
+                  targetIds = list(562, 563, 565, 566),
+                  subgroupIds = list(21,22,31,32,41,42,51,52,61,62,71,72,81,82,91,92,101,102,111,112,121,122),
                   timeAtRiskIds = list(1, 2, 3, 4, 5, 6, 7),
                   outcomeIds = list(345, 349, 347, 346, 343, 340, 339, 335, 385, 386, 381, 405, 402, 406, 411, 547))
 
@@ -98,49 +99,49 @@ for (i in 1:length(analysisListFromFile$analysisList)) {
 # Check the warnings if any are generated to find configuration errors
 
 
-# Store environment in which the study was executed -----------------------
-OhdsiRTools::insertEnvironmentSnapshotInPackage("Covid19SubjectsAesiIncidenceRate")
-OhdsiRTools::createRenvLockFile(rootPackage = "Covid19SubjectsAesiIncidenceRate")
-
-# Check all files for UTF-8 Encoding and ensure there are no non-ASCII characters
-OhdsiRTools::findNonAsciiStringsInFolder()
-
-packageFiles <- list.files(path = ".", recursive = TRUE)
-if (!all(utf8::utf8_valid(packageFiles))) {
-  print("Found invalid UTF-8 encoded files")
-}
-
-# Create the Renv lock file
-OhdsiRTools::createRenvLockFile("Covid19SubjectsAesiIncidenceRate",
-                                additionalRequiredPackages = c("keyring",
-  "DatabaseConnector", "dplyr", "ROhdsiWebApi", "stringr", "SqlRender", "tidyr", "plyr"))
-
-# Validate cohort SQL file names ------------
-targetCohorts <- Covid19SubjectsAesiIncidenceRate::readCsv("settings/targetRef.csv")
-targetCohorts$cohortFolder <- "target"
-subgroupCohorts <- Covid19SubjectsAesiIncidenceRate::readCsv("settings/subgroupRef.csv")
-subgroupCohorts$cohortFolder <- "subgroup"
-outcomeCohorts <- Covid19SubjectsAesiIncidenceRate::readCsv("settings/outcomeRef.csv")
-outcomeCohorts$cohortFolder <- "outcome"
-# Reformat the outcomeCohorts dataframe to match target/subgroup
-outcomeCohortsReformatted <- outcomeCohorts[, c("outcomeId",
-                                                "outcomeName",
-                                                "fileName",
-                                                "cohortFolder")]
-names(outcomeCohortsReformatted) <- c("cohortId", "cohortName", "fileName", "cohortFolder")
-allCohorts <- rbind(targetCohorts, subgroupCohorts, outcomeCohortsReformatted)
-
-# Obtain the list of SQL files in the list
-packageSqlFiles <- list.files(system.file(file.path("sql/sql_server/"),
-                                          package = "Covid19SubjectsAesiIncidenceRate"),
-  recursive = TRUE)
-
-for (i in 1:nrow(allCohorts)) {
-  # Verify that the path to the SQL file is correct and matches with case sensitivity
-  sqlFileName <- file.path(allCohorts$cohortFolder[i], allCohorts$fileName[i])
-  fileFound <- sqlFileName %in% packageSqlFiles
-  if (!fileFound) {
-    warning(paste(sqlFileName,
-                  "not found in package. This is likely due to a difference in case sensitivity."))
-  }
-}
+# # Store environment in which the study was executed -----------------------
+# OhdsiRTools::insertEnvironmentSnapshotInPackage("Covid19SubjectsAesiIncidenceRate")
+# OhdsiRTools::createRenvLockFile(rootPackage = "Covid19SubjectsAesiIncidenceRate")
+#
+# # Check all files for UTF-8 Encoding and ensure there are no non-ASCII characters
+# OhdsiRTools::findNonAsciiStringsInFolder()
+#
+# packageFiles <- list.files(path = ".", recursive = TRUE)
+# if (!all(utf8::utf8_valid(packageFiles))) {
+#   print("Found invalid UTF-8 encoded files")
+# }
+#
+# # Create the Renv lock file
+# OhdsiRTools::createRenvLockFile("Covid19SubjectsAesiIncidenceRate",
+#                                 additionalRequiredPackages = c("keyring",
+#   "DatabaseConnector", "dplyr", "ROhdsiWebApi", "stringr", "SqlRender", "tidyr", "plyr"))
+#
+# # Validate cohort SQL file names ------------
+# targetCohorts <- Covid19SubjectsAesiIncidenceRate::readCsv("settings/targetRef.csv")
+# targetCohorts$cohortFolder <- "target"
+# subgroupCohorts <- Covid19SubjectsAesiIncidenceRate::readCsv("settings/subgroupRef.csv")
+# subgroupCohorts$cohortFolder <- "subgroup"
+# outcomeCohorts <- Covid19SubjectsAesiIncidenceRate::readCsv("settings/outcomeRef.csv")
+# outcomeCohorts$cohortFolder <- "outcome"
+# # Reformat the outcomeCohorts dataframe to match target/subgroup
+# outcomeCohortsReformatted <- outcomeCohorts[, c("outcomeId",
+#                                                 "outcomeName",
+#                                                 "fileName",
+#                                                 "cohortFolder")]
+# names(outcomeCohortsReformatted) <- c("cohortId", "cohortName", "fileName", "cohortFolder")
+# allCohorts <- rbind(targetCohorts, subgroupCohorts, outcomeCohortsReformatted)
+#
+# # Obtain the list of SQL files in the list
+# packageSqlFiles <- list.files(system.file(file.path("sql/sql_server/"),
+#                                           package = "Covid19SubjectsAesiIncidenceRate"),
+#   recursive = TRUE)
+#
+# for (i in 1:nrow(allCohorts)) {
+#   # Verify that the path to the SQL file is correct and matches with case sensitivity
+#   sqlFileName <- file.path(allCohorts$cohortFolder[i], allCohorts$fileName[i])
+#   fileFound <- sqlFileName %in% packageSqlFiles
+#   if (!fileFound) {
+#     warning(paste(sqlFileName,
+#                   "not found in package. This is likely due to a difference in case sensitivity."))
+#   }
+# }
