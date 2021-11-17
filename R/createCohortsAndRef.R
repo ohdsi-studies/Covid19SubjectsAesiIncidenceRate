@@ -93,7 +93,6 @@ createCohortsAndRef <- function(connectionDetails,
 
   }
 
-
   if (nrow(timeAtRisk) > 0) {
     ParallelLogger::logInfo("Insert time at risk reference")
     for (i in 1:nrow(timeAtRisk)) {

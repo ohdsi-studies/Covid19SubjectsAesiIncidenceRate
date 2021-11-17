@@ -65,27 +65,6 @@ runIR <- function(connectionDetails = NULL,
     on.exit(DatabaseConnector::disconnect(connection))
   }
 
-  # Create the reference tables -----------------------------------------------------------------------
-  ParallelLogger::logInfo("----------------------------------------------------------")
-  ParallelLogger::logInfo("  ---- Creating reference tables  ---- ")
-  ParallelLogger::logInfo("----------------------------------------------------------")
-  createRefTablesSql <- SqlRender::loadRenderTranslateSql("CreateRefTables.sql",
-                                                          packageName = getThisPackageName(),
-                                                          dbms = connection@dbms,
-                                                          tempEmulationSchema = tempEmulationSchema,
-                                                          warnOnMissingParameters = TRUE,
-                                                          cohort_database_schema = cohortDatabaseSchema,
-                                                          summary_table = summaryTable,
-                                                          target_ref_table = targetRefTable,
-                                                          subgroup_ref_table = subgroupRefTable,
-                                                          outcome_ref_table = outcomeRefTable,
-                                                          time_at_risk_table = timeAtRiskTable)
-  DatabaseConnector::executeSql(connection = connection,
-                                sql = createRefTablesSql,
-                                progressBar = TRUE,
-                                reportOverallTime = TRUE)
-
-
   # Run the IR analysis ------------------------------------------------------------
   ParallelLogger::logInfo("----------------------------------------------------------")
   ParallelLogger::logInfo("  ---- Computing & Export Incidence Analysis ---- ")

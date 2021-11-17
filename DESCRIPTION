@@ -1,7 +1,7 @@
 Package: Covid19SubjectsAesiIncidenceRate
 Type: Package
 Title: Adverse Events of Special Interest within COVID-19 Subjects
-Version: 0.1.2
+Version: 0.1.3
 Author: Erica Voss [aut, cre],
 	Marc A. Suchard [aut]
 Maintainer: Erica Voss <EVoss3@its.jnj.com>
