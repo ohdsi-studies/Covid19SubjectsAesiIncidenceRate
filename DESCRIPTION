@@ -1,13 +1,12 @@
 Package: Covid19SubjectsAesiIncidenceRate
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
+Title: Adverse Events of Special Interest within COVID-19 Subjects
+Version: 0.1.2
 Author: Erica Voss [aut, cre],
 	Marc A. Suchard [aut]
 Maintainer: Erica Voss <EVoss3@its.jnj.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Description: Extending on our previous work by Li et al. 1 2 in understanding the incidence rates of adverse events of special interest (AESI) for COVID-19, this work will look at the rates of these AESIs in patients who had COVDI-19 disease.
+License: The Covid19SubjectsAesiIncidenceRate package is licensed under Apache License 2.0.
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2

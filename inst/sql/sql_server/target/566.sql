@@ -16,24 +16,67 @@ FROM
   select E.person_id, E.start_date, E.end_date,
          row_number() OVER (PARTITION BY E.person_id ORDER BY E.sort_date ASC) ordinal,
          OP.observation_period_start_date as op_start_date, OP.observation_period_end_date as op_end_date, cast(E.visit_occurrence_id as bigint) as visit_occurrence_id
-  FROM 
+  FROM
   (
-  
+  -- Begin Observation Period Criteria
+select C.person_id, C.observation_period_id as event_id, DATEFROMPARTS(2017, 1, 1) as start_date, DATEFROMPARTS(2017, 1, 1) as end_date,
+       CAST(NULL as bigint) as visit_occurrence_id, C.observation_period_start_date as sort_date
+
+from
+(
+        select op.*, row_number() over (PARTITION BY op.person_id ORDER BY op.observation_period_start_date) as ordinal
+        FROM @cdm_database_schema.OBSERVATION_PERIOD op
+) C
+
+WHERE C.OBSERVATION_PERIOD_START_DATE <= DATEFROMPARTS(2017, 1, 1) and C.OBSERVATION_PERIOD_END_DATE >= DATEFROMPARTS(2017, 1, 1)
+AND C.OBSERVATION_PERIOD_START_DATE <= DATEFROMPARTS(2017, 1, 1) and C.OBSERVATION_PERIOD_END_DATE >= DATEFROMPARTS(2017, 1, 1)
+-- End Observation Period Criteria
+
+UNION ALL
+-- Begin Observation Period Criteria
+select C.person_id, C.observation_period_id as event_id, DATEFROMPARTS(2018, 1, 1) as start_date, DATEFROMPARTS(2018, 1, 1) as end_date,
+       CAST(NULL as bigint) as visit_occurrence_id, C.observation_period_start_date as sort_date
+
+from
+(
+        select op.*, row_number() over (PARTITION BY op.person_id ORDER BY op.observation_period_start_date) as ordinal
+        FROM @cdm_database_schema.OBSERVATION_PERIOD op
+) C
+
+WHERE C.OBSERVATION_PERIOD_START_DATE <= DATEFROMPARTS(2018, 1, 1) and C.OBSERVATION_PERIOD_END_DATE >= DATEFROMPARTS(2018, 1, 1)
+AND C.OBSERVATION_PERIOD_START_DATE <= DATEFROMPARTS(2018, 1, 1) and C.OBSERVATION_PERIOD_END_DATE >= DATEFROMPARTS(2018, 1, 1)
+-- End Observation Period Criteria
+
+UNION ALL
+-- Begin Observation Period Criteria
+select C.person_id, C.observation_period_id as event_id, DATEFROMPARTS(2019, 1, 1) as start_date, DATEFROMPARTS(2019, 1, 1) as end_date,
+       CAST(NULL as bigint) as visit_occurrence_id, C.observation_period_start_date as sort_date
+
+from
+(
+        select op.*, row_number() over (PARTITION BY op.person_id ORDER BY op.observation_period_start_date) as ordinal
+        FROM @cdm_database_schema.OBSERVATION_PERIOD op
+) C
+
+WHERE C.OBSERVATION_PERIOD_START_DATE <= DATEFROMPARTS(2019, 1, 1) and C.OBSERVATION_PERIOD_END_DATE >= DATEFROMPARTS(2019, 1, 1)
+AND C.OBSERVATION_PERIOD_START_DATE <= DATEFROMPARTS(2019, 1, 1) and C.OBSERVATION_PERIOD_END_DATE >= DATEFROMPARTS(2019, 1, 1)
+-- End Observation Period Criteria
+
   ) E
 	JOIN @cdm_database_schema.observation_period OP on E.person_id = OP.person_id and E.start_date >=  OP.observation_period_start_date and E.start_date <= op.observation_period_end_date
-  WHERE DATEADD(day,0,OP.OBSERVATION_PERIOD_START_DATE) <= E.START_DATE AND DATEADD(day,0,E.START_DATE) <= OP.OBSERVATION_PERIOD_END_DATE
+  WHERE DATEADD(day,365,OP.OBSERVATION_PERIOD_START_DATE) <= E.START_DATE AND DATEADD(day,0,E.START_DATE) <= OP.OBSERVATION_PERIOD_END_DATE
 ) P
-WHERE P.ordinal = 1
+
 -- End Primary Events
 
 )
 SELECT event_id, person_id, start_date, end_date, op_start_date, op_end_date, visit_occurrence_id
 INTO #qualified_events
-FROM 
+FROM
 (
   select pe.event_id, pe.person_id, pe.start_date, pe.end_date, pe.op_start_date, pe.op_end_date, row_number() over (partition by pe.person_id order by pe.start_date ASC) as ordinal, cast(pe.visit_occurrence_id as bigint) as visit_occurrence_id
   FROM primary_events pe
-  
+
 ) QE
 
 ;
@@ -60,23 +103,30 @@ with cteIncludedEvents(event_id, person_id, start_date, end_date, op_start_date,
 select event_id, person_id, start_date, end_date, op_start_date, op_end_date
 into #included_events
 FROM cteIncludedEvents Results
-WHERE Results.ordinal = 1
+
 ;
 
+-- date offset strategy
+
+select event_id, person_id,
+  case when DATEADD(day,0,start_date) > op_end_date then op_end_date else DATEADD(day,0,start_date) end as end_date
+INTO #strategy_ends
+from #included_events;
 
 
 -- generate cohort periods into #final_cohort
 with cohort_ends (event_id, person_id, end_date) as
 (
 	-- cohort exit dates
-  -- By default, cohort exit at the event's op end date
-select event_id, person_id, op_end_date as end_date from #included_events
+  -- End Date Strategy
+SELECT event_id, person_id, end_date from #strategy_ends
+
 ),
 first_ends (person_id, start_date, end_date) as
 (
 	select F.person_id, F.start_date, F.end_date
 	FROM (
-	  select I.event_id, I.person_id, I.start_date, E.end_date, row_number() over (partition by I.person_id, I.event_id order by E.end_date) as ordinal 
+	  select I.event_id, I.person_id, I.start_date, E.end_date, row_number() over (partition by I.person_id, I.event_id order by E.end_date) as ordinal
 	  from #included_events I
 	  join cohort_ends E on I.event_id = E.event_id and I.person_id = E.person_id and E.end_date >= I.start_date
 	) F
@@ -87,7 +137,7 @@ INTO #cohort_rows
 from first_ends;
 
 with cteEndDates (person_id, end_date) AS -- the magic
-(	
+(
 	SELECT
 		person_id
 		, DATEADD(day,-1 * 0, event_date)  as end_date
@@ -97,7 +147,7 @@ with cteEndDates (person_id, end_date) AS -- the magic
 			person_id
 			, event_date
 			, event_type
-			, MAX(start_ordinal) OVER (PARTITION BY person_id ORDER BY event_date, event_type ROWS UNBOUNDED PRECEDING) AS start_ordinal 
+			, MAX(start_ordinal) OVER (PARTITION BY person_id ORDER BY event_date, event_type ROWS UNBOUNDED PRECEDING) AS start_ordinal
 			, ROW_NUMBER() OVER (PARTITION BY person_id ORDER BY event_date, event_type) AS overall_ord
 		FROM
 		(
@@ -107,9 +157,9 @@ with cteEndDates (person_id, end_date) AS -- the magic
 				, -1 AS event_type
 				, ROW_NUMBER() OVER (PARTITION BY person_id ORDER BY start_date) AS start_ordinal
 			FROM #cohort_rows
-		
+
 			UNION ALL
-		
+
 
 			SELECT
 				person_id
@@ -139,13 +189,15 @@ group by person_id, end_date
 
 DELETE FROM @target_database_schema.@target_cohort_table where cohort_definition_id = @target_cohort_id;
 INSERT INTO @target_database_schema.@target_cohort_table (cohort_definition_id, subject_id, cohort_start_date, cohort_end_date)
-select @target_cohort_id as cohort_definition_id, person_id, start_date, end_date 
+select @target_cohort_id as cohort_definition_id, person_id, start_date, end_date
 FROM #final_cohort CO
 ;
 
 
 
 
+TRUNCATE TABLE #strategy_ends;
+DROP TABLE #strategy_ends;
 
 
 TRUNCATE TABLE #cohort_rows;
