@@ -632,10 +632,10 @@
 		},
 		"sodium" : {
 			"Package" : "sodium",
-			"Version" : "1.2.0",
+			"Version" : "1.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN",
-			"Hash" : "07060494360a48fc8a2e282f0dc8f2cf"
+			"Hash" : "9f07fda8802e9a2ed7e91f20f2d814ce"
 		},
 		"stringi" : {
 			"Package" : "stringi",
