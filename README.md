@@ -34,36 +34,9 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
   renv::init()
   ```
 
-3. When asked if the project already has a lockfile select "1: Restore the project from the lockfile.".
+3. If/When asked if the project already has a lockfile select "1: Restore the project from the lockfile.".
 
-4. Verify all dependencies have been loaded:
-
-  ```r
-  verifyDependencies <- function() {
-    expected <- RJSONIO::fromJSON("renv.lock")
-    expected <- dplyr::bind_rows(expected[[2]])
-    basePackages <- rownames(installed.packages(priority = "base"))
-    expected <- expected[!expected$Package %in% basePackages, ]
-    observedVersions <- sapply(sapply(expected$Package, packageVersion), paste, collapse = ".")
-    expectedVersions <- sapply(sapply(expected$Version, numeric_version), paste, collapse = ".")
-    mismatchIdx <- which(observedVersions != expectedVersions)
-    if (length(mismatchIdx) > 0) {
-      
-      lines <- sapply(mismatchIdx, function(idx) sprintf("- Package %s version %s should be %s",
-                                                         expected$Package[idx],
-                                                         observedVersions[idx],
-                                                         expectedVersions[idx]))
-      message <- paste(c("Mismatch between required and installed package versions. Did you forget to run renv::restore()?",
-                         lines),
-                       collapse = "\n")
-      stop(message)
-    }
-    return("Dependencies Verified")
-  }
-  verifyDependencies()
-  ```
-  
-5. You can execute the study by modifying and using the code below. For your convenience, this code is also provided under `extras/CodeToRun.R`:
+4. You can execute the study by modifying and using the code below. For your convenience, this code is also provided under `extras/CodeToRun.R`:
 	
 	```r
 	# --- SETUP --------------------------------------------------------------------
@@ -97,7 +70,7 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
 											  runIR = TRUE)
 	```
 	
-4. Upload the files ```results/cohortDiagnostics/Results_<DatabaseId>.zip``` and ```results/incidenceRate/Results_IR_<DatabaseId>.zip``` in the output folder to the study coordinator:
+5. Upload the files ```results/cohortDiagnostics/Results_<DatabaseId>.zip``` and ```results/incidenceRate/Results_IR_<DatabaseId>.zip``` in the output folder to the study coordinator:
 
 	```r
 	privateKeyFileName <- "<file>"
@@ -108,6 +81,13 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
 	
 	Where ```<file>``` and ```<name>``` are the credentials provided to you personally by the study coordinator.
 
+6. (OPTIONAL) If you want to view your CohortDiagnostics results, run the following:
+
+  ```r
+  # --- VIEW COHORT DIAGNOSTICS --------------------------------------------------
+  # If CohortDiagnostics has been run, you can call the RShiney viewer like this:
+  CohortDiagnostics::launchDiagnosticsExplorer(dataFolder = file.path(outputFolder,"cohortDiagnostics"))
+  ```
 
 # License 
 The Covid19SubjectsAesiIncidenceRate package is licensed under Apache License 2.0.
