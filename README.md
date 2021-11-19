@@ -28,11 +28,11 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
 
 2. Create an empty folder or new RStudio project, and in R, use the following code to install the study package and its dependencies:
 
-  ```r
-  install.packages("renv")
-  download.file("https://raw.githubusercontent.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/master/renv.lock", "renv.lock")
-  renv::init()
-  ```
+    ```r
+    install.packages("renv")
+    download.file("https://raw.githubusercontent.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/master/renv.lock", "renv.lock")
+    renv::init()
+    ```
 
 3. If/When asked if the project already has a lockfile select "1: Restore the project from the lockfile.".
 
@@ -69,25 +69,25 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
 											  runCohortDiagnostics = TRUE,
 											  runIR = TRUE)
 	```
+
+5. (OPTIONAL) If you want to view your CohortDiagnostics results, run the following:
+
+    ```r
+    # --- VIEW COHORT DIAGNOSTICS --------------------------------------------------
+    # If CohortDiagnostics has been run, you can call the RShiney viewer like this:
+    CohortDiagnostics::launchDiagnosticsExplorer(dataFolder = file.path(outputFolder,"cohortDiagnostics"))
+    ```	
+
+6. Upload the files ```results/cohortDiagnostics/Results_<DatabaseId>.zip``` and ```results/incidenceRate/Results_IR_<DatabaseId>.zip``` in the output folder to the study coordinator:
+ 
+    ```r
+    privateKeyFileName <- "<file>"
+    userName <- "<name>"
+    Covid19SubjectsAesiIncidenceRate::uploadStudyResults(file.path(outputFolder,"cohortDiagnostics"), privateKeyFileName, userName)
+    Covid19SubjectsAesiIncidenceRate::uploadStudyResults(file.path(outputFolder, "incidenceRate"), privateKeyFileName, userName)
+    ```
 	
-5. Upload the files ```results/cohortDiagnostics/Results_<DatabaseId>.zip``` and ```results/incidenceRate/Results_IR_<DatabaseId>.zip``` in the output folder to the study coordinator:
-
-	```r
-	privateKeyFileName <- "<file>"
-	userName <- "<name>"
-	Covid19SubjectsAesiIncidenceRate::uploadStudyResults(file.path(outputFolder,"cohortDiagnostics"), privateKeyFileName, userName)
-	Covid19SubjectsAesiIncidenceRate::uploadStudyResults(file.path(outputFolder, "incidenceRate"), privateKeyFileName, userName)
-	```
-	
-	Where ```<file>``` and ```<name>``` are the credentials provided to you personally by the study coordinator.
-
-6. (OPTIONAL) If you want to view your CohortDiagnostics results, run the following:
-
-  ```r
-  # --- VIEW COHORT DIAGNOSTICS --------------------------------------------------
-  # If CohortDiagnostics has been run, you can call the RShiney viewer like this:
-  CohortDiagnostics::launchDiagnosticsExplorer(dataFolder = file.path(outputFolder,"cohortDiagnostics"))
-  ```
+    Where ```<file>``` and ```<name>``` are the credentials provided to you personally by the study coordinator.
 
 # License 
 The Covid19SubjectsAesiIncidenceRate package is licensed under Apache License 2.0.

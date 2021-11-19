@@ -35,15 +35,12 @@ execute <- function(connectionDetails,
     dir.create(outputFolder, recursive = TRUE)
   }
 
-  ParallelLogger::clearLoggers()  # Ensure that any/all previous logging activities are cleared
   ParallelLogger::addDefaultFileLogger(file.path(outputFolder,
                                                  paste0(getThisPackageName(), "_log.txt")))
   ParallelLogger::addDefaultErrorReportLogger(file.path(outputFolder, paste0(getThisPackageName(),
                                                                              "_ErrorReportR.txt")))
-  ParallelLogger::addDefaultConsoleLogger()
   on.exit(ParallelLogger::unregisterLogger("DEFAULT_FILE_LOGGER", silent = TRUE))
   on.exit(ParallelLogger::unregisterLogger("DEFAULT_ERRORREPORT_LOGGER", silent = TRUE), add = TRUE)
-  on.exit(ParallelLogger::unregisterLogger("DEFAULT_CONSOLE_LOGGER", silent = TRUE), add = TRUE)
 
   # Write out the system information
   ParallelLogger::logInfo(.systemInfo())
