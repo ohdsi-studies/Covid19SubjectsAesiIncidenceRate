@@ -36,7 +36,7 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
 
 3. If/When asked if the project already has a lockfile select "1: Restore the project from the lockfile.".
 
-4. You can execute the study by modifying and using the code below. For your convenience, this code is also provided under `extras/CodeToRun.R`.  Please note this execution step will create the following tables on your database:
+4. This is the main execution step. Please note this execution step will create the following tables on your database:
    - `<cohortTable>`
    - `<cohortTablePrefix>_ir_summary`
    - `<cohortTablePrefix>_outcome`
@@ -46,7 +46,9 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
    - `<cohortTablePrefix>_target`
    - `<cohortTablePrefix>_target_ref`
    - `<cohortTablePrefix>_time_at_risk`
-	
+  
+    You can execute the study by modifying and using the code below. For your convenience, this code is also provided under `extras/CodeToRun.R`.  
+  
     ```r
     # --- SETUP --------------------------------------------------------------------
     library(Covid19SubjectsAesiIncidenceRate)
@@ -56,10 +58,11 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
 
     # Details for connecting to the server:
     # See ?DatabaseConnector::createConnectionDetails for help
-    connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = "postgresql",
-    															server = "some.server.com/ohdsi",
-    															user = "joe",
-    															password = "secret")
+    connectionDetails <- DatabaseConnector::createConnectionDetails(
+							dbms = "postgresql",
+    						server = "some.server.com/ohdsi",
+    						user = "joe",
+    						password = "secret")
 
     outputFolder <- "D:/Covid19SubjectsAesiIncidenceRate/results"
     cdmDatabaseSchema <- "cdm_synpuf"
@@ -72,17 +75,17 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
     
     # --- EXECUTE ------------------------------------------------------------------
     Covid19SubjectsAesiIncidenceRate::execute(connectionDetails = connectionDetails,
-    									  outputFolder = outputFolder,
-    									  cdmDatabaseSchema = cdmDatabaseSchema,
-    									  cohortDatabaseSchema = cohortDatabaseSchema,
-    									  cohortTablePrefix = cohortTablePrefix,
+    					outputFolder = outputFolder,
+    					cdmDatabaseSchema = cdmDatabaseSchema,
+    					cohortDatabaseSchema = cohortDatabaseSchema,
+    					cohortTablePrefix = cohortTablePrefix,
                         cohortTable = cohortTable,
                         databaseId = databaseId,
                         databaseName = databaseName,
                         databaseDescription = databaseDescription,
-    									  createCohortsAndRef = TRUE,
+    					createCohortsAndRef = TRUE,
                         runCohortDiagnostics = TRUE,
-        							  runIR = TRUE)
+        				runIR = TRUE)
     ```
     
 5. (OPTIONAL) If you want to view your CohortDiagnostics results, run the following:
