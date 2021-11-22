@@ -20,7 +20,7 @@ rootFTPFolder <- function() {
 
 #' @export
 uploadDiagnosticsResults <- function(outputFolder, privateKeyFileName, userName) {
-  uploadResults(file.path(outputFolder, "diagnostics"),
+  uploadResults(outputFolder,
                 privateKeyFileName,
                 userName,
                 remoteFolder = paste0(rootFTPFolder(), "CohortDiagnostics"))
@@ -28,8 +28,10 @@ uploadDiagnosticsResults <- function(outputFolder, privateKeyFileName, userName)
 
 #' @export
 uploadStudyResults <- function(outputFolder, privateKeyFileName, userName) {
-  uploadResults(outputFolder, privateKeyFileName, userName, remoteFolder = paste0(rootFTPFolder(),
-                                                                                  "StudyResults"))
+  uploadResults(outputFolder,
+                privateKeyFileName,
+                userName,
+                remoteFolder = paste0(rootFTPFolder(), "StudyResults"))
 }
 
 #' Upload results to OHDSI server

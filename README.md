@@ -102,7 +102,7 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
     ```r
     privateKeyFileName <- "<file>"
     userName <- "<name>"
-    Covid19SubjectsAesiIncidenceRate::uploadStudyResults(file.path(outputFolder,"cohortDiagnostics"), privateKeyFileName, userName)
+    Covid19SubjectsAesiIncidenceRate::uploadDiagnosticsResults(file.path(outputFolder,"cohortDiagnostics"), privateKeyFileName, userName)
     Covid19SubjectsAesiIncidenceRate::uploadStudyResults(file.path(outputFolder, "incidenceRate"), privateKeyFileName, userName)
     ```
 	
