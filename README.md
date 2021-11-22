@@ -30,13 +30,14 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
 
     ```r
     install.packages("renv")
+	setwd("D:/Projects/Covid19SubjectsAesiIncidenceRate")
     download.file("https://raw.githubusercontent.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/master/renv.lock", "renv.lock")
     renv::init()
     ```
 
 3. If/When asked if the project already has a lockfile select "1: Restore the project from the lockfile.".
 
-4. This is the main execution step. Please note this execution step will create the following tables on your database:
+4. This is the main execution step. Please note this execution step will create the following tables on your database based on the user defined variables `<cohortTable>` and `<cohortTablePrefix>`.
    - `<cohortTable>`
    - `<cohortTablePrefix>_ir_summary`
    - `<cohortTablePrefix>_outcome`
