@@ -55,14 +55,14 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
 	outputFolder <- "D:/Covid19SubjectsAesiIncidenceRate/results"
 	cdmDatabaseSchema <- "cdm_synpuf"
 	cohortDatabaseSchema <- "scratch.dbo"
-	cohortTablePrefix <- "aesi"
+  cohortTablePrefix <- "aesi"
   cohortTable <- "aesi_cohort"
-	databaseId <- "synpuf"
-	databaseName <- "Medicare Claims Synthetic Public Use Files (SynPUFs)"
-	databaseDescription <- "Medicare Claims Synthetic Public Use Files (SynPUFs) were created to allow interested parties to gain familiarity using Medicare claims data while protecting beneficiary privacy. These files are intended to promote development of software and applications that utilize files in this format, train researchers on the use and complexities of Centers for Medicare and Medicaid Services (CMS) claims, and support safe data mining innovations. The SynPUFs were created by combining randomized information from multiple unique beneficiaries and changing variable values. This randomization and combining of beneficiary information ensures privacy of health information."
+  databaseId <- "synpuf"
+  databaseName <- "Medicare Claims Synthetic Public Use Files (SynPUFs)"
+  databaseDescription <- "Medicare Claims Synthetic Public Use Files (SynPUFs) were created to allow interested parties to gain familiarity using Medicare claims data while protecting beneficiary privacy. These files are intended to promote development of software and applications that utilize files in this format, train researchers on the use and complexities of Centers for Medicare and Medicaid Services (CMS) claims, and support safe data mining innovations. The SynPUFs were created by combining randomized information from multiple unique beneficiaries and changing variable values. This randomization and combining of beneficiary information ensures privacy of health information."
 
-	# --- EXECUTE ------------------------------------------------------------------
-	Covid19SubjectsAesiIncidenceRate::execute(connectionDetails = connectionDetails,
+  # --- EXECUTE ------------------------------------------------------------------
+  Covid19SubjectsAesiIncidenceRate::execute(connectionDetails = connectionDetails,
 											  outputFolder = outputFolder,
 											  cdmDatabaseSchema = cdmDatabaseSchema,
 											  cohortDatabaseSchema = cohortDatabaseSchema,
@@ -74,19 +74,18 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
 											  createCohortsAndRef = TRUE,
 											  runCohortDiagnostics = TRUE,
 											  runIR = TRUE)
-
-	```
+  ```
     
-    This step will generate the following tables in the cohortDatabaseSchema:
-     - <cohortTable>
-     - <cohortTablePrefix>_ir_summary
-     - <cohortTablePrefix>_outcome
-     - <cohortTablePrefix>_outcome_ref
-     - <cohortTablePrefix>_subgroup
-     - <cohortTablePrefix>_subgroup_ref
-     - <cohortTablePrefix>_target
-     - <cohortTablePrefix>_target_ref
-     - <cohortTablePrefix>_time_at_risk
+  This step will generate the following tables in the cohortDatabaseSchema:
+   - <cohortTable>
+   - <cohortTablePrefix>_ir_summary
+   - <cohortTablePrefix>_outcome
+   - <cohortTablePrefix>_outcome_ref
+   - <cohortTablePrefix>_subgroup
+   - <cohortTablePrefix>_subgroup_ref
+   - <cohortTablePrefix>_target
+   - <cohortTablePrefix>_target_ref
+   - <cohortTablePrefix>_time_at_risk
 
 5. (OPTIONAL) If you want to view your CohortDiagnostics results, run the following:
 
