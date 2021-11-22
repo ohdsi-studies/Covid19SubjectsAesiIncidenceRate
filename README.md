@@ -76,17 +76,17 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
     
     # --- EXECUTE ------------------------------------------------------------------
     Covid19SubjectsAesiIncidenceRate::execute(connectionDetails = connectionDetails,
-    					outputFolder = outputFolder,
-    					cdmDatabaseSchema = cdmDatabaseSchema,
-    					cohortDatabaseSchema = cohortDatabaseSchema,
-    					cohortTablePrefix = cohortTablePrefix,
+                        outputFolder = outputFolder,
+                        cdmDatabaseSchema = cdmDatabaseSchema,
+                        cohortDatabaseSchema = cohortDatabaseSchema,
+                        cohortTablePrefix = cohortTablePrefix,
                         cohortTable = cohortTable,
                         databaseId = databaseId,
                         databaseName = databaseName,
                         databaseDescription = databaseDescription,
-    					createCohortsAndRef = TRUE,
+                        createCohortsAndRef = TRUE,
                         runCohortDiagnostics = TRUE,
-        				runIR = TRUE)
+                        runIR = TRUE)
     ```
     
 5. (OPTIONAL) If you want to view your CohortDiagnostics results, run the following:
