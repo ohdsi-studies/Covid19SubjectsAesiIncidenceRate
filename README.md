@@ -36,18 +36,16 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
 
 3. If/When asked if the project already has a lockfile select "1: Restore the project from the lockfile.".
 
-4. You can execute the study by modifying and using the code below. For your convenience, this code is also provided under `extras/CodeToRun.R`.  Please note this execution will create the following tables on your database:
-
-  This step will generate the following tables in the cohortDatabaseSchema:
-   - <cohortTable>
-   - <cohortTablePrefix>_ir_summary
-   - <cohortTablePrefix>_outcome
-   - <cohortTablePrefix>_outcome_ref
-   - <cohortTablePrefix>_subgroup
-   - <cohortTablePrefix>_subgroup_ref
-   - <cohortTablePrefix>_target
-   - <cohortTablePrefix>_target_ref
-   - <cohortTablePrefix>_time_at_risk
+4. You can execute the study by modifying and using the code below. For your convenience, this code is also provided under `extras/CodeToRun.R`.  Please note this execution step will create the following tables on your database:
+   - `<cohortTable>`
+   - `<cohortTablePrefix>_ir_summary`
+   - `<cohortTablePrefix>_outcome`
+   - `<cohortTablePrefix>_outcome_ref`
+   - `<cohortTablePrefix>_subgroup`
+   - `<cohortTablePrefix>_subgroup_ref`
+   - `<cohortTablePrefix>_target`
+   - `<cohortTablePrefix>_target_ref`
+   - `<cohortTablePrefix>_time_at_risk`
 	
     ```r
     # --- SETUP --------------------------------------------------------------------
