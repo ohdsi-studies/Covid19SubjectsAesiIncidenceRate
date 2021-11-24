@@ -42,7 +42,7 @@ Covid19SubjectsAesiIncidenceRate::execute(connectionDetails = connectionDetails,
 # Upload the results to the OHDSI SFTP server:
 privateKeyFileName <- "<file>"
 userName <- "<name>"
-Covid19SubjectsAesiIncidenceRate::uploadStudyResults(file.path(outputFolder,"cohortDiagnostics"), privateKeyFileName, userName)
+Covid19SubjectsAesiIncidenceRate::uploadDiagnosticsResults(file.path(outputFolder,"cohortDiagnostics"), privateKeyFileName, userName)
 Covid19SubjectsAesiIncidenceRate::uploadStudyResults(file.path(outputFolder, "incidenceRate"), privateKeyFileName, userName)
 
 # --- VIEW COHORT DIAGNOSTICS --------------------------------------------------
