@@ -33,7 +33,7 @@
             "STANDARD_CONCEPT": "S",
             "CONCEPT_CODE": "40956001",
             "VOCABULARY_ID": "SNOMED",
-            "CONCEPT_NAME": "Guillain-Barré syndrome",
+            "CONCEPT_NAME": "Guillain-Barre syndrome",
             "DOMAIN_ID": "Condition",
             "STANDARD_CONCEPT_CAPTION": "Standard",
             "CONCEPT_CLASS_ID": "Clinical Finding",
