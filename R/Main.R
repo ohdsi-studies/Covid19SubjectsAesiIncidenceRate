@@ -107,7 +107,6 @@ execute <- function(connectionDetails,
                                             minCellCount = 5,
                                             incremental = TRUE,
                                             incrementalFolder = incrementalFolder)
-    CohortDiagnostics::preMergeDiagnosticsFiles(exportFolder)
   }
 
   ################################

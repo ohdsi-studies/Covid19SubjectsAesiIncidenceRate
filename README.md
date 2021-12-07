@@ -94,6 +94,7 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
     ```r
     # --- VIEW COHORT DIAGNOSTICS --------------------------------------------------
     # If CohortDiagnostics has been run, you can call the RShiney viewer like this:
+    CohortDiagnostics::preMergeDiagnosticsFiles(file.path(outputFolder, "cohortDiagnostics"))
     CohortDiagnostics::launchDiagnosticsExplorer(dataFolder = file.path(outputFolder,"cohortDiagnostics"))
     ```	
 
