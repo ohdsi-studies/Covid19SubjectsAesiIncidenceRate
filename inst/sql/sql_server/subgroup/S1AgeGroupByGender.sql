@@ -33,13 +33,13 @@ genders as (
   UNION
   SELECT 2 as gender_id, 8507 as gender_concept_id, 'Male' as gender_name
 )
-SELECT ages.age_id*10+genders.gender_id as subgroup_id, age_low, age_high, gender_concept_id, gender_name
+SELECT CONCAT(ages.age_id*10, genders.gender_id) as subgroup_id, age_low, age_high, gender_concept_id, gender_name
   INTO #subgroups
   FROM ages, genders
 ;
 
 INSERT INTO @target_database_schema.@target_ref_table (subgroup_cohort_definition_id, subgroup_name)
-SELECT subgroup_id, 'Persons aged ' + cast(age_low as varchar) + ' to ' + cast(age_high as varchar) + ' with gender = ' + gender_name
+SELECT subgroup_id, CONCAT('Persons aged ', cast(age_low as varchar), ' to ', cast(age_high as varchar), ' with gender = ', gender_name)
 FROM #subgroups;
 
 
