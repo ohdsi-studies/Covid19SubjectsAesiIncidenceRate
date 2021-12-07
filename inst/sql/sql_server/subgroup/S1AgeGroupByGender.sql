@@ -33,7 +33,7 @@ genders as (
   UNION
   SELECT 2 as gender_id, 8507 as gender_concept_id, 'Male' as gender_name
 )
-SELECT CONCAT(ages.age_id*10, genders.gender_id) as subgroup_id, age_low, age_high, gender_concept_id, gender_name
+SELECT ages.age_id*10+genders.gender_id as subgroup_id, age_low, age_high, gender_concept_id, gender_name
   INTO #subgroups
   FROM ages, genders
 ;
