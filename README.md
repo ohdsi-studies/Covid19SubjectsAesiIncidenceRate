@@ -26,7 +26,7 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
 # How to Run
 1. Follow [these instructions](https://ohdsi.github.io/Hades/rSetup.html) for setting up your R environment, including RTools and Java. 
 
-2. Create an empty folder or new RStudio project, and in R, use the following code to install the study package and its dependencies:
+2. Create an empty folder or new RStudio project (in Windows make sure the path is not too long or you will get a "filename exceeded Windows’ internal limit"). Then in R, use the following code to install the study package and its dependencies:
 
     ```r
     install.packages("renv")
