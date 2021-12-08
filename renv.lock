@@ -24,18 +24,20 @@
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CirceR",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v1.1.1"
+			"RemoteRef" : "HEAD",
+			"RemoteSha" : "eb27c4bd43f02c68a8bce6a01e02f9fe2b923b5c",
+			"Hash" : "33321874c0165a3d3ac83b6821021faa"
 		},
 		"CohortDiagnostics" : {
 			"Package" : "CohortDiagnostics",
-			"Version" : "2.1.3",
+			"Version" : "2.1.4",
 			"Source" : "GitHub",
 			"Remotes" : "ohdsi/Eunomia, ohdsi/FeatureExtraction, ohdsi/ROhdsiWebApi,\nohdsi/CirceR",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortDiagnostics",
 			"RemoteUsername" : "OHDSI",
-			"RemoteRef" : "v2.1.3"
+			"RemoteRef" : "v2.1.4"
 		},
 		"DBI" : {
 			"Package" : "DBI",
@@ -59,7 +61,9 @@
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "FeatureExtraction",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.1.1"
+			"RemoteRef" : "HEAD",
+			"RemoteSha" : "7e615050508bd1915e8437cf98fceacacbda4b9c",
+			"Hash" : "eab7151ab5fba6eea939b46c551e2ef1"
 		},
 		"OhdsiRTools" : {
 			"Package" : "OhdsiRTools",
@@ -69,7 +73,9 @@
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "OhdsiRTools",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v2.0.0"
+			"RemoteRef" : "develop",
+			"RemoteSha" : "d3e7801823850c0367fcfb50a78e464ec61ff036",
+			"Hash" : "5b3586c208dc55434079d80ab1ec2cad"
 		},
 		"OhdsiSharing" : {
 			"Package" : "OhdsiSharing",
@@ -79,7 +85,9 @@
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "OhdsiSharing",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v0.2.2"
+			"RemoteRef" : "HEAD",
+			"RemoteSha" : "8778421042e74e8824c00a58cf63bedfbfeb54aa",
+			"Hash" : "2fdcab21ec86f128e22aa5c88b66cbe1"
 		},
 		"ParallelLogger" : {
 			"Package" : "ParallelLogger",
@@ -111,13 +119,15 @@
 		},
 		"ROhdsiWebApi" : {
 			"Package" : "ROhdsiWebApi",
-			"Version" : "1.2.0",
+			"Version" : "1.2.1",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "ROhdsiWebApi",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v1.2.0"
+			"RemoteRef" : "HEAD",
+			"RemoteSha" : "5eba1e59c3d466fb862cd3f0a6c536c2e401bbb4",
+			"Hash" : "6b0388f1300613b05ec44e5580f11c67"
 		},
 		"RSQLite" : {
 			"Package" : "RSQLite",
@@ -254,10 +264,10 @@
 		},
 		"cpp11" : {
 			"Package" : "cpp11",
-			"Version" : "0.4.1",
+			"Version" : "0.4.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN",
-			"Hash" : "70976176dfd7f179f212783aab2547b1"
+			"Hash" : "fa53ce256cd280f468c080a58ea5ba8c"
 		},
 		"crayon" : {
 			"Package" : "crayon",
@@ -352,10 +362,10 @@
 		},
 		"glue" : {
 			"Package" : "glue",
-			"Version" : "1.5.0",
+			"Version" : "1.5.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN",
-			"Hash" : "5ccb956a6d09b4ca448094582f8c7571"
+			"Hash" : "e01bc1fe0c20954ec97eac86640abc70"
 		},
 		"highr" : {
 			"Package" : "highr",
@@ -555,10 +565,10 @@
 		},
 		"readr" : {
 			"Package" : "readr",
-			"Version" : "2.1.0",
+			"Version" : "2.1.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN",
-			"Hash" : "6c825746f32a68f4d8c40f94da5b1ac5"
+			"Hash" : "e9df4b445fca203653f04ece2f97d51e"
 		},
 		"remotes" : {
 			"Package" : "remotes",
@@ -737,10 +747,10 @@
 		},
 		"vroom" : {
 			"Package" : "vroom",
-			"Version" : "1.5.6",
+			"Version" : "1.5.7",
 			"Source" : "Repository",
 			"Repository" : "CRAN",
-			"Hash" : "0af818392e60673cd8968ab9119c30a7"
+			"Hash" : "976507b5a105bc3bdf6a5a5f29e0684f"
 		},
 		"webshot" : {
 			"Package" : "webshot",
@@ -751,10 +761,10 @@
 		},
 		"withr" : {
 			"Package" : "withr",
-			"Version" : "2.4.2",
+			"Version" : "2.4.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN",
-			"Hash" : "ad03909b44677f930fa156d47d7a3aeb"
+			"Hash" : "a376b424c4817cda4920bbbeb3364e85"
 		},
 		"xfun" : {
 			"Package" : "xfun",
@@ -786,7 +796,7 @@
 		},
 		"Covid19SubjectsAesiIncidenceRate" : {
 			"Package" : "Covid19SubjectsAesiIncidenceRate",
-			"Version" : "1.2.0",
+			"Version" : "1.2.1",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",

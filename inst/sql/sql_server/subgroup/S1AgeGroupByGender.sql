@@ -39,9 +39,9 @@ SELECT ages.age_id*10+genders.gender_id as subgroup_id, age_low, age_high, gende
 ;
 
 INSERT INTO @target_database_schema.@target_ref_table (subgroup_cohort_definition_id, subgroup_name)
-SELECT subgroup_id, CONCAT('Persons aged ', cast(age_low as varchar), ' to ', cast(age_high as varchar), ' with gender = ', gender_name)
+SELECT CAST(subgroup_id AS BIGINT) AS subgroup_cohort_definition_id,
+  CONCAT(cast('Persons aged ' as varchar), cast(age_low as varchar), ' to ', cast(age_high as varchar), CAST(' with gender = ' as varchar), CAST(gender_name as varchar)) AS subgroup_name
 FROM #subgroups;
-
 
 
 INSERT INTO @target_database_schema.@target_cohort_table (cohort_definition_id, subject_id, cohort_start_date, cohort_end_date)

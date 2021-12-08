@@ -1,7 +1,7 @@
 Package: Covid19SubjectsAesiIncidenceRate
 Type: Package
 Title: Adverse Events of Special Interest within COVID-19 Subjects
-Version: 1.2.0
+Version: 1.2.1
 Author: Erica Voss [aut, cre]
 Maintainer: Erica Voss <EVoss3@its.jnj.com>
 Description: Extending on our previous work by Li et al. in understanding the incidence rates of adverse events of special interest (AESI) for COVID-19, this work will look at the rates of these AESIs in patients who had COVDI-19 disease.
