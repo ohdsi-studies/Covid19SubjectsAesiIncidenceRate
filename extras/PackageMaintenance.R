@@ -17,11 +17,15 @@
 # CREATE LOCK FILE --------------------------------------------------------
 library(keyring)
 library(Covid19SubjectsAesiIncidenceRate)
+renv::deactivate()
+remove.packages("Covid19SubjectsAesiIncidenceRate")
 renv::purge("Covid19SubjectsAesiIncidenceRate")
 OhdsiRTools::createRenvLockFile(rootPackage = "Covid19SubjectsAesiIncidenceRate",
                                 additionalRequiredPackages = c("keyring", "Covid19SubjectsAesiIncidenceRate"),
                                 includeRootPackage = TRUE)
-
+#renv::update(packages = c("CohortDiagnostics"), library = "C:\\Users\\admin_evoss3\\Documents\\R\\win-library\\4.1")
+renv::restore()
+renv::restore(packages = "CohortDiagnostics")
 
 # Format and check code ---------------------------------------------------
 # OhdsiRTools::formatRFolder()
