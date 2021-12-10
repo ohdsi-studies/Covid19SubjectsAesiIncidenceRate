@@ -28,14 +28,14 @@
 		},
 		"CohortDiagnostics" : {
 			"Package" : "CohortDiagnostics",
-			"Version" : "2.1.4",
+			"Version" : "2.2.0",
 			"Source" : "GitHub",
 			"Remotes" : "ohdsi/Eunomia, ohdsi/FeatureExtraction, ohdsi/ROhdsiWebApi,\nohdsi/CirceR",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortDiagnostics",
 			"RemoteUsername" : "OHDSI",
-			"RemoteRef" : "v2.1.4"
+			"RemoteRef" : "9b31b720dff9dcea647f6d97f7aa7b479c5ed82c"
 		},
 		"DBI" : {
 			"Package" : "DBI",
