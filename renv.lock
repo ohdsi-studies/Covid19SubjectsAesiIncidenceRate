@@ -35,7 +35,7 @@
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortDiagnostics",
 			"RemoteUsername" : "OHDSI",
-			"RemoteRef" : "9b31b720dff9dcea647f6d97f7aa7b479c5ed82c"
+			"RemoteRef" : "0ff9fa13730db5b6c8959426903e198e481c3846"
 		},
 		"DBI" : {
 			"Package" : "DBI",
