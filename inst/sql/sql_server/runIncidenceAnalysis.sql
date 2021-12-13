@@ -357,11 +357,12 @@ create table #at_risk_smry_pre_xcl
 
 
 INSERT INTO #at_risk_smry_pre_xcl (target_cohort_definition_id, time_at_risk_id,subgroup_cohort_definition_id, num_persons, person_years)
-select t1.cohort_definition_id as target_cohort_definition_id,
-  t1.time_at_risk_id,
-  0 as subgroup_cohort_definition_id,
-  count_big(distinct t1.subject_id) as num_persons,
-  sum((datediff(dd,t1.start_date, t1.end_date)+1)/365.25) as person_years
+select
+  t1.cohort_definition_id as target_cohort_definition_id,
+  CAST(t1.time_at_risk_id AS INT) AS time_at_risk_id,
+  CAST(0 AS BIGINT) as subgroup_cohort_definition_id,
+  CAST(count_big(distinct t1.subject_id) AS BIGINT) as num_persons,
+  CAST(sum((datediff(dd,t1.start_date, t1.end_date)+1)/365.25) AS BIGINT) as person_years
 from #TTAR_erafied t1
 group by t1.cohort_definition_id, t1.time_at_risk_id
 ;
@@ -369,11 +370,12 @@ group by t1.cohort_definition_id, t1.time_at_risk_id
 
 
 INSERT INTO #at_risk_smry_pre_xcl (target_cohort_definition_id, time_at_risk_id,subgroup_cohort_definition_id, num_persons, person_years)
-select t1.cohort_definition_id as target_cohort_definition_id,
-  t1.time_at_risk_id,
-  s1.cohort_definition_id as subgroup_cohort_definition_id,
-  count_big(distinct t1.subject_id) as num_persons,
-  sum((datediff(dd,t1.start_date, t1.end_date)+1)/365.25) as person_years
+select
+  t1.cohort_definition_id as target_cohort_definition_id,
+  CAST(t1.time_at_risk_id AS INT) AS time_at_risk_id,
+  CAST(s1.cohort_definition_id AS BIGINT)  as subgroup_cohort_definition_id,
+  CAST(count_big(distinct t1.subject_id) AS BIGINT) as num_persons,
+  CAST(sum((datediff(dd,t1.start_date, t1.end_date)+1)/365.25) AS BIGINT)  as person_years
 from #TTAR_erafied t1
   INNER JOIN (select * from @cohort_database_schema.@subgroup_cohort_table where cohort_definition_id in (@subgroup_ids)) s1
   on t1.subject_id = s1.subject_id
@@ -405,12 +407,13 @@ create table #outcome_smry_pre_xcl
 
 
 insert into #outcome_smry_pre_xcl (target_cohort_definition_id, time_at_risk_id,subgroup_cohort_definition_id, outcome_id, num_persons_w_outcome, num_outcomes)
-select t1.cohort_definition_id as target_cohort_definition_id,
-  t1.time_at_risk_id,
-  0 as subgroup_cohort_definition_id,
-  o1.cohort_definition_id as outcome_id,
-  count_big(distinct o1.subject_id) as num_persons_w_outcome,
-  count_big(o1.subject_id) as num_outcomes
+select
+  t1.cohort_definition_id as target_cohort_definition_id,
+  CAST(t1.time_at_risk_id AS INT) AS time_at_risk_id,
+  CAST(0 AS BIGINT) as subgroup_cohort_definition_id,
+  CAST(o1.cohort_definition_id AS BIGINT) as outcome_id,
+  CAST(count_big(distinct o1.subject_id) AS BIGINT) as num_persons_w_outcome,
+  CAST(count_big(o1.subject_id) AS BIGINT) as num_outcomes
 from #TTAR_erafied t1
   inner join (select * from @cohort_database_schema.@outcome_cohort_table where cohort_definition_id in (@outcome_ids)) o1
   on t1.subject_id = o1.subject_id
@@ -422,12 +425,13 @@ group by t1.cohort_definition_id, t1.time_at_risk_id, o1.cohort_definition_id
 
 
 insert into #outcome_smry_pre_xcl (target_cohort_definition_id, time_at_risk_id, subgroup_cohort_definition_id, outcome_id, num_persons_w_outcome, num_outcomes)
-select t1.cohort_definition_id as target_cohort_definition_id,
-  t1.time_at_risk_id,
-  s1.cohort_definition_id as subgroup_cohort_definition_id,
-  o1.cohort_definition_id as outcome_id,
-  count_big(distinct o1.subject_id) as num_persons_w_outcome,
-  count_big(o1.subject_id) as num_outcomes
+select
+  t1.cohort_definition_id as target_cohort_definition_id,
+  CAST(t1.time_at_risk_id AS INT) AS time_at_risk_id,
+  CAST(s1.cohort_definition_id AS BIGINT) as subgroup_cohort_definition_id,
+  CAST(o1.cohort_definition_id AS BIGINT) as outcome_id,
+  CAST(count_big(distinct o1.subject_id) AS BIGINT) as num_persons_w_outcome,
+  CAST(count_big(o1.subject_id) AS BIGINT) as num_outcomes
 from #TTAR_erafied t1
   inner join (select * from @cohort_database_schema.@outcome_cohort_table where cohort_definition_id in (@outcome_ids)) o1
   on t1.subject_id = o1.subject_id
@@ -466,11 +470,12 @@ create table #excluded_person_yrs
 
 
 INSERT INTO #excluded_person_yrs (target_cohort_definition_id, time_at_risk_id,subgroup_cohort_definition_id, outcome_id, person_years)
-select et1.target_cohort_definition_id,
-  et1.time_at_risk_id,
-  0 as subgroup_cohort_definition_id,
-  et1.outcome_id,
-  sum(datediff(dd,et1.start_date, et1.end_date)/365.25) as person_years
+select
+  et1.target_cohort_definition_id,
+  CAST(et1.time_at_risk_id AS INT) AS time_at_risk_id,
+  CAST(0 AS BIGINT) as subgroup_cohort_definition_id,
+  CAST(et1.outcome_id AS BIGINT) AS outcome_id,
+  CAST(sum(datediff(dd,et1.start_date, et1.end_date)/365.25) AS BIGINT) as person_years
 from #TTAR_erafied t1
   inner join
   #exc_TTAR_o_erafied et1
@@ -486,11 +491,12 @@ group by et1.target_cohort_definition_id, et1.time_at_risk_id, et1.outcome_id
 
 
 INSERT INTO #excluded_person_yrs (target_cohort_definition_id, time_at_risk_id,subgroup_cohort_definition_id, outcome_id, person_years)
-select et1.target_cohort_definition_id,
-  et1.time_at_risk_id,
-  s1.cohort_definition_id as subgroup_cohort_definition_id,
-  et1.outcome_id,
-  sum(datediff(dd,et1.start_date, et1.end_date)/365.25) as person_years
+select
+  et1.target_cohort_definition_id,
+  CAST(et1.time_at_risk_id AS INT) AS time_at_risk_id,
+  CAST(s1.cohort_definition_id AS BIGINT) as subgroup_cohort_definition_id,
+  CAST(et1.outcome_id AS BIGINT) AS outcome_id,
+  CAST(sum(datediff(dd,et1.start_date, et1.end_date)/365.25)  AS BIGINT) as person_years
 from #TTAR_erafied t1
   inner join
   #exc_TTAR_o_erafied et1
@@ -525,11 +531,12 @@ create table #excluded_persons
 
 
 insert into #excluded_persons (target_cohort_definition_id, time_at_risk_id, subgroup_cohort_definition_id, outcome_id, num_persons_w_no_tar)
-select t1.target_cohort_definition_id,
-  t1.time_at_risk_id,
-  0 as subgroup_cohort_definition_id,
-  et1.outcome_id,
-  count_big(distinct t1.subject_id) as num_persons_w_no_tar
+select
+  t1.target_cohort_definition_id,
+  CAST(t1.time_at_risk_id AS INT) AS time_at_risk_id,
+  CAST(0 AS BIGINT) as subgroup_cohort_definition_id,
+  CAST(et1.outcome_id AS BIGINT) AS outcome_id,
+  CAST(count_big(distinct t1.subject_id) AS BIGINT) as num_persons_w_no_tar
 from
 (
   select t0.cohort_definition_id as target_cohort_definition_id,
@@ -571,11 +578,12 @@ group by t1.target_cohort_definition_id,
 
 
 insert into #excluded_persons (target_cohort_definition_id, time_at_risk_id, subgroup_cohort_definition_id, outcome_id, num_persons_w_no_tar)
-select t1.target_cohort_definition_id,
-  t1.time_at_risk_id,
-  t1.subgroup_cohort_definition_id,
-  et1.outcome_id,
-  count_big(distinct t1.subject_id) as num_persons_w_no_tar
+select
+  t1.target_cohort_definition_id,
+  CAST(t1.time_at_risk_id AS INT) time_at_risk_id,
+  CAST(t1.subgroup_cohort_definition_id AS BIGINT) AS subgroup_cohort_definition_id,
+  CAST(et1.outcome_id AS BIGINT) AS outcome_id,
+  CAST(count_big(distinct t1.subject_id) as num_persons_w_no_tar
 from
 (
   select t0.cohort_definition_id as target_cohort_definition_id,
@@ -643,11 +651,12 @@ create table #excluded_outcomes
 
 
 insert into #excluded_outcomes (target_cohort_definition_id, time_at_risk_id,subgroup_cohort_definition_id,outcome_id, num_outcomes)
-select et1.target_cohort_definition_id,
-  et1.time_at_risk_id,
-  0 as subgroup_cohort_definition_id,
-  et1.outcome_id,
-  count_big(o1.subject_id) as num_outcomes
+select
+  et1.target_cohort_definition_id,
+  CAST(et1.time_at_risk_id AS INT) AS time_at_risk_id,
+  CAST(0 AS BIGINT) as subgroup_cohort_definition_id,
+  CAST(et1.outcome_id AS BIGINT) AS outcome_id,
+  CAST(count_big(o1.subject_id) AS BIGINT) as num_outcomes
 from #TTAR_erafied t1
   inner join
   #exc_TTAR_o_erafied et1
@@ -667,11 +676,12 @@ group by et1.target_cohort_definition_id, et1.time_at_risk_id, et1.outcome_id
 
 
 insert into #excluded_outcomes (target_cohort_definition_id, time_at_risk_id,subgroup_cohort_definition_id,outcome_id, num_outcomes)
-select et1.target_cohort_definition_id,
-  et1.time_at_risk_id,
-  s1.cohort_definition_id as subgroup_cohort_definition_id,
-  et1.outcome_id,
-  count_big(o1.subject_id) as num_outcomes
+select
+  et1.target_cohort_definition_id,
+  CAST(et1.time_at_risk_id AS INT) AS time_at_risk_id,
+  CAST(s1.cohort_definition_id AS BIGINT) as subgroup_cohort_definition_id,
+  CAST(et1.outcome_id AS BIGINT) AS outcome_id,
+  CAST(count_big(o1.subject_id) AS BIGINT) as num_outcomes
 from #TTAR_erafied t1
   inner join
   #exc_TTAR_o_erafied et1
@@ -713,11 +723,12 @@ create table #excl_persons_w_o
 
 
 insert into #excl_persons_w_o (target_cohort_definition_id, time_at_risk_id, subgroup_cohort_definition_id, outcome_id, num_persons_excluded_outcomes)
-select t1.target_cohort_definition_id,
-  t1.time_at_risk_id,
-  0 as subgroup_cohort_definition_id,
-  t1.outcome_id,
-  count_big(distinct t1.subject_id) as num_persons_excluded_outcomes
+select
+  t1.target_cohort_definition_id,
+  CAST(t1.time_at_risk_id AS INT) AS time_at_risk_id,
+  CAST(0 AS BIGINT) as subgroup_cohort_definition_id,
+  CAST(t1.outcome_id AS BIGINT) AS outcome_id,
+  CAST(count_big(distinct t1.subject_id) AS BIGINT) as num_persons_excluded_outcomes
 from
 (
   select t0.cohort_definition_id as target_cohort_definition_id,
@@ -782,11 +793,12 @@ group by t1.target_cohort_definition_id,
 
 
 insert into #excl_persons_w_o (target_cohort_definition_id, time_at_risk_id, subgroup_cohort_definition_id, outcome_id, num_persons_excluded_outcomes)
-select t1.target_cohort_definition_id,
-  t1.time_at_risk_id,
-  t1.subgroup_cohort_definition_id,
-  t1.outcome_id,
-  count_big(distinct t1.subject_id) as num_persons_excluded_outcomes
+select
+  t1.target_cohort_definition_id,
+  CAST(t1.time_at_risk_id AS INT) AS time_at_risk_id,
+  CAST(t1.subgroup_cohort_definition_id AS BIGINT) AS subgroup_cohort_definition_id,
+  CAST(t1.outcome_id AS BIGINT) AS outcome_id,
+  CAST(count_big(distinct t1.subject_id) AS BIGINT) as num_persons_excluded_outcomes
 from
 (
   select t0.cohort_definition_id as target_cohort_definition_id,
