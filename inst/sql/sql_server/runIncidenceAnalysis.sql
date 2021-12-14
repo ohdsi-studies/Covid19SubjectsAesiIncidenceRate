@@ -583,7 +583,7 @@ select
   CAST(t1.time_at_risk_id AS INT) time_at_risk_id,
   CAST(t1.subgroup_cohort_definition_id AS BIGINT) AS subgroup_cohort_definition_id,
   CAST(et1.outcome_id AS BIGINT) AS outcome_id,
-  CAST(count_big(distinct t1.subject_id) as num_persons_w_no_tar
+  CAST(count_big(distinct t1.subject_id) AS BIGINT) as num_persons_w_no_tar
 from
 (
   select t0.cohort_definition_id as target_cohort_definition_id,
