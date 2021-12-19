@@ -18,8 +18,8 @@ setwd(working_directory)
 install.packages('devtools')
 
 .libPaths(renv_final_path)
-devtools::install_github("jdposada/BQJdbcConnectionStringR", 
-                         lib=renv_final_path, 
+devtools::install_github("jdposada/BQJdbcConnectionStringR",
+                         lib=renv_final_path,
                          upgrade="never")
 
 # Installing the Study Package
@@ -27,4 +27,4 @@ setwd(study_package_directory)
 devtools::install(quiet=TRUE, upgrade="never", dependencies=F)
 
 # Load the package to test is correctly installed
-library(LegendT2dm)
+library(Covid19SubjectsAesiIncidenceRate)
