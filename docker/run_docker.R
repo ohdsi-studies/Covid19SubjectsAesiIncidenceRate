@@ -1,4 +1,4 @@
-image_tag <- "covid19_subjects_aesi_incidence_rate:1.2.4"
+image_tag <- "ohdsi/covid19_subjects_aesi_incidence_rate:1.2.4"
 local_folder <-  <YOUR LOCAL FOLDER HERE>
 gcloud_local_folder <- <YOUR LOCAL GCLOUD FOLDER HERE>
 user <- "ohdsi"

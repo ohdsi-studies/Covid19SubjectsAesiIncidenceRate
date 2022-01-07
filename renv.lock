@@ -30,7 +30,7 @@
 			"Package" : "CohortDiagnostics",
 			"Version" : "2.2.0",
 			"Source" : "GitHub",
-			"Remotes" : "ohdsi/Eunomia, ohdsi/FeatureExtraction, ohdsi/ROhdsiWebApi,\nohdsi/CirceR",
+			"Remotes" : "ohdsi/Eunomia, ohdsi/FeatureExtraction, ohdsi/ROhdsiWebApi, ohdsi/CirceR",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortDiagnostics",
