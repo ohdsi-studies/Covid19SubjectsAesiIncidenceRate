@@ -26,17 +26,19 @@
 			"RemoteUsername" : "ohdsi",
 			"RemoteRef" : "v1.1.1"
 		},
-		"CohortDiagnostics" : {
-			"Package" : "CohortDiagnostics",
-			"Version" : "2.2.0",
-			"Source" : "GitHub",
-			"Remotes" : "ohdsi/Eunomia, ohdsi/FeatureExtraction, ohdsi/ROhdsiWebApi, ohdsi/CirceR",
-			"RemoteType" : "github",
-			"RemoteHost" : "api.github.com",
-			"RemoteRepo" : "CohortDiagnostics",
-			"RemoteUsername" : "OHDSI",
-			"RemoteRef" : "0ff9fa13730db5b6c8959426903e198e481c3846"
-		},
+    	"CohortDiagnostics": {
+      		"Package": "CohortDiagnostics",
+      		"Version": "2.2.0",
+      		"Source": "GitHub",
+      		"Remotes": "ohdsi/Eunomia, ohdsi/FeatureExtraction, ohdsi/ROhdsiWebApi,\nohdsi/CirceR",
+      		"RemoteType": "github",
+      		"RemoteHost": "api.github.com",
+      		"RemoteRepo": "CohortDiagnostics",
+      		"RemoteUsername": "OHDSI",
+      		"RemoteRef": "stanford2",
+      		"RemoteSha": "c8479c1176c79538bb72495a178f42893165d009",
+      		"Hash": "4cff6f65ebd51e7a77d293b4d2bfeaca"
+    	},
 		"DBI" : {
 			"Package" : "DBI",
 			"Version" : "1.1.1",
