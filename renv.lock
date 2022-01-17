@@ -799,7 +799,7 @@
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "Covid19SubjectsAesiIncidenceRate",
 			"RemoteUsername" : "ohdsi-studies",
-			"RemoteRef" : "minCellCount"
+			"RemoteRef" : "master"
 		}
 	}
 }
