@@ -221,7 +221,9 @@ computeAndExportIncidenceAnalysis <- function(connection,
   fieldsToCensor <- c("numPersonsWOutcomePreExclude",
                       "numPersonsWOutcome",
                       "numOutcomesPreExclude",
-                      "numOutcomes")
+                      "numOutcomes",
+                      "numPersonsPreExclude",
+                      "numPersonsAtRisk")
   for (i in 1:length(fieldsToCensor)) {
     results <- enforceMinCellValue(results, fieldsToCensor[i], minCellCount)
   }
