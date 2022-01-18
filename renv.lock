@@ -795,7 +795,7 @@
 		},
 		"Covid19SubjectsAesiIncidenceRate" : {
 			"Package" : "Covid19SubjectsAesiIncidenceRate",
-			"Version" : "1.2.4",
+			"Version" : "1.2.6",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",

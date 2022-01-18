@@ -27,7 +27,8 @@ execute <- function(connectionDetails,
                     verifyDependencies = TRUE,
                     createCohortsAndRef = TRUE,
                     runCohortDiagnostics = TRUE,
-                    runIR = TRUE){
+                    runIR = TRUE,
+                    minCellCount = 5){
 
   ################################
   # Setup
@@ -55,7 +56,7 @@ execute <- function(connectionDetails,
 
   #Variables---------------------
   tempEmulationSchema <- getOption("sqlRenderTempEmulationSchema")
-  minCellCount= 5
+  minCellCount= minCellCount
   incrementalFolder = file.path(outputFolder, "incrementalFolder")
 
   ################################
@@ -104,7 +105,7 @@ execute <- function(connectionDetails,
                                             runCohortCharacterization = TRUE,
                                             runTemporalCohortCharacterization = TRUE,
                                             runTimeSeries = FALSE,
-                                            minCellCount = 5,
+                                            minCellCount = minCellCount,
                                             incremental = TRUE,
                                             incrementalFolder = incrementalFolder)
   }
@@ -125,7 +126,8 @@ execute <- function(connectionDetails,
           databaseId = databaseId,
           databaseName = databaseName,
           databaseDescription = databaseDescription,
-          incremental = TRUE)
+          incremental = TRUE,
+          minCellCount = minCellCount)
 
   }
 
