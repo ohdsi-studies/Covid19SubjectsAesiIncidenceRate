@@ -154,6 +154,21 @@ computeAndExportIncidenceAnalysis <- function(connection,
                                               databaseName,
                                               summaryTable,
                                               minCellCount) {
+  # Create the summary table -----------------------------------------------------------------------
+  ParallelLogger::logInfo("----------------------------------------------------------")
+  ParallelLogger::logInfo("  ---- Creating summary table  ---- ")
+  ParallelLogger::logInfo("----------------------------------------------------------")
+  createIRSummaryTableSql <- SqlRender::loadRenderTranslateSql("CreateIRSummaryTable.sql",
+                                                          packageName = getThisPackageName(),
+                                                          dbms = connection@dbms,
+                                                          tempEmulationSchema = tempEmulationSchema,
+                                                          warnOnMissingParameters = TRUE,
+                                                          cohort_database_schema = cohortDatabaseSchema,
+                                                          summary_table = summaryTable)
+  DatabaseConnector::executeSql(connection = connection,
+                                sql = createIRSummaryTableSql,
+                                progressBar = TRUE,
+                                reportOverallTime = TRUE)
 
   # Run the analyses as specified in the settings/analysisSettings.json file
   analysisListFile <- system.file("settings/analysisSettings.json",
