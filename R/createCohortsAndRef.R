@@ -46,7 +46,6 @@ createCohortsAndRef <- function(connectionDetails,
                                                           tempEmulationSchema = tempEmulationSchema,
                                                           warnOnMissingParameters = TRUE,
                                                           cohort_database_schema = cohortDatabaseSchema,
-                                                          summary_table = summaryTable,
                                                           target_ref_table = targetRefTable,
                                                           subgroup_ref_table = subgroupRefTable,
                                                           outcome_ref_table = outcomeRefTable,
@@ -110,6 +109,15 @@ createCohortsAndRef <- function(connectionDetails,
   }
 
   if (nrow(subgroupCohorts) > 0) {
+    # NOTE: The parameter "incremental = FALSE" is done so that subgroups are always
+    # created since the SQL for this process performs 2 steps: it creates the
+    # subgroup_ref_table and also builds the subgroups. If this step is skipped
+    # incrementally, the subgroup_ref_table will be empty and will cause the IR
+    # process to skip subgroup cohorts per
+    # https://github.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/issues/18.
+    # This is not the most efficent way to solve this problem but since building
+    # subgroups is a relatively fast operation, repeating this step is the easiest
+    # way to avoid the bug referenced above.
     ParallelLogger::logInfo("----------------------------------------------------------")
     ParallelLogger::logInfo("  ---- Creating subgroup cohorts ---- ")
     ParallelLogger::logInfo("----------------------------------------------------------")
@@ -122,7 +130,7 @@ createCohortsAndRef <- function(connectionDetails,
                          cohorts = subgroupCohorts,
                          cohortSqlFolder = "subgroup",
                          createCohortTable = TRUE,
-                         incremental = incremental,
+                         incremental = FALSE,
                          incrementalFolder = incrementalFolder,
                          target_ref_table = subgroupRefTable)  # NOTE: Extra param target_ref_table
   }
