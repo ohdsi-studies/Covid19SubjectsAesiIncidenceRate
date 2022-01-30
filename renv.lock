@@ -793,13 +793,13 @@
 		},
 		"Covid19SubjectsAesiIncidenceRate" : {
 			"Package" : "Covid19SubjectsAesiIncidenceRate",
-			"Version" : "1.2.6",
+			"Version" : "1.2.7",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "Covid19SubjectsAesiIncidenceRate",
 			"RemoteUsername" : "ohdsi-studies",
-			"RemoteRef" : "master"
+			"RemoteRef" : "bug-fixes"
 		}
 	}
 }
