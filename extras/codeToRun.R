@@ -13,7 +13,8 @@ options(sqlRenderTempEmulationSchema = NULL)
 connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = "postgresql",
                                                                 server = "some.server.com/ohdsi",
                                                                 user = "joe",
-                                                                password = "secret")
+                                                                password = "secret",
+                                                                pathToDriver = "D:/drivers")
 
 outputFolder <- "D:/Covid19SubjectsAesiIncidenceRate/results"
 cdmDatabaseSchema <- "cdm_synpuf"
