@@ -1,6 +1,7 @@
 outcomeId,outcomeCohortDefinitionId,outcomeName,cleanWindow,primaryTimeAtRiskStartOffset,primaryTimeAtRiskStartIndex,primaryTimeAtRiskEndOffset,primaryTimeAtRiskEndIndex,excludedCohortDefinitionId,fileName
 345,345,Narcolepsy,365,1,0,28,0,0,345.sql
 349,349,Anaphylaxis,30,1,0,28,0,0,349.sql
+568,568,Anaphylaxis v2.0,30,1,0,28,0,0,568.sql
 347,347,Bells Palsy,183,1,0,28,0,0,347.sql
 346,346,Encephalomyelitis,183,1,0,28,0,0,346.sql
 343,343,Guillain Barre Syndrome,365,1,0,28,0,0,343.sql
