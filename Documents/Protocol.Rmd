@@ -50,8 +50,8 @@ longtable: yes
 mainfont: Arial
 bibliography: Protocol.bib
 params:
-  date: '2021-11-02'
-  version: 1.0.0
+  date: '2022-02-20'
+  version: 1.0.1
 subtitle: 'Version: `r params$version`'
 link-citations: true
 csl: bmj.csl
@@ -157,7 +157,8 @@ Table \@ref(tab:amendments) lists any protocol amendments made over time.
 ```{r amendments, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
 amendments <- readr::read_delim(col_names = TRUE, delim = ";", trim_ws = TRUE, file = "
   Number; Date; Section of study protocol; Amendment or update; Reason
-  -;-;-;-;-
+  1.0.0;2021.11.02;-;-;-
+  1.0.1;2022.02.20;Milestones / Outcome Cohort Definitions (in text and Appendix);Improved milestones based on current state and added additional anaphylaxis definition;In working with IPCI, we learned there were anaphylaxis concepts not included in our original definition (because they did not have source codes associated to them [e.g., 42536383-anaphlaxis shock]). However, IPCI had a source to standard mapping to these missing anaphylaxis concepts. Updated cohort is Cohort 567 - Anaphylaxis V2.0. Since the protocol is being updated, took the opportunity to improve the milestone dates.
 ")
 
 tab <- kable(amendments, booktabs = TRUE, linesep = "", caption = "Protocol amendments")
@@ -184,8 +185,9 @@ Table \@ref(tab:dates) lists the study milestones.
 dates <- readr::read_delim(col_names = TRUE, delim = ";", trim_ws = TRUE, file = "
   Milestone; Planned / actual date
   Start of analysis;2021-11-29
-  End of analysis;2021-12-31
-  Results presentation;2022-02-01
+  End data collection;2022-02-28
+  End of analysis;2022-03-31
+  Results presentation;2022-04-30
 ")
 
 tab <- kable(dates, booktabs = TRUE, linesep = "", caption = "Study milestones") 
@@ -255,7 +257,8 @@ We consider the effect of clean windows to define the incidence of outcomes. A c
 - Cohort 386 - Appendicitis
 - Cohort 385 - Disseminated Intravascular Coagulation
 - Cohort 381 - Transverse Myelitis
-- Cohort 349 - Anaphylaxis
+- Cohort 349 - Anaphylaxis V1.0
+- Cohort 568 - Anaphylaxis V2.0
 - Cohort 347 - Bell's Palsy
 - Cohort 346 - Encephalomyelitis
 - Cohort 345 - Narcolepsy
@@ -483,7 +486,16 @@ baseCohort <- RJSONIO::fromJSON(baseCohortJson)
 
 baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
 
-printCohortDefinitionFromNameAndJson(name = "Cohort 349 - Anaphylaxis",json = baseCohortJson)
+printCohortDefinitionFromNameAndJson(name = "Cohort 349 - Anaphylaxis v1.0",json = baseCohortJson)
+```
+
+```{r anaphylaxisv2-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
+baseCohortJson <- SqlRender::readSql(system.file("cohorts", "568.json", package = "Covid19SubjectsAesiIncidenceRate"))
+baseCohort <- RJSONIO::fromJSON(baseCohortJson)
+
+baseCohortJson <- RJSONIO::toJSON(baseCohort, digits = 50)
+
+printCohortDefinitionFromNameAndJson(name = "Cohort 568 - Anaphylaxis v2.0",json = baseCohortJson)
 ```
 
 ```{r bellsPalsy-cohort, echo=FALSE, results="asis", warning=FALSE, message=FALSE}
