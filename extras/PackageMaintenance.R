@@ -48,7 +48,7 @@ analysis1 <- list(name = "AESIs in COVID-19 subjects",
                   targetIds = list(562, 563, 565, 566),
                   subgroupIds = list(21,22,31,32,41,42,51,52,61,62,71,72,81,82,91,92,101,102,111,112,121,122),
                   timeAtRiskIds = list(1, 2, 3, 4, 5, 6, 7),
-                  outcomeIds = list(345, 349, 347, 346, 343, 340, 339, 335, 385, 386, 381, 405, 402, 406, 411, 547))
+                  outcomeIds = list(345, 349, 568, 347, 346, 343, 340, 339, 335, 385, 386, 381, 405, 402, 406, 411, 547))
 
 analysisList <- list(analysisList = list(analysis1))
 analysisListJson <- RJSONIO::toJSON(analysisList, pretty = T)
