@@ -48,7 +48,7 @@ Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies
    - `<cohortTablePrefix>_target_ref`
    - `<cohortTablePrefix>_time_at_risk`
   
-    You can execute the study by modifying and using the code below. For your convenience, this code is also provided under `extras/CodeToRun.R`.  
+    You can execute the study by modifying and using the code below. For your convenience, this code is also provided under `extras/CodeToRun.R`. If you are struggling with making a connection to the database, please refer to [Connecting to a database](http://ohdsi.github.io/DatabaseConnector/articles/Connecting.html).  
   
     ```r
     # --- SETUP --------------------------------------------------------------------
