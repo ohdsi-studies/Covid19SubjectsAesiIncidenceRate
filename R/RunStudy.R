@@ -158,7 +158,7 @@ computeAndExportIncidenceAnalysis <- function(connection,
   ParallelLogger::logInfo("----------------------------------------------------------")
   ParallelLogger::logInfo("  ---- Creating summary table  ---- ")
   ParallelLogger::logInfo("----------------------------------------------------------")
-  createIRSummaryTableSql <- SqlRender::loadRenderTranslateSql("CreateIRSummaryTable.sql",
+  createIRSummaryTableSql <- SqlRender::loadRenderTranslateSql("createIRSummaryTable.sql",
                                                           packageName = getThisPackageName(),
                                                           dbms = connection@dbms,
                                                           tempEmulationSchema = tempEmulationSchema,

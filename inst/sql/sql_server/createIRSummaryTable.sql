@@ -28,3 +28,5 @@ CREATE TABLE @cohort_database_schema.@summary_table
        incidence_proportion_p100p float,
        incidence_rate_p100py float
  );
+ 
+ 
