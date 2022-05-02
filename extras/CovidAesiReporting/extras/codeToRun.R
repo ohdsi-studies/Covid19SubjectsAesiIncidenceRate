@@ -13,7 +13,7 @@ cohortDiagnosticsFolder <- "data/cohortDiagnostics" #where you store the CD resu
 irFolder <- "data/ir" #where you store the IR results
 incidenceAnalysisFile <- paste0(ir,"/incidenceAnalysisCensored.csv")
 censorshipFile <- "extras/Censorship Worksheet.xlsx"
-resultsFolder <- "/results" #where you want to write to
+resultsFolder <- "results" #where you want to write to
 
 resultsSchema <- 'covid_aesi' #schema to load CohortDiagnostic results in OHDSI
 
@@ -77,3 +77,11 @@ for(i in 1:length(aesis)){
 # AGE & SEX STRATIFIED IR PLOT #################################################
 
 ageSexStratifiedPlot(resultsFolder, irFolder)
+
+
+# SIRR META-ANALYSIS FOREST PLOT ###############################################
+
+metaAnalysisIR <- read.csv(paste0(resultsFolder,"/metaResults.csv"))
+metaAnalysisForestPlots(metaAnalysisIR)
+
+
