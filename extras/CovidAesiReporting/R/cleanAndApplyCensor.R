@@ -72,19 +72,21 @@ cleanAndApplyCensor <- function(irDf, notCensoredOutomesDF, censorSubgroupCohort
   censoredIrDf$outcomeId[censoredIrDf$outcomeId==568] <- 349
   censoredIrDf$outcomeCohortDefinitionId[censoredIrDf$outcomeCohortDefinitionId==568] <- 349
 
-  return(censoredIrDf)
 
-  # censoredIrDfCovid <- censoredIrDf[censoredIrDf$targetName =="Earliest COVID-19 Event (positive test OR diagnosis)",]
-  # censoredIrDfGeneral <- censoredIrDf[censoredIrDf$targetName =="Persons at Risk at Start of Year 2017-2019",]
-  # censoredIrDfCovidGeneral <- sqldf::sqldf("SELECT DISTINCT c.*, g.incidenceRateP100py As incidenceRateP100pyGeneral
-  #                                        FROM censoredIrDfCovid c
-  #                                         JOIN censoredIrDfGeneral g
-  #                                           ON g.databaseName = c.databaseName
-  #                                           AND g.timeAtRiskId = c.timeAtRiskId
-  #                                           AND g.subgroupCohortDefinitionId = c.subgroupCohortDefinitionId
-  #                                           AND g.outcomeId = c.outcomeId
-  #                                           AND g.ageGroup = c.ageGroup")
-  #
-  # write.csv(censoredIrDfCovidGeneral,paste0(dataFolder,"/incidenceAnalysisCensoredCovidVsGeneral.csv"))
+
+  censoredIrDfCovid <- censoredIrDf[censoredIrDf$targetName =="Earliest COVID-19 Event (positive test OR diagnosis)",]
+  censoredIrDfGeneral <- censoredIrDf[censoredIrDf$targetName =="Persons at Risk at Start of Year 2017-2019",]
+  censoredIrDfCovidGeneral <- sqldf::sqldf("SELECT DISTINCT c.*, g.incidenceRateP100py As incidenceRateP100pyGeneral
+                                         FROM censoredIrDfCovid c
+                                          JOIN censoredIrDfGeneral g
+                                            ON g.databaseName = c.databaseName
+                                            AND g.timeAtRiskId = c.timeAtRiskId
+                                            AND g.subgroupCohortDefinitionId = c.subgroupCohortDefinitionId
+                                            AND g.outcomeId = c.outcomeId
+                                            AND g.ageGroup = c.ageGroup")
+
+  write.csv(censoredIrDfCovidGeneral,paste0(dataFolder,"/incidenceAnalysisCensoredCovidVsGeneral.csv"))
+
+  return(censoredIrDf)
 
 }

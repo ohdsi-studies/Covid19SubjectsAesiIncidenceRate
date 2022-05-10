@@ -16,3 +16,5 @@ outcomeId,outcomeCohortDefinitionId,outcomeName,cleanWindow,primaryTimeAtRiskSta
 406,406,Non-hemorrhagic Stroke,365,1,0,28,0,0,406.sql
 411,411,Pulmonary Embolism,365,1,0,28,0,0,411.sql
 547,547,Thrombosis with Thrombocytopenia (TWT),365,1,0,28,0,0,547.sql
+620,620,CVST IP Events,365,1,0,28,0,0,620.sql
+6246,6246,CVST,365,1,0,28,0,0,6246.sql

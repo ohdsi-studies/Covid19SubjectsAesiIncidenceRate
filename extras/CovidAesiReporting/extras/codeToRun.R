@@ -3,6 +3,8 @@
 # ##############################################################################
 
 # PREP & VARIABLES #############################################################
+setwd("D:\\Git\\BitBucket\\epi_974\\Covid19SubjectsAesiIncidenceRate\\extras\\CovidAesiReporting")
+
 library(dplyr)
 library(tidyr)
 library(CohortDiagnostics)
@@ -11,7 +13,7 @@ options(scipen=999)
 
 cohortDiagnosticsFolder <- "data/cohortDiagnostics" #where you store the CD results
 irFolder <- "data/ir" #where you store the IR results
-incidenceAnalysisFile <- paste0(ir,"/incidenceAnalysisCensored.csv")
+incidenceAnalysisFile <- paste0(irFolder,"/incidenceAnalysisCensored.csv")
 censorshipFile <- "extras/Censorship Worksheet.xlsx"
 resultsFolder <- "results" #where you want to write to
 
@@ -19,20 +21,11 @@ resultsSchema <- 'covid_aesi' #schema to load CohortDiagnostic results in OHDSI
 
 # GET DATA #####################################################################
 ## Cohort Diagnostics-----------------------------------------------------------
-#takes data from CD zips and loads them to OHDSI server
+#takes data from CD zips
 getCohortDiagnostics(cohortDiagnosticsFolder)
 
-#Launch locally using OHDSI Server
-connectionDetails <- DatabaseConnector::createConnectionDetails(
-  dbms = "postgresql",
-  server = paste(Sys.getenv("shinydbServer"),Sys.getenv("shinydbDatabase"),sep = "/"),
-  port = Sys.getenv("shinydbPort"),
-  user = Sys.getenv("shinydbUser"),
-  password = Sys.getenv("shinydbPW")
-)
-
-CohortDiagnostics::launchDiagnosticsExplorer(connectionDetails = connectionDetails,
-                                             resultsDatabaseSchema = resultsSchema)
+#Launch locally
+CohortDiagnostics::launchDiagnosticsExplorer(dataFolder = "D:\\Git\\BitBucket\\epi_974\\Covid19SubjectsAesiIncidenceRate\\extras\\CovidAesiReporting\\data\\cohortDiagnostics")
 ## IR ---------------------------------------------------------------------------
 #pulls together IR results into one file, forces min cell count,
 #DP name clean up, output to CSV, returns incidenceAnalysis dataframe
