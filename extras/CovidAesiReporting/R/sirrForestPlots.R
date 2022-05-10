@@ -71,6 +71,10 @@ sirrForestPlots <- function(summaryIR, metaAnalysisIR,aesi){
                        label = c(as.character(d$name), labels),
                        stringsAsFactors = FALSE)
   labels$label[nrow(d) + 1] <- paste(xLabelSmall, "(95% CI)")
+  labels[labels$label == "Inf (9999.00 - 9999.00)",c("label")] <- "Results Censored"
+  labels[labels$label == "Inf ( - )",c("label")] <- "Insufficient Data"
+  labels[labels$label == " ( - )",c("label")] <- "Insufficient Data"
+
   data_table <- ggplot2::ggplot(labels, ggplot2::aes(x = .data$x,
                                                      y = .data$y,
                                                      label = .data$label)) +

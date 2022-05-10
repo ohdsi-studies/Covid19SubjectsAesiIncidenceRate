@@ -66,9 +66,46 @@ sirr(covidPop,generalPop,tar,subgroup,dataFolder = irFolder,resultsFolder)
 
 # SIRR META-ANALYSIS FOREST PLOT ###############################################
 
+#figure out what was censored
+load(paste0(irFolder,"/PreMerged.RData"))
+cohorts <- distinct(incidenceAnalysis[,c("outcomeCohortDefinitionId","outcomeName")])
+cohorts <- cohorts[cohorts$outcomeCohortDefinitionId != 568,] #remove second anaphalaxis
+censoredOutcomes <- whatOutcomesToCensor(dataFolder, censorshipFile,censoredResults=1)
+censoredOutcomes <- merge(x = censoredOutcomes, y = cohorts, by.x = "PHENOTYPE", by.y = "outcomeCohortDefinitionId", all.x = TRUE)
+colnames(censoredOutcomes) <- c("PHENOTYPE","databaseName","CENSORED","outcomeName")
+censoredOutcomesToAppend <- as.data.frame(cbind(censoredOutcomes$databaseName,rep(6,nrow(censoredOutcomes)),
+                                                censoredOutcomes$outcomeName,rep(9999,nrow(censoredOutcomes)),
+                                                rep(9999,nrow(censoredOutcomes)),rep(9999,nrow(censoredOutcomes)),
+                                                rep(9999,nrow(censoredOutcomes)),rep("Censored",nrow(censoredOutcomes)),
+                                                rep(9999,nrow(censoredOutcomes)),rep(9999,nrow(censoredOutcomes)),
+                                                rep(9999,nrow(censoredOutcomes)),rep(9999,nrow(censoredOutcomes))))
+colnames(censoredOutcomesToAppend) <- c("databaseName","timeAtRiskId","outcomeName","generalWeightedIRTotal",
+                                        "covidWeightedIRTotal","covidE","covidD","SIR","SIRLB","SIRUB",
+                                        "logSIR","logSIRSE" )
+censoredOutcomesToAppend <- transform(censoredOutcomesToAppend,timeAtRiskId = as.integer(timeAtRiskId),
+                                      generalWeightedIRTotal = as.numeric(generalWeightedIRTotal),
+                                      covidWeightedIRTotal = as.numeric(covidWeightedIRTotal),
+                                      covidE = as.numeric(covidE),
+                                      covidD = as.integer(covidD),
+                                      SIR = as.numeric(SIR),
+                                      SIRLB = as.numeric(SIRLB),
+                                      SIRUB = as.numeric(SIRUB),
+                                      logSIR  = as.numeric(logSIR),
+                                      logSIRSE = as.numeric(logSIRSE))
+
+#add censored records to records with values
 summaryIR <- read.csv(paste0(resultsFolder,"/summaryIR.csv"))
+aesis <- unique(summaryIR$out)
+summaryIR <- rbind(summaryIR,censoredOutcomesToAppend)
+summaryIR <- summaryIR %>% drop_na(outcomeName)
+#clean up issue with Anaphylaxis twice
+summaryIRAnaphylaxis <- summaryIR[summaryIR$outcomeName == "Anaphylaxis",]
+summaryIRAnaphylaxisCounts <- summaryIRAnaphylaxis %>% group_by(databaseName) %>% tally()
+summaryIRAnaphylaxisDuplicated <- summaryIRAnaphylaxisCounts[summaryIRAnaphylaxisCounts$n == 2,]
+summaryIRFilter <- summaryIR %>% filter(summaryIR$outcomeName == "Anaphylaxis" & summaryIR$databaseName %in% summaryIRAnaphylaxisDuplicated$databaseName & summaryIR$generalWeightedIRTotal == 9999)
+summaryIR <- sqldf::sqldf('SELECT * FROM summaryIR EXCEPT SELECT * FROM summaryIRFilter')
+
 metaAnalysisIR <- read.csv(paste0(resultsFolder,"/metaResults.csv"))
-aesis <- unique(summaryIR$outcomeName)
 
 for(i in 1:length(aesis)){
   sirrForestPlots(summaryIR, metaAnalysisIR, aesi = aesis[i])

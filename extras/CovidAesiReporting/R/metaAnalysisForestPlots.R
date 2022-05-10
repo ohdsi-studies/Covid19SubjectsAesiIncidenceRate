@@ -3,8 +3,8 @@ metaAnalysisForestPlots <- function(metaAnalysisIR){
   fileName <- paste0(resultsFolder,"/ForestPlotAesiMeans.png")
   labels <- c(metaAnalysisIR$outcomeName)
 
-  xLabel = "Standardized Relative Risk (SRR)"
-  xLabelSmall = "SRR"
+  xLabel = "Standardized Incidence Ratios (SIR)"
+  xLabelSmall = "SIR"
   limits = c(0.1, 30)
 
   #assemble data object (header, DB, MA)
@@ -32,7 +32,7 @@ metaAnalysisForestPlots <- function(metaAnalysisIR){
   plotD$logLb95Ci[is.infinite(plotD$logLb95Ci)] <- -10
   plotD$logUb95Ci[is.infinite(plotD$logUb95Ci)] <- 10
 
-  breaks <- c(0.1, 0.25, 0.5, 1, 2, 4, 6, 8, 10,20,30)
+  breaks <- c(0.5, 1, 2, 4, 6, 8, 10,20)
   p <- ggplot2::ggplot(plotD, ggplot2::aes(x = exp(.data$logRr),
                                            y = .data$name,
                                            xmin = exp(.data$logLb95Ci),
