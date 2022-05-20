@@ -6,9 +6,9 @@ sirrForestPlots <- function(summaryIR, metaAnalysisIR,aesi){
   metaAnalysisIR <- metaAnalysisIR[metaAnalysisIR$outcomeName ==aesi,]
   labels <- c(summaryIR$databaseName)
 
-  xLabel = "Standardized Relative Risk (SRR)"
-  xLabelSmall = "SRR"
-  limits = c(0.1, 30)
+  xLabel = "Standardized Incidence Rates (SIR)"
+  xLabelSmall = "SIR"
+  limits = c(0.5, 20)
   summaryLabel = "Summary"
 
   #assemble data object (header, DB, MA)
@@ -40,7 +40,17 @@ sirrForestPlots <- function(summaryIR, metaAnalysisIR,aesi){
   plotD$logLb95Ci[is.infinite(plotD$logLb95Ci)] <- -10
   plotD$logUb95Ci[is.infinite(plotD$logUb95Ci)] <- 10
 
-  breaks <- c(0.1, 0.25, 0.5, 1, 2, 4, 6, 8, 10,20,30)
+  #clean up censored values
+  plotD[plotD$logRr == 9999 & !is.na(plotD$logRr),]$logLb95Ci <- -100
+  plotD[plotD$logRr == 9999 & !is.na(plotD$logRr),]$logUb95Ci <- -100
+  plotD[plotD$logRr == 9999 & !is.na(plotD$logRr),]$logRr <- -100
+
+  #clean up infinite
+  plotD[is.infinite(plotD$logRr),]$logLb95Ci <- -100
+  plotD[is.infinite(plotD$logRr),]$logUb95Ci <- -100
+  plotD[is.infinite(plotD$logRr),]$logRr <- -100
+
+  breaks <- c(0.5, 1, 2, 4, 6, 8, 10,20)
   p <- ggplot2::ggplot(plotD, ggplot2::aes(x = exp(.data$logRr),
                                            y = .data$name,
                                            xmin = exp(.data$logLb95Ci),
@@ -71,9 +81,12 @@ sirrForestPlots <- function(summaryIR, metaAnalysisIR,aesi){
                        label = c(as.character(d$name), labels),
                        stringsAsFactors = FALSE)
   labels$label[nrow(d) + 1] <- paste(xLabelSmall, "(95% CI)")
+
+  #fix labels
   labels[labels$label == "Inf (9999.00 - 9999.00)",c("label")] <- "Results Censored"
   labels[labels$label == "Inf ( - )",c("label")] <- "Insufficient Data"
   labels[labels$label == " ( - )",c("label")] <- "Insufficient Data"
+  labels[stringr::str_detect(labels$label,stringr::fixed("0.00 ( - ")),c("label")] <- "Insufficient Data"
 
   data_table <- ggplot2::ggplot(labels, ggplot2::aes(x = .data$x,
                                                      y = .data$y,
@@ -90,12 +103,12 @@ sirrForestPlots <- function(summaryIR, metaAnalysisIR,aesi){
                    axis.ticks = ggplot2::element_line(colour = "white"),
                    plot.margin = grid::unit(c(0, 0, 0.1, 0), "lines")) +
     ggplot2::labs(x = "", y = "") +
-    ggplot2::coord_cartesian(xlim = c(1, 3))
+    ggplot2::coord_cartesian(xlim = c(1, 2.5))
 
   plot <- gridExtra::grid.arrange(data_table, p, ncol = 2)
 
   #save out
   if (!is.null(fileName))
-    ggplot2::ggsave(fileName, plot, width = 8, height = 1 + nrow(summaryIR) * 0.3, dpi = 400)
+    ggplot2::ggsave(fileName, plot, width = 11, height = 1 + nrow(summaryIR) * 0.3, dpi = 400)
   invisible(plot)
 }

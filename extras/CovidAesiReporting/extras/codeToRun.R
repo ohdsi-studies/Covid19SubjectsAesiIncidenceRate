@@ -19,6 +19,16 @@ resultsFolder <- "results" #where you want to write to
 
 resultsSchema <- 'covid_aesi' #schema to load CohortDiagnostic results in OHDSI
 
+outcomeNameSortOrder <- seq(1,16)
+outcomeName <- c('Acute Myocardial Infarction','Non-hemorrhagic Stroke',
+                 'Deep Vein Thrombosis (DVT)','Pulmonary Embolism',
+                 'Hemorrhagic Stroke','Bells Palsy','Appendicitis',
+                 'Myocarditis Pericarditis','Thrombosis with Thrombocytopenia (TWT)',
+                 'Immune Thrombocytopenia (ITP)','Anaphylaxis','Narcolepsy',
+                 'Disseminated Intravascular Coagulation','Encephalomyelitis',
+                 'Guillain Barre Syndrome','Transverse Myelitis')
+outcomeSortOrder <- data.frame(outcomeNameSortOrder, outcomeName)
+
 # GET DATA #####################################################################
 ## Cohort Diagnostics-----------------------------------------------------------
 #takes data from CD zips
@@ -41,7 +51,11 @@ notCensoredOutomesDF <- whatOutcomesToCensor(dataFolder = irFolder, censorshipFi
 censorSubgroupCohortDefinitionId <- whatsubgroupsToCensor()
 
 # IR CLEANUP
-incidenceAnalysisCensored <- cleanAndApplyCensor(incidenceAnalysis, notCensoredOutomesDF, censorSubgroupCohortDefinitionId)
+incidenceAnalysisCensored <- cleanAndApplyCensor(irDf = incidenceAnalysis,
+                                                 notCensoredOutomesDF,
+                                                 censorSubgroupCohortDefinitionId,
+                                                 dataFolder= irFolder,
+                                                 outcomeSortOrder)
 write.csv(incidenceAnalysisCensored,paste0(irFolder,"/incidenceAnalysisCensored.csv"), row.names = FALSE)
 
 # META ANALYSIS & PRETTY TABLE #################################################
@@ -60,6 +74,7 @@ sirr(covidPop,generalPop,tar,subgroup,dataFolder = irFolder,resultsFolder)
 # SIRR META-ANALYSIS FOREST PLOT ###############################################
 
 #figure out what was censored
+dataFolder <- irFolder
 load(paste0(irFolder,"/PreMerged.RData"))
 cohorts <- distinct(incidenceAnalysis[,c("outcomeCohortDefinitionId","outcomeName")])
 cohorts <- cohorts[cohorts$outcomeCohortDefinitionId != 568,] #remove second anaphalaxis
@@ -108,10 +123,23 @@ for(i in 1:length(aesis)){
 
 ageSexStratifiedPlot(resultsFolder, irFolder)
 
+# COVID IR vs GENDERAL IRSTRATIFIED IR PLOT ####################################
+
+incidenceAnalysisCensoredCovidVsGeneral <- read.csv(paste0(irFolder,"/incidenceAnalysisCensoredCovidVsGeneral.csv"))
+
+subgroup <- c(21,22,31,32,41,42,51,52,61,62,71,72,81,82,91,92)
+
+incidenceAnalysisCensoredCovidVsGeneralForPlot <- incidenceAnalysisCensoredCovidVsGeneral[incidenceAnalysisCensoredCovidVsGeneral$timeAtRiskId == 6,]
+incidenceAnalysisCensoredCovidVsGeneralForPlot <- incidenceAnalysisCensoredCovidVsGeneralForPlot[incidenceAnalysisCensoredCovidVsGeneralForPlot$subgroupName != 'All',]
+incidenceAnalysisCensoredCovidVsGeneralForPlot <- incidenceAnalysisCensoredCovidVsGeneralForPlot[incidenceAnalysisCensoredCovidVsGeneralForPlot$subgroupCohortDefinitionId %in% subgroup,]
+incidenceAnalysisCensoredCovidVsGeneralForPlot <- incidenceAnalysisCensoredCovidVsGeneralForPlot[,c('databaseName','targetName','timeAtRiskId','subgroupName',"gender","ageGroup",'outcomeName',"incidenceRateP100py","incidenceRateP100pyGeneral")]
+
+write.csv(incidenceAnalysisCensoredCovidVsGeneralForPlot,paste0(irFolder,"/incidenceAnalysisCensoredCovidVsGeneralForPlot.csv"), row.names = FALSE)
 
 # SIRR META-ANALYSIS FOREST PLOT ###############################################
 
 metaAnalysisIR <- read.csv(paste0(resultsFolder,"/metaResults.csv"))
-metaAnalysisForestPlots(metaAnalysisIR)
+metaAnalysisIR <- metaAnalysisIR[order(-metaAnalysisIR$SIR),]
+metaAnalysisForestPlots(metaAnalysisIR,resultsFolder)
 
 

@@ -2,7 +2,7 @@
 #' @export
 #'
 #'
-cleanAndApplyCensor <- function(irDf, notCensoredOutomesDF, censorSubgroupCohortDefinitionId){
+cleanAndApplyCensor <- function(irDf, notCensoredOutomesDF, censorSubgroupCohortDefinitionId, dataFolder,outcomeSortOrder){
   # NAME CLEANUP
   irDf[irDf == "Integrated Primary Care Information"] <- "IPCI"
   irDf[irDf == "UK Biobank, University College London"] <- "UK_BIOBANK"
@@ -72,7 +72,8 @@ cleanAndApplyCensor <- function(irDf, notCensoredOutomesDF, censorSubgroupCohort
   censoredIrDf$outcomeId[censoredIrDf$outcomeId==568] <- 349
   censoredIrDf$outcomeCohortDefinitionId[censoredIrDf$outcomeCohortDefinitionId==568] <- 349
 
-
+  #Add sort order to the file
+  censoredIrDf <- merge(x = censoredIrDf, y = outcomeSortOrder, by = 'outcomeName', all.x = TRUE)
 
   censoredIrDfCovid <- censoredIrDf[censoredIrDf$targetName =="Earliest COVID-19 Event (positive test OR diagnosis)",]
   censoredIrDfGeneral <- censoredIrDf[censoredIrDf$targetName =="Persons at Risk at Start of Year 2017-2019",]
@@ -85,7 +86,7 @@ cleanAndApplyCensor <- function(irDf, notCensoredOutomesDF, censorSubgroupCohort
                                             AND g.outcomeId = c.outcomeId
                                             AND g.ageGroup = c.ageGroup")
 
-  write.csv(censoredIrDfCovidGeneral,paste0(dataFolder,"/incidenceAnalysisCensoredCovidVsGeneral.csv"))
+  write.csv(censoredIrDfCovidGeneral,paste0(dataFolder,"/incidenceAnalysisCensoredCovidVsGeneral.csv"), row.names = FALSE)
 
   return(censoredIrDf)
 

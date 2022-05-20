@@ -1,11 +1,11 @@
-metaAnalysisForestPlots <- function(metaAnalysisIR){
+metaAnalysisForestPlots <- function(metaAnalysisIR,resultsFolder){
   #Variables
   fileName <- paste0(resultsFolder,"/ForestPlotAesiMeans.png")
   labels <- c(metaAnalysisIR$outcomeName)
 
   xLabel = "Standardized Incidence Ratios (SIR)"
   xLabelSmall = "SIR"
-  limits = c(0.1, 30)
+  limits = c(0.5, 20)
 
   #assemble data object (header, DB, MA)
   d1 <- data.frame(logRr = -100,
@@ -78,12 +78,12 @@ metaAnalysisForestPlots <- function(metaAnalysisIR){
                    axis.ticks = ggplot2::element_line(colour = "white"),
                    plot.margin = grid::unit(c(0, 0, 0.1, 0), "lines")) +
     ggplot2::labs(x = "", y = "") +
-    ggplot2::coord_cartesian(xlim = c(1, 3))
+    ggplot2::coord_cartesian(xlim = c(1, 2.5))
 
   plot <- gridExtra::grid.arrange(data_table, p, ncol = 2)
 
   #save out
   if (!is.null(fileName))
-    ggplot2::ggsave(fileName, plot, width = 14, height = 1 + nrow(metaAnalysisIR) * 0.3, dpi = 400)
+    ggplot2::ggsave(fileName, plot, width = 11, height = 1 + nrow(metaAnalysisIR) * 0.3, dpi = 400)
   invisible(plot)
 }

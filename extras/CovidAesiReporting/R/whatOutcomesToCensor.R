@@ -15,12 +15,11 @@ whatOutcomesToCensor <- function(dataFolder, censorshipFile,censoredResults=0){
   censorshipDf$DB <- dbNames$DB
 
   censorshipDfPivot <- censorshipDf %>% pivot_longer(!DB,names_to = "PHENOTYPE",values_to = "CENSORED")
-  notCensoredDF <- censorshipDfPivot[censorshipDfPivot$CENSORED == 'NOT_CENSORED',]
+  censoredDF <- censorshipDfPivot[censorshipDfPivot$CENSORED == 'NOT_CENSORED',]
 
   if(censoredResults){
     censoredDF <- censorshipDfPivot[censorshipDfPivot$CENSORED == 'CENSORED',]
-    return(censoredDF)
   }
 
-  return(notCensoredDF)
+  return(censoredDF)
 }

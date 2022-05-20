@@ -21,7 +21,7 @@ ageSexStratifiedPlot <- function(resultsFolder, irFolder){
   # Target group: Earliest COVID-19 Event (positive test OR diagnosis)
   # TAR: 6 (or 90 days)
   Data2 <- Data1[ which(Data1$targetName=='Earliest COVID-19 Event (positive test OR diagnosis)' & Data1$timeAtRiskId ==6), ]
-  Data3 <- subset(Data2, select=c(1,3,4,13,24:26))
+  Data3 <- subset(Data2, select=c(1,2,3,4,13,24:27))
   names (Data3)
 
   # Remove the combined age groups & 0-5yo, 6-17yo & combined sex
@@ -41,6 +41,7 @@ ageSexStratifiedPlot <- function(resultsFolder, irFolder){
   Data4[grep ("085-11", Data4$ageGroup), "AgeGroup_New"] <- ">85"
 
   Data4$AgeGroup_New <- factor(Data4$AgeGroup_New, levels = c("0-4", "5-11", "12-17", "18-34", "35-54", "55-64", "65-74", "75-84", ">85"))
+  Data4$outcomeName <- factor(Data4$outcomeName, levels = unique(Data4[order(Data4$outcomeNameSortOrder),c('outcomeName')]))
 
   # PLOT 1
   # Create ggplot
