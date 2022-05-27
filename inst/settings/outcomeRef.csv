@@ -16,5 +16,23 @@ outcomeId,outcomeCohortDefinitionId,outcomeName,cleanWindow,primaryTimeAtRiskSta
 406,406,Non-hemorrhagic Stroke,365,1,0,28,0,0,406.sql
 411,411,Pulmonary Embolism,365,1,0,28,0,0,411.sql
 547,547,Thrombosis with Thrombocytopenia (TWT),365,1,0,28,0,0,547.sql
-620,620,CVST IP Events,365,1,0,28,0,0,620.sql
-6246,6246,CVST,365,1,0,28,0,0,6246.sql
+598,598,[NC] Alcoholic liver damage,365,1,0,28,0,0,598.sql
+597,597,[NC] Animal bite wound,365,1,0,28,0,0,597.sql
+596,596,[NC] Ankle ulcer,365,1,0,28,0,0,596.sql
+595,595,[NC] Benign neoplasm of ovary,365,1,0,28,0,0,595.sql
+594,594,[NC] Biliary calculus,365,1,0,28,0,0,594.sql
+593,593,[NC] Burn of digit of hand,365,1,0,28,0,0,593.sql
+592,592,[NC] Burn of lower leg,365,1,0,28,0,0,592.sql
+591,591,[NC] Cannabis abuse,365,1,0,28,0,0,591.sql
+590,590,[NC] Cervical spine ankylosis,365,1,0,28,0,0,590.sql
+589,589,[NC] Contusion of toe,365,1,0,28,0,0,589.sql
+588,588,[NC] Endometriosis of uterus,365,1,0,28,0,0,588.sql
+587,587,[NC] Hyperplasia of prostate,365,1,0,28,0,0,587.sql
+586,586,[NC] Intestinal parasitism,365,1,0,28,0,0,586.sql
+585,585,[NC] Leukemia,365,1,0,28,0,0,585.sql
+584,584,[NC] Open wound of buttock,365,1,0,28,0,0,584.sql
+583,583,[NC] Poisoning by bee sting,365,1,0,28,0,0,583.sql
+582,582,[NC] Primary malignant neoplasm of pancreas,365,1,0,28,0,0,582.sql
+581,581,[NC] Prosthetic joint loosening,365,1,0,28,0,0,581.sql
+580,580,[NC] Sprain of spinal ligament,365,1,0,28,0,0,580.sql
+579,579,[NC] Tailor’s bunion,365,1,0,28,0,0,579.sql

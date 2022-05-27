@@ -1,54 +1,16 @@
 {
   "ConceptSets": [
     {
-      "id": 1,
-      "name": "Inpatient or Inpatient/ER visit",
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Visit",
-              "CONCEPT_CODE": "ERIP",
-              "CONCEPT_ID": 262,
-              "CONCEPT_NAME": "Emergency Room and Inpatient Visit",
-              "DOMAIN_ID": "Visit",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "Visit"
-            },
-            "includeDescendants": true
-          },
-          {
-            "concept": {
-              "CONCEPT_CLASS_ID": "Visit",
-              "CONCEPT_CODE": "IP",
-              "CONCEPT_ID": 9201,
-              "CONCEPT_NAME": "Inpatient Visit",
-              "DOMAIN_ID": "Visit",
-              "INVALID_REASON": "V",
-              "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "S",
-              "STANDARD_CONCEPT_CAPTION": "Standard",
-              "VOCABULARY_ID": "Visit"
-            },
-            "includeDescendants": true
-          }
-        ]
-      }
-    },
-    {
-      "id": 3,
-      "name": "Cerebral venous sinus thrombosis",
+      "id": 0,
+      "name": "[covidaesi] Alcoholic liver damage",
       "expression": {
         "items": [
           {
             "concept": {
               "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "195230003",
-              "CONCEPT_ID": 4111714,
-              "CONCEPT_NAME": "Cerebral infarction due to cerebral venous thrombosis, non-pyogenic",
+              "CONCEPT_CODE": "41309000",
+              "CONCEPT_ID": 201612,
+              "CONCEPT_NAME": "Alcoholic liver damage",
               "DOMAIN_ID": "Condition",
               "INVALID_REASON": "V",
               "INVALID_REASON_CAPTION": "Valid",
@@ -61,9 +23,9 @@
           {
             "concept": {
               "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "200258006",
-              "CONCEPT_ID": 4061473,
-              "CONCEPT_NAME": "Obstetric cerebral venous thrombosis",
+              "CONCEPT_CODE": "1082601000119104",
+              "CONCEPT_ID": 46269816,
+              "CONCEPT_NAME": "Ascites due to alcoholic cirrhosis",
               "DOMAIN_ID": "Condition",
               "INVALID_REASON": "V",
               "INVALID_REASON_CAPTION": "Valid",
@@ -71,15 +33,29 @@
               "STANDARD_CONCEPT_CAPTION": "Standard",
               "VOCABULARY_ID": "SNOMED"
             },
-            "isExcluded": true,
             "includeDescendants": true
           },
           {
             "concept": {
               "CONCEPT_CLASS_ID": "Clinical Finding",
-              "CONCEPT_CODE": "297157005",
-              "CONCEPT_ID": 4179912,
-              "CONCEPT_NAME": "Intracranial venous thrombosis",
+              "CONCEPT_CODE": "309783001",
+              "CONCEPT_ID": 4148021,
+              "CONCEPT_NAME": "Esophageal varices in alcoholic cirrhosis of the liver",
+              "DOMAIN_ID": "Condition",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "SNOMED"
+            },
+            "includeDescendants": true
+          },
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Clinical Finding",
+              "CONCEPT_CODE": "1085021000119106",
+              "CONCEPT_ID": 46269835,
+              "CONCEPT_NAME": "Hepatic ascites due to chronic alcoholic hepatitis",
               "DOMAIN_ID": "Condition",
               "INVALID_REASON": "V",
               "INVALID_REASON_CAPTION": "Valid",
@@ -97,7 +73,7 @@
     "CriteriaList": [
       {
         "ConditionOccurrence": {
-          "CodesetId": 3
+          "CodesetId": 0
         }
       }
     ],
@@ -110,21 +86,21 @@
     }
   },
   "QualifiedLimit": {
-    "Type": "All"
+    "Type": "First"
   },
   "ExpressionLimit": {
     "Type": "All"
   },
   "InclusionRules": [
     {
-      "name": "has no events in prior 'clean window' - 365 days",
+      "name": "No Index Concept in (-365,-1) Days Before",
       "expression": {
         "Type": "ALL",
         "CriteriaList": [
           {
             "Criteria": {
               "ConditionOccurrence": {
-                "CodesetId": 3
+                "CodesetId": 0
               }
             },
             "StartWindow": {
@@ -138,7 +114,6 @@
               },
               "UseEventEnd": false
             },
-            "IgnoreObservationPeriod": true,
             "Occurrence": {
               "Type": 0,
               "Count": 0
