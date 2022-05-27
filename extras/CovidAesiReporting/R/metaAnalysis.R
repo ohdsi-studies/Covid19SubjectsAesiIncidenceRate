@@ -2,7 +2,7 @@
 #' @export
 #'
 #'
-metaAnalysis <- function(resultsFolder,incidenceAnalysisFile){
+metaAnalysis <- function(resultsFolder,incidenceAnalysisFile,outcomeSortOrder){
   library(tidyverse)
   library(metafor)
   library(meta)
@@ -173,6 +173,21 @@ metaAnalysis <- function(resultsFolder,incidenceAnalysisFile){
       round(as.numeric(table_by_age_sex_for_csv[,lb]),0)," to ",
       round(as.numeric(table_by_age_sex_for_csv[,ub]),0),")"))
     colnames(dfCol) <- colnames(table_by_age_sex_for_csv)[ir]
+    colName1 <- colnames(table_by_age_sex_for_csv)[ir]
+    colName2 <- paste0(colnames(table_by_age_sex_for_csv)[ir],"_COLOR")
+
+    #CIOMS
+    cioms <- as.data.frame(as.numeric(table_by_age_sex_for_csv[,ir]))
+    colnames(cioms) <- c("ir")
+
+    cioms<- mutate(cioms, color = ifelse(ir < 10 , "DARK GREEN",
+                              ifelse(ir >= 10 & ir < 100, "LIGHT GREEN",
+                                     ifelse(ir >= 100 & ir < 1000,"YELLOW",
+                                            ifelse(ir >= 1000 & ir < 10000,"ORANGE",
+                                                   ifelse(ir >= 10000,"RED","ERROR"))))))
+
+    dfCol <- cbind(dfCol,cioms$color)
+    colnames(dfCol) <- c(colName1,colName2)
 
     df <- cbind(df,dfCol)
   }
@@ -192,7 +207,8 @@ metaAnalysis <- function(resultsFolder,incidenceAnalysisFile){
   colnames(df_male) <- sub("_Male","",colnames(df_male))
 
   df_female_male <- rbind(df_female,df_male)
-  df_female_male <- df_female_male[order(df_female_male$outcomeName,df_female_male$gender),]
+  df_female_male <- merge(df_female_male, outcomeSortOrder, by = 'outcomeName', all.x = "TRUE")
+  df_female_male <- df_female_male[order(df_female_male$outcomeNameSortOrder,df_female_male$gender),]
 
   write.csv(df_female_male,file.path(resultsFolder, "table_by_age_sex_pretty.csv"), row.names = T)
 }

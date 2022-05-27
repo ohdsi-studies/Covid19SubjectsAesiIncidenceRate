@@ -36,12 +36,13 @@ getCohortDiagnostics(cohortDiagnosticsFolder)
 
 #Launch locally
 CohortDiagnostics::launchDiagnosticsExplorer(dataFolder = "D:\\Git\\BitBucket\\epi_974\\Covid19SubjectsAesiIncidenceRate\\extras\\CovidAesiReporting\\data\\cohortDiagnostics")
+
 ## IR ---------------------------------------------------------------------------
 #pulls together IR results into one file, forces min cell count,
 #DP name clean up, output to CSV, returns incidenceAnalysis dataframe
 incidenceAnalysis <- getDataIR(irFolder)
 
-# CLEAN & CENSOR IR DATA #######################################################
+## CLEAN & CENSOR IR DATA #######################################################
 
 #incidenceAnalysis <- read.csv(paste0(irFolder,"/incidenceAnalysis.csv"))
 load(paste0(irFolder,"/PreMerged.RData"))
@@ -58,9 +59,19 @@ incidenceAnalysisCensored <- cleanAndApplyCensor(irDf = incidenceAnalysis,
                                                  outcomeSortOrder)
 write.csv(incidenceAnalysisCensored,paste0(irFolder,"/incidenceAnalysisCensored.csv"), row.names = FALSE)
 
+#trying to find where people deleted rows, not successful yet.
+# tarCount <- length(unique(incidenceAnalysisCensored$timeAtRiskId))
+# subgroupCount <- length(unique(incidenceAnalysisCensored$subgroupCohortDefinitionId))
+# aesiPerDb <- unique(incidenceAnalysisCensored[,c('databaseName', "outcomeName","targetName")])
+# aesiTargetCountPerDb <- aesiPerDb %>% count(databaseName)
+# aesiTargetCountPerDb$rowCount <- aesiCountPerDb$n * tarCount * subgroupCount
+# irCounts <- incidenceAnalysisCensored %>% count(databaseName, sort = TRUE)
+# df <- merge(aesiTargetCountPerDb, irCounts, by = c('databaseName'))
+
+
 # META ANALYSIS & PRETTY TABLE #################################################
 #runs the meta analysis and makes the pretty table for the paper
-metaAnalysis(resultsFolder,incidenceAnalysisFile)
+metaAnalysis(resultsFolder,incidenceAnalysisFile,outcomeSortOrder)
 
 # STANDARDIZED INCIDENCE RATE RATIOS ###########################################
 
@@ -71,7 +82,8 @@ subgroup <- c(21,22,31,32,41,42,51,52,61,62,71,72,81,82,91,92) #all groups excep
 
 sirr(covidPop,generalPop,tar,subgroup,dataFolder = irFolder,resultsFolder)
 
-# SIRR META-ANALYSIS FOREST PLOT ###############################################
+
+# SIRR META-ANALYSIS FOREST PLOT WITH DB RATES #################################
 
 #figure out what was censored
 dataFolder <- irFolder
@@ -136,10 +148,9 @@ incidenceAnalysisCensoredCovidVsGeneralForPlot <- incidenceAnalysisCensoredCovid
 
 write.csv(incidenceAnalysisCensoredCovidVsGeneralForPlot,paste0(irFolder,"/incidenceAnalysisCensoredCovidVsGeneralForPlot.csv"), row.names = FALSE)
 
-# SIRR META-ANALYSIS FOREST PLOT ###############################################
+# SIRR META-ANALYSIS FOREST PLOT SUMMARY #######################################
 
 metaAnalysisIR <- read.csv(paste0(resultsFolder,"/metaResults.csv"))
 metaAnalysisIR <- metaAnalysisIR[order(-metaAnalysisIR$SIR),]
 metaAnalysisForestPlots(metaAnalysisIR,resultsFolder)
-
 

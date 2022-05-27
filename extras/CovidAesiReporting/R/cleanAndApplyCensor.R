@@ -72,6 +72,9 @@ cleanAndApplyCensor <- function(irDf, notCensoredOutomesDF, censorSubgroupCohort
   censoredIrDf$outcomeId[censoredIrDf$outcomeId==568] <- 349
   censoredIrDf$outcomeCohortDefinitionId[censoredIrDf$outcomeCohortDefinitionId==568] <- 349
 
+  #Some DPs had duplicate records
+  censoredIrDf <- unique(censoredIrDf)
+
   #Add sort order to the file
   censoredIrDf <- merge(x = censoredIrDf, y = outcomeSortOrder, by = 'outcomeName', all.x = TRUE)
 
