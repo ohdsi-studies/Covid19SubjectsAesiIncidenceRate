@@ -131,10 +131,6 @@ for(i in 1:length(aesis)){
   sirrForestPlots(summaryIR, metaAnalysisIR, aesi = aesis[i])
 }
 
-# AGE & SEX STRATIFIED IR PLOT #################################################
-
-ageSexStratifiedPlot(resultsFolder, irFolder)
-
 # COVID IR vs GENDERAL IRSTRATIFIED IR PLOT ####################################
 
 incidenceAnalysisCensoredCovidVsGeneral <- read.csv(paste0(irFolder,"/incidenceAnalysisCensoredCovidVsGeneral.csv"))
@@ -148,9 +144,14 @@ incidenceAnalysisCensoredCovidVsGeneralForPlot <- incidenceAnalysisCensoredCovid
 
 write.csv(incidenceAnalysisCensoredCovidVsGeneralForPlot,paste0(irFolder,"/incidenceAnalysisCensoredCovidVsGeneralForPlot.csv"), row.names = FALSE)
 
+# AGE & SEX STRATIFIED IR PLOT & COVID IR vs General (FIGURE 1 & 3) ############
+
+ageSexStratifiedPlot(resultsFolder, irFolder)
+
 # SIRR META-ANALYSIS FOREST PLOT SUMMARY #######################################
 
 metaAnalysisIR <- read.csv(paste0(resultsFolder,"/metaResults.csv"))
 metaAnalysisIR <- metaAnalysisIR[order(-metaAnalysisIR$SIR),]
 metaAnalysisForestPlots(metaAnalysisIR,resultsFolder)
 
+# SIRR META-ANALYSIS FOREST PLOT SUMMARY #######################################

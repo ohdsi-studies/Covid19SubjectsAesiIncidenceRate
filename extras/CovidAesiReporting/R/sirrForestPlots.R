@@ -6,7 +6,7 @@ sirrForestPlots <- function(summaryIR, metaAnalysisIR,aesi){
   metaAnalysisIR <- metaAnalysisIR[metaAnalysisIR$outcomeName ==aesi,]
   labels <- c(summaryIR$databaseName)
 
-  xLabel = "Standardized Incidence Rates (SIR)"
+  xLabel = "Standardized Incidence Ratios (SIR)"
   xLabelSmall = "SIR"
   limits = c(0.5, 20)
   summaryLabel = "Summary"
@@ -41,9 +41,11 @@ sirrForestPlots <- function(summaryIR, metaAnalysisIR,aesi){
   plotD$logUb95Ci[is.infinite(plotD$logUb95Ci)] <- 10
 
   #clean up censored values
-  plotD[plotD$logRr == 9999 & !is.na(plotD$logRr),]$logLb95Ci <- -100
-  plotD[plotD$logRr == 9999 & !is.na(plotD$logRr),]$logUb95Ci <- -100
-  plotD[plotD$logRr == 9999 & !is.na(plotD$logRr),]$logRr <- -100
+  if(nrow(plotD[plotD$logRr == 9999 & !is.na(plotD$logRr),]) > 0) {
+    plotD[plotD$logRr == 9999 & !is.na(plotD$logRr),]$logLb95Ci <- -100
+    plotD[plotD$logRr == 9999 & !is.na(plotD$logRr),]$logUb95Ci <- -100
+    plotD[plotD$logRr == 9999 & !is.na(plotD$logRr),]$logRr <- -100
+  }
 
   #clean up infinite
   plotD[is.infinite(plotD$logRr),]$logLb95Ci <- -100
