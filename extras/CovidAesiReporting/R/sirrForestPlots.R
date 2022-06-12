@@ -1,7 +1,8 @@
-sirrForestPlots <- function(summaryIR, metaAnalysisIR,aesi){
+sirrForestPlots <- function(resultsFolder, summaryIR, metaAnalysisIR,aesi){
 
   #Variables
   fileName <- paste0(resultsFolder,"/ForestPlot_",aesi,".png")
+  fileName <- stringr::str_replace_all(fileName, "[?]","")
   summaryIR <- summaryIR[summaryIR$outcomeName ==aesi, ]
   metaAnalysisIR <- metaAnalysisIR[metaAnalysisIR$outcomeName ==aesi,]
   labels <- c(summaryIR$databaseName)
@@ -37,8 +38,10 @@ sirrForestPlots <- function(summaryIR, metaAnalysisIR,aesi){
 
   #start building plot up
   plotD <- d
-  plotD$logLb95Ci[is.infinite(plotD$logLb95Ci)] <- -10
-  plotD$logUb95Ci[is.infinite(plotD$logUb95Ci)] <- 10
+  if(nrow(plotD) > 0 ){
+    plotD$logLb95Ci[is.infinite(plotD$logLb95Ci)] <- -10
+    plotD$logUb95Ci[is.infinite(plotD$logUb95Ci)] <- 10
+  }
 
   #clean up censored values
   if(nrow(plotD[plotD$logRr == 9999 & !is.na(plotD$logRr),]) > 0) {
@@ -48,9 +51,11 @@ sirrForestPlots <- function(summaryIR, metaAnalysisIR,aesi){
   }
 
   #clean up infinite
-  plotD[is.infinite(plotD$logRr),]$logLb95Ci <- -100
-  plotD[is.infinite(plotD$logRr),]$logUb95Ci <- -100
-  plotD[is.infinite(plotD$logRr),]$logRr <- -100
+  if(nrow(plotD[is.infinite(plotD$logRr),]) > 0 ){
+    plotD[is.infinite(plotD$logRr),]$logLb95Ci <- -100
+    plotD[is.infinite(plotD$logRr),]$logUb95Ci <- -100
+    plotD[is.infinite(plotD$logRr),]$logRr <- -100
+  }
 
   breaks <- c(0.5, 1, 2, 4, 6, 8, 10,20)
   p <- ggplot2::ggplot(plotD, ggplot2::aes(x = exp(.data$logRr),

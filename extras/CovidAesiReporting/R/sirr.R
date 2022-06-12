@@ -1,10 +1,10 @@
-sirr <- function(covidPop,generalPop,tar,subgroup,dataFolder,resultsFolder){
+sirr <- function(covidPop,generalPop,tar,subgroup,dataFolder,resultsFolder,irFile){
   #takes as inputs (1) what target cohort you want, (2) the comparison cohort, (3) the time at risk, (4) and the subgroups you want to include
   #then standardizes the IR and creates IR ratios per database per AESI
   #it also creates a summary rate for all databases
   #outputs two files of IRR
 
-  df <- read.csv(paste0(dataFolder,"/incidenceAnalysisCensored.csv"))
+  df <- read.csv(paste0(dataFolder,"/",irFile))
 
   df$numOutcomesUnblinded <- case_when(df$numPersonsWOutcome > 0 ~ round(df$numOutcomes,0),
                                        !is.na(df$incidenceProportionP100p) ~ round(df$numPersonsAtRisk * (df$incidenceProportionP100p/100),0),

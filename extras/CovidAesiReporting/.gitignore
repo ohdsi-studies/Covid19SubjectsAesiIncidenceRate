@@ -38,6 +38,7 @@ extras/codeToRun_EAV.R
 errorReport.txt
 errorReportSql.txt
 results/
+resultsNegativeControls/
 programs/archive/
 data/
 
