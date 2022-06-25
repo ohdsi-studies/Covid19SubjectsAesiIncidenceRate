@@ -66,7 +66,7 @@ metaAnalysis <- function(resultsFolder,incidenceAnalysisFile,outcomeSortOrder){
     left_join(select(database_ref,-databaseNameU), by='databaseName')
 
   IR_use_for_MA <- IR_use %>%
-    filter(targetCohortDefinitionId %in% c(566),  #COVID DX & PX
+    filter(targetCohortDefinitionId %in% c(563),  #COVID DX & PX
            timeAtRiskId == 6,  #90d
            subgroupCohortDefinitionId > 20, #age/sex strata
            outcomeCohortDefinitionId %in% c(411,405,406,402,386,385,381,349,568,347,346,345,343,340,339,335,547),
