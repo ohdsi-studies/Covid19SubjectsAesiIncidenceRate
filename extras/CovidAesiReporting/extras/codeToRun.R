@@ -3,8 +3,6 @@
 # ##############################################################################
 
 # PREP & VARIABLES #############################################################
-setwd("D:\\Git\\BitBucket\\epi_974\\Covid19SubjectsAesiIncidenceRate\\extras\\CovidAesiReporting")
-
 library(dplyr)
 library(tidyr)
 library(CohortDiagnostics)
@@ -45,7 +43,7 @@ outcomeSortOrderNegativeControls <- data.frame(outcomeNameSortOrder, outcomeName
 getCohortDiagnostics(cohortDiagnosticsFolder)
 
 #Launch locally
-CohortDiagnostics::launchDiagnosticsExplorer(dataFolder = "D:\\Git\\BitBucket\\epi_974\\Covid19SubjectsAesiIncidenceRate\\extras\\CovidAesiReporting\\data\\cohortDiagnostics")
+CohortDiagnostics::launchDiagnosticsExplorer(dataFolder = "D:\\Git\\BitBucket\\Covid19SubjectsAesiIncidenceRate\\extras\\CovidAesiReporting\\data\\cohortDiagnostics")
 
 ## IR ---------------------------------------------------------------------------
 #pulls together IR results into one file, forces min cell count,

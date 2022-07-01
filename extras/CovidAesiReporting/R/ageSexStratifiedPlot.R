@@ -43,7 +43,7 @@ ageSexStratifiedPlot <- function(resultsFolder, irFolder){
   # Databases 23-27: GP/primary care
   table (Data1$databaseName)
   Data1$databaseName <- factor(Data1$databaseName, levels = c("IBM_CCAE","IBM_MDCD","IBM_MDCR","IQVIA_OPENCLAIMS","IQVIA_PHARMETRICS","JMDC","OPTUM_SES","U_OF_TARTU",
-                                                              "APHM","CU_AMC","CUIMC","FIIBAP","HIC","IMASIS","IU","MHD","OPTUM_EHR","STARR","UCCS","UCHEALTH","UK_BIOBANK",
+                                                              "APHM","CU_AMC","CUIMC","FIIBAP","HIC","IMASIS","IU","MHD","OPTUM_EHR","STARR","UCCS","UCHDW","UK_BIOBANK",
                                                               "CPRD_AURUM","IPCI","IQVIA_FRANCE_DA","IQVIA_GERMANY_DA","SIDIAP"))
 
   # Filter out data points </=0

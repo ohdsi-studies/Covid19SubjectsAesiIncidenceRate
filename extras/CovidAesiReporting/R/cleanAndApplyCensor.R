@@ -29,7 +29,7 @@ cleanAndApplyCensor <- function(irDf, notCensoredOutomesDF, censorSubgroupCohort
   irDf[irDf == "IBM(R) MarketScan(R) Multi-State Medicaid Database"] <- "IBM_MDCD"
   irDf[irDf == "Optum De-Identified Clinformatics(R) Data Mart Database -“ Socio-Economic Status (SES)"] <- "OPTUM_SES"
   irDf[irDf == "Optum(R) de-identified Electronic Health Record Dataset"] <- "OPTUM_EHR"
-  irDf[irDf == "University of California Health"] <- "UCHEALTH"
+  irDf[irDf == "University of California Health"] <- "UCHDW"
   irDf[irDf == "CPRD_AURUM_UK"] <- "CPRD_AURUM"
 
   #saveIrDf <- irDf
