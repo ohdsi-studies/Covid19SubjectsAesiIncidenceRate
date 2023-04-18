@@ -1,7 +1,7 @@
 Adverse Events of Special Interest within COVID-19 Subjects
 =============
 
-<img src="https://img.shields.io/badge/Study%20Status-Started-blue.svg" alt="Study Status: Started">
+<img src="https://img.shields.io/badge/Study%20Status-Complete-orange.svg" alt="Study Status: Complete">
 
 - Analytics use case(s): **Characterization**
 - Study type: **Clinical Application**
@@ -9,10 +9,10 @@ Adverse Events of Special Interest within COVID-19 Subjects
 - Study lead: **Erica A Voss**
 - Study lead forums tag: **[ericaVoss](https://forums.ohdsi.org/u/ericaVoss)**
 - Study start date: **November 2, 2021**
-- Study end date: **-**
+- Study end date: **April 4, 2023**
 - Protocol: [AESIs in COVID-19 Subjects Protocol](https://ohdsi-studies.github.io/Covid19SubjectsAesiIncidenceRate/Protocol.html)
-- Publications: **-**
-- Results explorer: **-**
+- Publications: **Voss, E. A., Shoaibi, A., Yin Hui Lai, L., Blacketer, C., Alshammari, T., Makadia, R., Haynes, K., Sena, A. G., Rao, G., van Sandijk, S., Fraboulet, C., Boyer, L., Le Carrour, T., Horban, S., Morales, D. R., Martínez Roldán, J., Ramírez-Anguita, J. M., Mayer, M. A., de Wilde, M., John, L. H., … Ryan, P. B. (2023). Contextualising adverse events of special interest to characterise the baseline incidence rates in 24 million patients with COVID-19 across 26 databases: a multinational retrospective cohort study. EClinicalMedicine, 58, 101932. [https://doi.org/10.1016/j.eclinm.2023.101932](https://doi.org/10.1016/j.eclinm.2023.101932)**
+- Results explorer: **[https://data.ohdsi.org/Covid19SubjectsAesiIncidenceRate/](https://data.ohdsi.org/Covid19SubjectsAesiIncidenceRate/)**
 
 Extending on our previous work by Li et al. [1](https://github.com/ohdsi-studies/Covid19VaccineAesiIncidenceRate) [2](https://pubmed.ncbi.nlm.nih.gov/33791732/) in understanding the incidence rates of adverse events of special interest (AESI) for COVID-19, this work will look at the rates of these AESIs in patients who had COVDI-19 disease.
 

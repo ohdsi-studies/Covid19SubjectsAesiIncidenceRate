@@ -8,7 +8,7 @@ ageSexStratifiedPlot <- function(resultsFolder, irFolder){
   ##################
   #### FIGURE 1 ####
   ##################
-  fileName <- paste0(resultsFolder,"/AGE_SEX_STRATIFIED_IR.png")
+  fileName <- paste0(resultsFolder,"/AGE_SEX_STRATIFIED_IR.pdf")
 
   # Import data
   Data1 <- read.csv(paste0(irFolder,"/incidenceAnalysisCensoredCovidVsGeneralForPlot.csv"))
@@ -104,7 +104,7 @@ ageSexStratifiedPlot <- function(resultsFolder, irFolder){
   ##################
   #### FIGURE 2 ####
   ##################
-  fileName2 <- paste0(resultsFolder,"/COVID_SIR_VS_GENERAL_SIR.png")
+  fileName2 <- paste0(resultsFolder,"/COVID_SIR_VS_GENERAL_SIR.pdf")
 
   p2 <- ggplot(Data2, aes(x=IR_POP, y=IR_COVID)) +
     geom_point(aes(col=databaseName, shape=gender),size=2) +

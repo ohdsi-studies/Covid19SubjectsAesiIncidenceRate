@@ -1,6 +1,6 @@
 metaAnalysisForestPlots <- function(metaAnalysisIR,resultsFolder){
   #Variables
-  fileName <- paste0(resultsFolder,"/ForestPlotAesiMeans.png")
+  fileName <- paste0(resultsFolder,"/ForestPlotAesiMeans.pdf")
   labels <- c(metaAnalysisIR$outcomeName)
 
   xLabel = "Standardized Incidence Ratios (SIR)"
